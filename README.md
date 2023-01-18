@@ -1,1 +1,1 @@
-# BYU-CS260
+# BYU-CS260 Startup Application Notes:
