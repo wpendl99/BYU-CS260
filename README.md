@@ -63,4 +63,6 @@ This part of the assignment has provided me with a deeper understanding of the p
 
 Overall, this assignment has helped me to understand the importance of having a domain name and how to set it up and manage it properly.
 
+*Domain: http://[worldexcursions.click](http://worldexcursions.click)*
+
 #### Daniel Yu Learned:
