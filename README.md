@@ -35,7 +35,7 @@ Overall, the design process has been a valuable learning experience and has prov
 #### Daniel Yu Learned:
 Paint.net (a piece of opensource freeware) is not the most powerful image editing tool, especially for graphical design. Brainstorming the visual aspects of a website or project is an intensive process.
 
-## Amazon Web Services -EC2
+## Amazon Web Services - EC2
 #### William Pendleton Learned
 In this assignment, I set up a new Amazon Web Services (AWS) instance and prepared it with an elastic IP address. This process allowed me to learn about the importance of using cloud-based infrastructure in web development and the benefits of using a service like AWS.
 
@@ -48,3 +48,19 @@ Overall, this assignment has provided me with a deeper understanding of the bene
 *Elastic IP address: 3.130.135.1*
 
 #### Daniel Yu Learned:
+
+## Amazon Web Services - Route53
+#### William Pendleton Learned
+In this part of the assignment, I used the AWS browser console to log in and then used Route 53 to purchase a domain name. The domain name that I purchased is worldexcusions.click.
+
+Route 53 is a service provided by AWS that allows users to manage their DNS records. This includes purchasing domain names, creating and managing DNS records, and monitoring the health of their domain.
+
+After purchasing the domain name, I set up my DNS records using Route 53. This included creating a record representing my root domain name (worldexcusions.click) and a wildcard subdomain (anything.worldexcusions.click). This allows for any subdomain to be used with the root domain, making it more flexible for the users.
+
+I then tested that I could access my server using my domain name and any subdomain name. This confirmed that the DNS records were set up correctly and that my server is accessible using the domain name.
+
+This part of the assignment has provided me with a deeper understanding of the process of purchasing and setting up a domain name and how to use Route 53 to manage DNS records. It also showed me how to test that the server is accessible using the domain name and any subdomain name.
+
+Overall, this assignment has helped me to understand the importance of having a domain name and how to set it up and manage it properly.
+
+## Daniel Yu Learned:
