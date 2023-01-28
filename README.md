@@ -1,5 +1,6 @@
 # BYU-CS260 Startup Application Notes:
 ## Github Assignment
+#### William Pendleton Learned:
 One of the thigns that I appreciate about this assignment is that it is important to commit changes OFTEN! And I also appreciate that you it talked about how to resolve conflicts. I have worked in the industy with people that have been working for years at a company and they still struggle to know how to resolve conflicts that come when merging data.
 
 ## Startup 
@@ -33,3 +34,17 @@ Overall, the design process has been a valuable learning experience and has prov
 
 #### Daniel Yu Learned:
 Paint.net (a piece of opensource freeware) is not the most powerful image editing tool, especially for graphical design. Brainstorming the visual aspects of a website or project is an intensive process.
+
+## Amazon Web Services -EC2
+#### William Pendleton Learned
+In this assignment, I set up a new Amazon Web Services (AWS) instance and prepared it with an elastic IP address. This process allowed me to learn about the importance of using cloud-based infrastructure in web development and the benefits of using a service like AWS.
+
+The process of creating a new AWS instance is relatively straightforward. I logged into the AWS Management Console, selected the EC2 service, and followed the prompts to create a new instance. Once the instance was created, I was able to ssh into it to make sure that everything was set up correctly.
+
+I then associated an Elastic IP address with the instance, which allows for a static, public IP address that can be used to access the instance from anywhere. This is important for ensuring that the server is accessible to users and can be used to host a website or web application.
+
+Overall, this assignment has provided me with a deeper understanding of the benefits and considerations of using cloud-based infrastructure in web development and the importance of security in these environments.
+
+*Elastic IP address: 3.144.231.107*
+
+#### Daniel Yu Learned:
