@@ -45,6 +45,6 @@ I then associated an Elastic IP address with the instance, which allows for a st
 
 Overall, this assignment has provided me with a deeper understanding of the benefits and considerations of using cloud-based infrastructure in web development and the importance of security in these environments.
 
-*Elastic IP address: 3.144.231.107*
+*Elastic IP address: 3.130.135.1*
 
 #### Daniel Yu Learned:
