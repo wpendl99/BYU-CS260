@@ -49,6 +49,12 @@ Overall, this assignment has provided me with a deeper understanding of the bene
 
 #### Daniel Yu Learned:
 
+Accessing a remote server remotely continues to be 'fun'. I always think its pretty cool to be able to access services and run programs on other machines other than the one I am sitting directly infront of. Between this, the BYU CS department lab machines, the servers I occasionally work on for work at BYU, and my own personal RunPod instances for beefy GPUs, I continue to learn more and have a blast.
+
+Obviously, inconsistent IP addresses that are allocated as machines become active pose a problem. Even leaving an instance online 24/7 is unneccesarry and dangerous. This is why elastic IPs offer such an advantage, creating a continuous reference to your dynamic instances that remains under your name.
+
+*Elastic IP address: 3.136.241.90*
+
 ## Amazon Web Services - Route53
 #### William Pendleton Learned
 In this part of the assignment, I used the AWS browser console to log in and then used Route 53 to purchase a domain name. The domain name that I purchased is worldexcusions.click.
@@ -66,3 +72,10 @@ Overall, this assignment has helped me to understand the importance of having a 
 *Domain: [http://worldexcursions.click](http://worldexcursions.click)*
 
 #### Daniel Yu Learned:
+
+Following the steps described in the documentation from Github posed no issues and I was able to purchase my domain name and get my own instance with relative ease. I know that AWS serves as the backbone to a lot of internet services and companies and so this first interaction is very informative and engaging.
+
+Looking at the available domain names was fun and made me have to choose between cost and appearances. I was happy to secure a domain ending in .world, which feels pretty cool and relevant to our prospective start up project.
+
+*Domain: [http://excursionsxr.world](http://excursionsxr.world)*
+
