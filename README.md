@@ -1,8 +1,55 @@
-# BYU-CS260 Startup Application Notes:
-## Github Assignment
+<a id='top'></a>
+# BYU-CS260 Notes
+## Assignement Write-up Quick Links:
+### Development essentials
+- [Github](#github)
+- [Startup - Specifications](#startup-specifications)
+### Web servers
+- [Amazon Web Sevices - EC2](#aws-ec2)
+- [Amazon Web Sevices - Route 53](#aws-r53)
+- [HTTPS, TLS, and certificates](#https)
+### HTML and CSS
+- [HTML Introduction](#html-introduction)
+
+<details>
+  <summary>🚧 Assignments that are not yet completed</summary>
+  <br>
+  
+  - [HTML Structure](#html-structure)
+  - [HTML Input](#html-input)
+  - [HTML Media](#html-media)
+  - [HTML Website](#html-website)
+  - [Simon HTML](#simon-html)
+- [CSS Practice](#css-practice)
+  - [CSS Flex](#css-flex)
+  - [CSS Frameworks](#css-frameworks)
+  - [Simon CSS](#simon-css)
+- [UX Desgin](#ux-design)
+- [Startup - HTML, CSS](#startup-html-css)
+### JavaScript
+- [JS Types, Operators, Conditionals, and Loops](#js-TOCL)
+- [JS Functions](#js-functions)
+- [JS Arrow Functions](#js-arrow-functions)
+- [JS Arrays](#js-arrays)
+- [JS Objects and Classes](#js-objects-classes)
+- [JS Regular Expressions](#js-regex)
+- [JS Rest and Spread](#js-rest-spread)
+- [JS Destructuring](#js-destructuring)
+- [JS Exceptions](#js-exceptions)
+- [JS Document Object Model (DOM)](#js-dom)
+- [JS Promises](#js-promises)
+- [JS Async/Await](#js-async-await)
+- [Simon JavaScript](#simon-js)
+- [Startup - JavaScript](#startup-js)
+</details>
+
+<a id='github'></a>
+## Github
 #### William Pendleton Learned:
 One of the thigns that I appreciate about this assignment is that it is important to commit changes OFTEN! And I also appreciate that you it talked about how to resolve conflicts. I have worked in the industy with people that have been working for years at a company and they still struggle to know how to resolve conflicts that come when merging data.
 
+[Back to top](#top)
+<a id='startup-specifications'></a>
 ## Startup 
 Imagine planning your next vacation with the ability to preview destinations in a virtual reality street view before you even leave home. Our web and mobile app seamlessly integrates with WebXR's ThreeJS technology to give you an immersive, 360-degree experience of your potential vacation spots, complete with nearby points of interest. No more guessing what a location will be like, our app allows you to experience it for yourself in a virtual reality headset. It's the ultimate planning tool for any traveler looking to make the most out of their vacation.
 - Ability to plan and preview vacation destinations in a virtual reality street view
@@ -35,6 +82,8 @@ Overall, the design process has been a valuable learning experience and has prov
 #### Daniel Yu Learned:
 Paint.net (a piece of opensource freeware) is not the most powerful image editing tool, especially for graphical design. Brainstorming the visual aspects of a website or project is an intensive process.
 
+[Back to top](#top)
+<a id='aws-ec2'></a>
 ## Amazon Web Services - EC2
 #### William Pendleton Learned:
 In this assignment, I set up a new Amazon Web Services (AWS) instance and prepared it with an elastic IP address. This process allowed me to learn about the importance of using cloud-based infrastructure in web development and the benefits of using a service like AWS.
@@ -46,6 +95,7 @@ I then associated an Elastic IP address with the instance, which allows for a st
 Overall, this assignment has provided me with a deeper understanding of the benefits and considerations of using cloud-based infrastructure in web development and the importance of security in these environments.
 
 *Elastic IP address: 3.130.135.1*
+</details>
 
 #### Daniel Yu Learned:
 
@@ -55,6 +105,8 @@ Obviously, inconsistent IP addresses that are allocated as machines become activ
 
 *Elastic IP address: 3.136.241.90*
 
+[Back to top](#top)
+<a id='aws-r53'></a>
 ## Amazon Web Services - Route53
 #### William Pendleton Learned:
 In this part of the assignment, I used the AWS browser console to log in and then used Route 53 to purchase a domain name. The domain name that I purchased is worldexcusions.click.
@@ -79,6 +131,8 @@ Looking at the available domain names was fun and made me have to choose between
 
 *Domain: [http://excursionsxr.world](http://excursionsxr.world)*
 
+[Back to top](#top)
+<a id='https'></a>
 ## HTTPS, TLS and web certificates
 #### William Pendleton Learned:
 In this part of the assignment, I learned about HTTPS, TLS, and web certificates. HTTPS (Hypertext Transfer Protocol Secure) is a protocol for secure communication over the internet. It is the preferred method of communication for sensitive information, such as online transactions or the exchange of personal information. TLS (Transport Layer Security) is the cryptographic protocol that is used to secure the data being transmitted over the internet.
@@ -90,3 +144,19 @@ In the past, I have had to set up servers and request certificates, and I know h
 This part of the assignment has helped me to understand the importance of using HTTPS and TLS for secure communication and how Caddy and Let's Encrypt make the process of setting up certificates much easier and more efficient. Overall, this assignment has been a great learning experience and has provided me with a deeper understanding of the role of web certificates in secure communication.
 
 #### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='html-introduction'></a>
+## HTML Introduction
+#### William Pendleton Learned:
+In this assignment, we were introduced to HTML and its elements, tags, attributes and hyperlinks. HTML stands for Hypertext Markup Language and it is the standard markup language used to create web pages. It uses a set of tags to structure the content and tell the browser how to display it.
+
+To demonstrate my understanding of HTML, I created a simple personal portfolio webpage. The webpage consisted of a header, an introduction section, an about me section, a section for my links and a footer.
+
+In the header, I included the title of the webpage, "Hello world, This is me!". In the introduction section, I talked about myself and what I do. In the about me section, I listed out some of my skills and provided a brief description for each of them using unordered lists. In the links section, I included some important links. Finally, in the footer, I put a little not saying thank you.
+
+By creating this simple HTML page, I learned how to use various HTML elements and tags to structure and display content on a webpage.
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
