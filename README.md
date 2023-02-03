@@ -36,7 +36,7 @@ Overall, the design process has been a valuable learning experience and has prov
 Paint.net (a piece of opensource freeware) is not the most powerful image editing tool, especially for graphical design. Brainstorming the visual aspects of a website or project is an intensive process.
 
 ## Amazon Web Services - EC2
-#### William Pendleton Learned
+#### William Pendleton Learned:
 In this assignment, I set up a new Amazon Web Services (AWS) instance and prepared it with an elastic IP address. This process allowed me to learn about the importance of using cloud-based infrastructure in web development and the benefits of using a service like AWS.
 
 The process of creating a new AWS instance is relatively straightforward. I logged into the AWS Management Console, selected the EC2 service, and followed the prompts to create a new instance. Once the instance was created, I was able to ssh into it to make sure that everything was set up correctly.
@@ -56,7 +56,7 @@ Obviously, inconsistent IP addresses that are allocated as machines become activ
 *Elastic IP address: 3.136.241.90*
 
 ## Amazon Web Services - Route53
-#### William Pendleton Learned
+#### William Pendleton Learned:
 In this part of the assignment, I used the AWS browser console to log in and then used Route 53 to purchase a domain name. The domain name that I purchased is worldexcusions.click.
 
 Route 53 is a service provided by AWS that allows users to manage their DNS records. This includes purchasing domain names, creating and managing DNS records, and monitoring the health of their domain.
@@ -79,3 +79,14 @@ Looking at the available domain names was fun and made me have to choose between
 
 *Domain: [http://excursionsxr.world](http://excursionsxr.world)*
 
+## HTTPS, TLS and web certificates
+#### William Pendleton Learned:
+In this part of the assignment, I learned about HTTPS, TLS, and web certificates. HTTPS (Hypertext Transfer Protocol Secure) is a protocol for secure communication over the internet. It is the preferred method of communication for sensitive information, such as online transactions or the exchange of personal information. TLS (Transport Layer Security) is the cryptographic protocol that is used to secure the data being transmitted over the internet.
+
+The project was set up with Caddy, a web server that automatically requests and generates certificates from Let's Encrypt for all of the domains and subdomains of the website. This is a great advantage because it eliminates the need for manual certificate management, which can be time-consuming and error-prone.
+
+In the past, I have had to set up servers and request certificates, and I know how much of a hassle it can be to make sure that the certificate covers all of the subdomains and switch between the development environment, which doesn't use HTTPS, to a production environment, which does. With Caddy and Let's Encrypt, the process is made much easier and more streamlined.
+
+This part of the assignment has helped me to understand the importance of using HTTPS and TLS for secure communication and how Caddy and Let's Encrypt make the process of setting up certificates much easier and more efficient. Overall, this assignment has been a great learning experience and has provided me with a deeper understanding of the role of web certificates in secure communication.
+
+#### Daniel Yu Learned:
