@@ -145,6 +145,10 @@ This part of the assignment has helped me to understand the importance of using 
 
 #### Daniel Yu Learned:
 
+Caddy is a nice solution for handling the aquisition of SSL certificates. In my workplace, we have to renew certificates from DigiCert every year or every other year, and it's quite a few more steps getting the certificates installed and placed. I'm wondering if Caddy can be configured to be used on our servers as well, but probably not, considering we don't use the more open and free solution. 
+
+It's nice to have chrome no longer freak out when connecting to my domain. The TLS system is a different and interesting approach to handling the security problem that comes with being online. It, in combination with RSA encryption, likely are the backbone for modern information exchange.
+
 [Back to top](#top)
 <a id='html-introduction'></a>
 ## HTML Introduction
