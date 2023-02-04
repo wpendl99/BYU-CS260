@@ -10,12 +10,12 @@
 - [HTTPS, TLS, and certificates](#https)
 ### HTML and CSS
 - [HTML Introduction](#html-introduction)
+- [HTML Structure](#html-structure)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
   <br>
-  
-  - [HTML Structure](#html-structure)
+ 
   - [HTML Input](#html-input)
   - [HTML Media](#html-media)
   - [HTML Website](#html-website)
@@ -156,6 +156,14 @@ To demonstrate my understanding of HTML, I created a simple personal portfolio w
 In the header, I included the title of the webpage, "Hello world, This is me!". In the introduction section, I talked about myself and what I do. In the about me section, I listed out some of my skills and provided a brief description for each of them using unordered lists. In the links section, I included some important links. Finally, in the footer, I put a little not saying thank you.
 
 By creating this simple HTML page, I learned how to use various HTML elements and tags to structure and display content on a webpage.
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='html-structure'></a>
+## HTML Structure
+#### William Pendleton Learned:
+In this assignment, I learned about HTML structure elements and their distinction between block and inline elements. The purpose of HTML is to provide structure and content to web applications, and common HTML structural elements include body, header, footer, main, section, aside, p, table, ol/ul, div, and span. Proper representation of the page structure using these elements is important for logical sense and for automated tools like search indexing crawlers and accessibility screen readers to correctly interpret the document. Block elements are meant to be distinct blocks in the flow of content, while inline elements are meant to be inline with the content flow of block elements. For example, a div block element could have an inline b element to bring attention to a portion of its sub-text, while a p element could have a span to mark the sub-text as a person's name.
 
 #### Daniel Yu Learned:
 
