@@ -11,12 +11,12 @@
 ### HTML and CSS
 - [HTML Introduction](#html-introduction)
 - [HTML Structure](#html-structure)
+- [HTML Input](#html-input)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
   <br>
  
-  - [HTML Input](#html-input)
   - [HTML Media](#html-media)
   - [HTML Website](#html-website)
   - [Simon HTML](#simon-html)
@@ -168,6 +168,16 @@ By creating this simple HTML page, I learned how to use various HTML elements an
 ## HTML Structure
 #### William Pendleton Learned:
 In this assignment, I learned about HTML structure elements and their distinction between block and inline elements. The purpose of HTML is to provide structure and content to web applications, and common HTML structural elements include body, header, footer, main, section, aside, p, table, ol/ul, div, and span. Proper representation of the page structure using these elements is important for logical sense and for automated tools like search indexing crawlers and accessibility screen readers to correctly interpret the document. Block elements are meant to be distinct blocks in the flow of content, while inline elements are meant to be inline with the content flow of block elements. For example, a div block element could have an inline b element to bring attention to a portion of its sub-text, while a p element could have a span to mark the sub-text as a person's name.
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='html-input'></a>
+## HTML Input
+#### William Pendleton Learned:
+HTML inputs allow for user input on a website or web application. There are several types of inputs, including text inputs, checkboxes, radio buttons, drop-down menus, and submit buttons. HTML inputs are essential for collecting data from users, and they play a crucial role in web development.
+
+One interesting aspect of HTML inputs is the versatility they offer in terms of data collection. Different input types cater to specific data requirements, and developers can choose the type that best fits their needs. For instance, a drop-down menu is ideal for offering a limited number of choices, while a text input allows for free-form data entry.
 
 #### Daniel Yu Learned:
 
