@@ -163,6 +163,8 @@ By creating this simple HTML page, I learned how to use various HTML elements an
 
 #### Daniel Yu Learned:
 
+This section was just a quick introduction to HTML and getting familiar with the conventions. Tags play a key role in forming the structure of webpages and also allowing webcrawling systems like search engines to catalogue and understand the content of your site.
+
 [Back to top](#top)
 <a id='html-structure'></a>
 ## HTML Structure
@@ -170,6 +172,8 @@ By creating this simple HTML page, I learned how to use various HTML elements an
 In this assignment, I learned about HTML structure elements and their distinction between block and inline elements. The purpose of HTML is to provide structure and content to web applications, and common HTML structural elements include body, header, footer, main, section, aside, p, table, ol/ul, div, and span. Proper representation of the page structure using these elements is important for logical sense and for automated tools like search indexing crawlers and accessibility screen readers to correctly interpret the document. Block elements are meant to be distinct blocks in the flow of content, while inline elements are meant to be inline with the content flow of block elements. For example, a div block element could have an inline b element to bring attention to a portion of its sub-text, while a p element could have a span to mark the sub-text as a person's name.
 
 #### Daniel Yu Learned:
+
+Tags became more important here, as things like "reader mode" for iOS or MacOS take advantage of tags to determine the content of your page. There's many tools that exist for us to use to build our website, from top to bottom.
 
 [Back to top](#top)
 <a id='html-input'></a>
@@ -180,5 +184,14 @@ HTML inputs allow for user input on a website or web application. There are seve
 One interesting aspect of HTML inputs is the versatility they offer in terms of data collection. Different input types cater to specific data requirements, and developers can choose the type that best fits their needs. For instance, a drop-down menu is ideal for offering a limited number of choices, while a text input allows for free-form data entry.
 
 #### Daniel Yu Learned:
+While it may not play a key role in what we do (as we will learn to use JS to perform a lot of these interactible tasks), forns served as the basis for user interaction with webpages and sending data back to webservers. While not present in the fork, and as something that may have to be implemented in JS, we need to perform clear and explicit error descriptions to prevent friction with users on our site.
+
+[Back to top](#top)
+<a id='html-media'></a>
+## HTML Media
+#### William Pendleton Learned:
+
+#### Daniel Yu Learned:
+Embedding both internal dynamic and external content is key to providing any other media other than text. I'm curious about how involved embedding dynamic content from an external source is, and if you are the one providing the external content, how you need to build your website and webserver to correctly and seamlessly integrate with other people's uses of your content. People embed YouTube viewers, which don't present video media with the same player as everything else, so I wonder how that is done and what the source site can see about its content's use on other platforms or sites.
 
 [Back to top](#top)
