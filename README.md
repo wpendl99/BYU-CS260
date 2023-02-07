@@ -13,12 +13,12 @@
 - [HTML Structure](#html-structure)
 - [HTML Input](#html-input)
 - [HTML Media](#html-media)
+- [HTML Website](#html-website)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
   <br>
  
-  - [HTML Website](#html-website)
   - [Simon HTML](#simon-html)
 - [CSS Practice](#css-practice)
   - [CSS Flex](#css-flex)
@@ -204,5 +204,18 @@ Overall, I learned about the different options for adding media to a web page an
 
 #### Daniel Yu Learned:
 Embedding both internal dynamic and external content is key to providing any other media other than text. I'm curious about how involved embedding dynamic content from an external source is, and if you are the one providing the external content, how you need to build your website and webserver to correctly and seamlessly integrate with other people's uses of your content. People embed YouTube viewers, which don't present video media with the same player as everything else, so I wonder how that is done and what the source site can see about its content's use on other platforms or sites.
+
+[Back to top](#top)
+<a id='html-website'></a>
+## HTML Website
+#### William Pendleton Learned:
+In this assignment, the task was to create a personal HTML website and deploy it on out server. The process involved verifying that the server is running, forking and cloning a repository containing the required files, personalizing the HTML template, replacing an image, and deploying the website using a shell script. The script utilized the secure copy (scp) command to transfer files to the server's public_html directory where the web server looks for static pages to host. We then verified the website was successfully deployed by accessing it through a browser. 
+
+What I found interesting about this assignment was the utilization of a shell script to deploy the website. It demonstrated how automation can make the process of deploying a website much easier and more efficient. Additionally, having a personal website as a portfolio to showcase projects and assignments completed in the class can be a valuable asset for demonstrating skills and knowledge to others.
+
+*Website Link: [William Pendleton HTML Website](https://worldexcursions.click)*
+
+#### Daniel Yu Learned:
+
 
 [Back to top](#top)
