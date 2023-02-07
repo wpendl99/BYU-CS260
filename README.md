@@ -1,6 +1,6 @@
 <a id='top'></a>
 # BYU-CS260 Notes
-## Assignement Write-up Quick Links:
+## Assignment Write-up Quick Links:
 ### Development essentials
 - [Github](#github)
 - [Startup - Specifications](#startup-specifications)
@@ -12,6 +12,7 @@
 - [HTML Introduction](#html-introduction)
 - [HTML Structure](#html-structure)
 - [HTML Input](#html-input)
+- [HTML Media](#html-media)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
