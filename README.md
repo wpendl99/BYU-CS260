@@ -10,16 +10,17 @@
 - [HTTPS, TLS, and certificates](#https)
 ### HTML and CSS
 - [HTML Introduction](#html-introduction)
-- [HTML Structure](#html-structure)
-- [HTML Input](#html-input)
-- [HTML Media](#html-media)
-- [HTML Website](#html-website)
+  - [HTML Structure](#html-structure)
+  - [HTML Input](#html-input)
+  - [HTML Media](#html-media)
+  - [HTML Website](#html-website)
+  - [Simon HTML](#simon-html)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
   <br>
  
-  - [Simon HTML](#simon-html)
+
 - [CSS Practice](#css-practice)
   - [CSS Flex](#css-flex)
   - [CSS Frameworks](#css-frameworks)
@@ -214,6 +215,35 @@ In this assignment, the task was to create a personal HTML website and deploy it
 What I found interesting about this assignment was the utilization of a shell script to deploy the website. It demonstrated how automation can make the process of deploying a website much easier and more efficient. Additionally, having a personal website as a portfolio to showcase projects and assignments completed in the class can be a valuable asset for demonstrating skills and knowledge to others.
 
 *Website Link: [William Pendleton HTML Website](https://worldexcursions.click)*
+
+#### Daniel Yu Learned:
+
+
+[Back to top](#top)
+<a id='simon-html'></a>
+## Simon HTML
+#### William Pendleton Learned:
+In this assignment, I demonstrated my ability to use basic HTML elements such as structure, formatting, input, output, links, and drawing to build a Simon game application. The application has a login page, game play page, high scores page, and about page, each with a header for navigation and a footer that references the source repository.
+
+To complete this assignment, I:
+- Reviewed the code for the example Simon HTML application
+- Cloned the repository to my development environment
+- Created my own version of the Simon application, focusing on understanding the concepts from the example project
+- Set the footer link to point to my own code repository
+- Committed and pushed my code to my repository multiple times as I hit milestones
+- Deployed my code to my production environment using the deployFiles.sh script
+- Updated my startup repository README.md to reflect on what I learned
+- Submitted the URL of my production environment for grading.
+- 
+Through this assignment, I learned how to:
+- Create multiple HTML pages connected with hyperlinks
+- Properly use HTML structural elements, header elements, and doctype
+- Use Git to commit and push code to a repository
+- Deploy code to a production environment using a script
+
+I am now more confident in my ability to build basic HTML applications and manage their code using Git and deployment scripts.
+
+*Website Link: [Simon (wkp23)](https://simon.worldexcursions.click)*
 
 #### Daniel Yu Learned:
 
