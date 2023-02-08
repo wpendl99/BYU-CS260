@@ -234,7 +234,7 @@ To complete this assignment, I:
 - Deployed my code to my production environment using the deployFiles.sh script
 - Updated my startup repository README.md to reflect on what I learned
 - Submitted the URL of my production environment for grading.
-- 
+
 Through this assignment, I learned how to:
 - Create multiple HTML pages connected with hyperlinks
 - Properly use HTML structural elements, header elements, and doctype
