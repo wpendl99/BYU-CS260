@@ -15,13 +15,13 @@
   - [HTML Media](#html-media)
   - [HTML Website](#html-website)
   - [Simon HTML](#simon-html)
+- [CSS Practice](#css-practice)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
   <br>
  
 
-- [CSS Practice](#css-practice)
   - [CSS Flex](#css-flex)
   - [CSS Frameworks](#css-frameworks)
   - [Simon CSS](#simon-css)
@@ -247,5 +247,20 @@ I am now more confident in my ability to build basic HTML applications and manag
 
 #### Daniel Yu Learned:
 
+
+[Back to top](#top)
+<a id='css-practice'></a>
+## CSS Practice
+#### William Pendleton Learned:
+The HTML and CSS code I provided demonstrated several fundamental concepts and techniques I recently learned in web development, such as:
+
+- Selectors: CSS selectors are used to target specific HTML elements and apply styles to them. In the example I provided, various selectors were used to target different elements, such as the nav element, the ul element, and the a element.
+- Declarations: CSS declarations are used to define the styles to be applied to the targeted elements. Declarations consist of a property and a value, such as color: #fff or font-size: 16px.
+- Layout: The CSS box model and layout techniques were used to control the position and size of the elements on the page. The display property was used to specify whether elements should be block-level or inline, and the position property was used to control the positioning of elements.
+- Responsive design & Animation: The @media rule was used to define styles that apply only when the screen size is below a certain width, allowing the page to be responsive to different screen sizes and the :hover selector enabled it to be animated while the user was using the website.
+
+*Codepen Link: [CSS Practice](https://codepen.io/wpendl99/pen/XWPWbgG)*
+
+#### Daniel Yu Learned:
 
 [Back to top](#top)
