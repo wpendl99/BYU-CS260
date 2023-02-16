@@ -16,13 +16,14 @@
   - [HTML Website](#html-website)
   - [Simon HTML](#simon-html)
 - [CSS Practice](#css-practice)
+  - [CSS Flex](#css-flex)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
   <br>
  
 
-  - [CSS Flex](#css-flex)
+  
   - [CSS Frameworks](#css-frameworks)
   - [Simon CSS](#simon-css)
 - [UX Desgin](#ux-design)
@@ -260,6 +261,18 @@ The HTML and CSS code I provided demonstrated several fundamental concepts and t
 - Responsive design & Animation: The @media rule was used to define styles that apply only when the screen size is below a certain width, allowing the page to be responsive to different screen sizes and the :hover selector enabled it to be animated while the user was using the website.
 
 *Codepen Link: [CSS Practice](https://codepen.io/wpendl99/pen/XWPWbgG)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='css-flex'></a>
+## CSS Flex
+#### William Pendleton Learned:
+The process of creating a fully responsive application using media queries was a really interesting and eye-opening experience. One of the things that stood out to me the most was how much control I had over the design and layout of my application for different screen sizes. By using media queries to adjust the styles and positioning of various elements, I was able to ensure that my application looked great and functioned properly on a wide range of devices, from smartphones to large desktop monitors.
+
+Another thing I found fascinating was how the use of media queries allowed me to create a consistent and cohesive user experience across all devices. By tailoring the design to fit the unique constraints of each screen size, I was able to make sure that the content was easily accessible and readable no matter what device a user was accessing it from. This not only improved the usability and accessibility of my application, but it also helped to establish trust and credibility with my users, who could rely on a consistent and reliable experience no matter where they were accessing my application from. Overall, I found the process of building a fully responsive application with media queries to be a challenging but highly rewarding experience, and one that has given me a greater appreciation for the importance of designing with a mobile-first mindset.
+
+*Codepen Link: [My Photo Gallery](https://codepen.io/wpendl99/pen/dyqPzYd)*
 
 #### Daniel Yu Learned:
 
