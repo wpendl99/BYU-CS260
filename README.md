@@ -17,6 +17,7 @@
   - [Simon HTML](#simon-html)
 - [CSS Practice](#css-practice)
   - [CSS Flex](#css-flex)
+  - [CSS Frameworks](#css-frameworks)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
@@ -24,7 +25,7 @@
  
 
   
-  - [CSS Frameworks](#css-frameworks)
+
   - [Simon CSS](#simon-css)
 - [UX Desgin](#ux-design)
 - [Startup - HTML, CSS](#startup-html-css)
@@ -277,3 +278,19 @@ Another thing I found fascinating was how the use of media queries allowed me to
 #### Daniel Yu Learned:
 
 [Back to top](#top)
+
+<a id='css-frameworks'></a>
+## CSS Frameworks
+#### William Pendleton Learned:
+During my assignment on Bootstrap, I had the opportunity to experiment with different Bootstrap components such as badges, breadcrumbs, buttons, and dropdowns, and I found this to be a lot of fun. These components are essential UI elements that can enhance the user experience of a website, and it was great to see that I took the time to explore how they work within the Bootstrap framework.
+
+In addition, I found the Tailwind CSS Framework to be cool, which indicates my interest in exploring different CSS frameworks. By experimenting with different frameworks and exploring various components, I am taking important steps towards becoming a more skilled and versatile developer.
+
+Overall, the process of building a simple home page with Bootstrap was an engaging and enjoyable experience for me, and it's exciting to see that I have a passion for learning about different frameworks and exploring various components to create a better user experience for websites.
+
+*Codepen Link: [CSS Bootstrap](https://codepen.io/wpendl99/pen/PodqvNM)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+
