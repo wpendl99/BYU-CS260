@@ -18,15 +18,12 @@
 - [CSS Practice](#css-practice)
   - [CSS Flex](#css-flex)
   - [CSS Frameworks](#css-frameworks)
+  - [Simon CSS](#simon-css)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
   <br>
  
-
-  
-
-  - [Simon CSS](#simon-css)
 - [UX Desgin](#ux-design)
 - [Startup - HTML, CSS](#startup-html-css)
 ### JavaScript
@@ -245,7 +242,7 @@ Through this assignment, I learned how to:
 
 I am now more confident in my ability to build basic HTML applications and manage their code using Git and deployment scripts.
 
-*Website Link: [Simon (wkp23)](https://simon.worldexcursions.click)*
+*Website Link: [Simon (wkp23)](https://simon.worldexcursions.click/archive/v1)*
 
 #### Daniel Yu Learned:
 
@@ -278,7 +275,6 @@ Another thing I found fascinating was how the use of media queries allowed me to
 #### Daniel Yu Learned:
 
 [Back to top](#top)
-
 <a id='css-frameworks'></a>
 ## CSS Frameworks
 #### William Pendleton Learned:
@@ -293,4 +289,13 @@ Overall, the process of building a simple home page with Bootstrap was an engagi
 #### Daniel Yu Learned:
 
 [Back to top](#top)
+<a id='simon-css'></a>
+## Simon CSS
+#### William Pendleton Learned:
+By incorporating CSS and Bootstrap into my Simon game, I was able to create a visually appealing and responsive design that improved the overall look and feel of the application, making it more user-friendly. I also gained experience with structuring CSS files, modifying code, and experimenting with changes to see their effects. Although bootstrap has been fun to learn, I'm excited to explore other frameworks like Tailwind CSS and think that my startup project would be a great way to work on implementing those frameworks. This assignment helped me to better understand how to use CSS and Bootstrap to enhance the design and user experience of a web application, and I'm looking forward to continuing to build on this knowledge in future projects.
 
+*Website Link: [Simon CSS (wkp23)](https://simon.worldexcursions.click)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
