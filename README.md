@@ -242,7 +242,7 @@ Through this assignment, I learned how to:
 
 I am now more confident in my ability to build basic HTML applications and manage their code using Git and deployment scripts.
 
-*Website Link: [Simon (wkp23)](https://simon.worldexcursions.click/archive/v1)*
+*Website Link: [Simon HTML (wkp23)](https://simon.worldexcursions.click/archive/v1)*
 
 #### Daniel Yu Learned:
 
