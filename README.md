@@ -19,6 +19,8 @@
   - [CSS Flex](#css-flex)
   - [CSS Frameworks](#css-frameworks)
   - [Simon CSS](#simon-css)
+### JavaScript
+- [JS Types, Operators, Conditionals, and Loops](#js-TOCL)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
@@ -26,8 +28,7 @@
  
 - [UX Desgin](#ux-design)
 - [Startup - HTML, CSS](#startup-html-css)
-### JavaScript
-- [JS Types, Operators, Conditionals, and Loops](#js-TOCL)
+
 - [JS Functions](#js-functions)
 - [JS Arrow Functions](#js-arrow-functions)
 - [JS Arrays](#js-arrays)
@@ -295,6 +296,16 @@ Overall, the process of building a simple home page with Bootstrap was an engagi
 By incorporating CSS and Bootstrap into my Simon game, I was able to create a visually appealing and responsive design that improved the overall look and feel of the application, making it more user-friendly. I also gained experience with structuring CSS files, modifying code, and experimenting with changes to see their effects. Although bootstrap has been fun to learn, I'm excited to explore other frameworks like Tailwind CSS and think that my startup project would be a great way to work on implementing those frameworks. This assignment helped me to better understand how to use CSS and Bootstrap to enhance the design and user experience of a web application, and I'm looking forward to continuing to build on this knowledge in future projects.
 
 *Website Link: [Simon CSS (wkp23)](https://simon.worldexcursions.click)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='js-TOCL'></a>
+## JavaScript Types, Operators, Conditionals, and Loops
+#### William Pendleton Learned:
+I found it interesting how the for loop and conditional statement work together to generate a random password of the user's desired length, while also ensuring that the user input is valid. The use of Math.random() and Math.floor() to select a random index from the allowed characters is also a clever technique that simplifies the code for generating random strings.
+
+*Website Link: [Random Password Generator](https://codepen.io/wpendl99/pen/bGxeNPj)*
 
 #### Daniel Yu Learned:
 
