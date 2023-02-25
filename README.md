@@ -24,6 +24,7 @@
 - [JS Types, Operators, Conditionals, and Loops](#js-TOCL)
   - [JS Functions](#js-functions)
   - [JS Arrow Functions](#js-arrow-functions)
+  - [JS Arrays](#js-arrays)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
@@ -343,6 +344,16 @@ I found it interesting how this assignment combines various types of functions i
 Something interesting thing about this assignment is that it demonstrates how the arrow function syntax can be used to create compact and readable code for event listeners. Instead of defining a named function and passing it as a parameter to the addEventListener method, we can define an arrow function inline with the addEventListener method call. This helps to reduce clutter and make the code more concise. Additionally, because arrow functions inherit the this pointer from the surrounding scope, we don't need to use bind or call to maintain the correct value of this inside the function body.
 
 *Website Link: [To-Do List](https://codepen.io/wpendl99/pen/MWqjvGX)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='js-arrays'></a>
+## JavaScript Arrays
+#### William Pendleton Learned:
+One aspect that stood out to me while I was doing this assignment was how when you combine several of the array methods you are able to manipulate JavaScript arrays in many ways, and I used it to create a simple but useful Grocery List application. For example, the tasks array is used to store the list of tasks, while the renderTasks() function uses the forEach() method to iterate over the tasks array and create a new DOM element for each task, with a "Delete" button that uses the splice() method to remove the task from the tasks array. Additionally, the addTask() function uses the push() method to add new tasks to the tasks array, and the input and addBtn elements are used to handle user input and trigger the addTask() function. All in all, this assignment demonstrates how powerful and versatile arrays and object functions can be in building interactive web applications.
+
+*Website Link: [Grocery List 2.0](https://codepen.io/wpendl99/pen/ExegvOJ)*
 
 #### Daniel Yu Learned:
 
