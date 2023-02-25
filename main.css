@@ -1,0 +1,118 @@
+header {
+	display: flex;
+	align-items: center;
+	padding: 10px 20px;
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+	position: sticky;
+	width: 100vw;
+	left: 0;
+	top: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: red;
+	margin: 0;
+	font-family: "Montserrat", sans-serif;
+}
+
+.navbar-left {
+	flex: 1;
+	display: flex;
+	justify-content: left;
+	justify-self: flex-start;
+	align-items: center;
+	margin-right: auto;
+}
+
+.search-icon svg path {
+	fill: black;
+	transition: fill 0.2s;
+	transition-timing-function: ease;
+}
+
+.search-icon:hover svg path {
+	fill: red;
+}
+
+.navbar-middle {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+}
+
+.logo img {
+	width: 200px;
+	height: auto;
+}
+
+.navbar-right {
+	flex: 1;
+	justify-self: flex-end;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: right;
+	margin-left: auto;
+}
+
+.reverse-button {
+	margin-left: 10px;
+	padding: 10px 30px;
+	background-color: white;
+	color: black;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: 400;
+	transition: color 0.2s;
+	transition-timing-function: ease;
+}
+
+.reverse-button:hover {
+	color: red;
+}
+
+.button {
+	margin-left: 10px;
+	padding: 7px 40px;
+	background-color: rgba(256, 0, 0, 1);
+	color: white;
+	border-radius: 10px;
+	text-decoration: none;
+	font-weight: 400;
+	transition: background-color 0.2s;
+	transition-timing-function: ease;
+}
+
+.button:hover {
+	background-color: rgba(256, 0, 0, 0.9);
+}
+
+.button:active {
+	background-color: rgba(200, 0, 0, 1);
+}
+
+main {
+	background-color: white;
+	width: 100vw;
+	margin: 0;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.content {
+	flex: 1;
+}
+
+footer {
+	text-align: center;
+	padding: 10px;
+	background-color: #fff;
+	box-shadow: 0 -2px 4px rgb(0 0 0 / 10%);
+}
+
+footer p {
+	margin: 0;
+}
