@@ -23,6 +23,7 @@
 ### JavaScript
 - [JS Types, Operators, Conditionals, and Loops](#js-TOCL)
   - [JS Functions](#js-functions)
+  - [JS Arrow Functions](#js-arrow-functions)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
@@ -30,7 +31,7 @@
  
 - [Startup - HTML, CSS](#startup-html-css)
 
-- [JS Arrow Functions](#js-arrow-functions)
+
 - [JS Arrays](#js-arrays)
 - [JS Objects and Classes](#js-objects-classes)
 - [JS Regular Expressions](#js-regex)
@@ -332,6 +333,16 @@ I found it interesting how the for loop and conditional statement work together 
 I found it interesting how this assignment combines various types of functions in JavaScript, including standard, inner, and anonymous functions. The use of an inner function to update the count display adds an extra layer of encapsulation, which makes the code more modular and easier to maintain. The anonymous function that adds event listeners to the buttons also demonstrates how JavaScript allows functions to be used as values and passed around as arguments, which is a powerful feature of the language. Overall, this assignment provides a good example of how to use different types of functions to create a responsive and modular web application.
 
 *Website Link: [Counting with JS](https://codepen.io/wpendl99/pen/MWqjvrX)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='js-arrow-functions'></a>
+## JavaScript Arrow Functions
+#### William Pendleton Learned:
+Something interesting thing about this assignment is that it demonstrates how the arrow function syntax can be used to create compact and readable code for event listeners. Instead of defining a named function and passing it as a parameter to the addEventListener method, we can define an arrow function inline with the addEventListener method call. This helps to reduce clutter and make the code more concise. Additionally, because arrow functions inherit the this pointer from the surrounding scope, we don't need to use bind or call to maintain the correct value of this inside the function body.
+
+*Website Link: [To-Do List](https://codepen.io/wpendl99/pen/MWqjvGX)*
 
 #### Daniel Yu Learned:
 
