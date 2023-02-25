@@ -19,17 +19,17 @@
   - [CSS Flex](#css-flex)
   - [CSS Frameworks](#css-frameworks)
   - [Simon CSS](#simon-css)
+- [UX Desgin](#ux-design)
 ### JavaScript
 - [JS Types, Operators, Conditionals, and Loops](#js-TOCL)
+  - [JS Functions](#js-functions)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
   <br>
  
-- [UX Desgin](#ux-design)
 - [Startup - HTML, CSS](#startup-html-css)
 
-- [JS Functions](#js-functions)
 - [JS Arrow Functions](#js-arrow-functions)
 - [JS Arrays](#js-arrays)
 - [JS Objects and Classes](#js-objects-classes)
@@ -300,12 +300,38 @@ By incorporating CSS and Bootstrap into my Simon game, I was able to create a vi
 #### Daniel Yu Learned:
 
 [Back to top](#top)
+<a id='ux-design'></a>
+## UX Design
+#### William Pendleton Learned:
+I designed to do my assignemnt on airbnb's website.
+
+One of the things that people tend to appreciate about Airbnb's UX design is how intuitive and easy it is to use. The homepage has a clear call to action that prompts users to begin searching for accommodations, and the search results page is well-organized and easy to navigate. The use of high-quality photos and a clean, uncluttered design also helps to create a positive user experience.
+
+In addition, Airbnb's UX design is highly effective at providing relevant information to users. For example, the search results page shows important details about each listing, such as price, location, and reviews from previous guests. This makes it easy for users to quickly evaluate whether a particular listing is a good fit for their needs.
+
+Overall, Airbnb's UX design is a great example of how to create a user-friendly and visually appealing web interface that effectively meets the needs of its users.
+
+*Website Link: [airbnb](https://www.airbnb.com)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
 <a id='js-TOCL'></a>
 ## JavaScript Types, Operators, Conditionals, and Loops
 #### William Pendleton Learned:
 I found it interesting how the for loop and conditional statement work together to generate a random password of the user's desired length, while also ensuring that the user input is valid. The use of Math.random() and Math.floor() to select a random index from the allowed characters is also a clever technique that simplifies the code for generating random strings.
 
 *Website Link: [Random Password Generator](https://codepen.io/wpendl99/pen/bGxeNPj)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='js-functions'></a>
+## JavaScript Functions
+#### William Pendleton Learned:
+I found it interesting how this assignment combines various types of functions in JavaScript, including standard, inner, and anonymous functions. The use of an inner function to update the count display adds an extra layer of encapsulation, which makes the code more modular and easier to maintain. The anonymous function that adds event listeners to the buttons also demonstrates how JavaScript allows functions to be used as values and passed around as arguments, which is a powerful feature of the language. Overall, this assignment provides a good example of how to use different types of functions to create a responsive and modular web application.
+
+*Website Link: [Counting with JS](https://codepen.io/wpendl99/pen/MWqjvrX)*
 
 #### Daniel Yu Learned:
 
