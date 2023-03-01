@@ -28,14 +28,14 @@
   - [JS Objects and Classes](#js-objects-classes)
   - [JS Regular Expressions](#js-regex)
   - [JS Rest and Spread](#js-rest-spread)
+  - [JS Destructuring](#js-destructuring)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
   <br>
  
 - [Startup - HTML, CSS](#startup-html-css)
-
-- [JS Destructuring](#js-destructuring)
+  
 - [JS Exceptions](#js-exceptions)
 - [JS Document Object Model (DOM)](#js-dom)
 - [JS Promises](#js-promises)
@@ -377,7 +377,7 @@ One thing I find interesting about regular expressions is their expressiveness a
 
 [Back to top](#top)
 <a id='js-rest-spread'></a>
-## JavaScript Regular Expressions
+## JavaScript Rest and Spread
 #### William Pendleton Learned:
 One thing that I find interesting about rest and spread in JavaScript is how they can simplify code that deals with arrays and objects.
 
@@ -386,6 +386,22 @@ With the spread syntax, we can easily concatenate arrays, clone arrays, and merg
 On the other hand, rest parameters allow us to define functions that can accept an arbitrary number of arguments, which can be useful in situations where we don't know how many arguments will be passed to a function. This can help us write more flexible and reusable code.
 
 *Website Link: [Shopping Cart](https://codepen.io/wpendl99/pen/NWLpaOw)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='js-destructuring'></a>
+## JavaScript Destructuring
+#### William Pendleton Learned:
+One thing that I find interesting about destructuring in JavaScript is how it allows us to easily extract and assign values from arrays and objects.
+
+With array destructuring, we can assign individual values from an array to separate variables in a single line of code. This can help make our code more concise and readable, especially when working with large arrays.
+
+Object destructuring allows us to extract values from objects and assign them to variables with the same name as the object's properties. We can also use object destructuring to extract values from nested objects and rename variables to avoid naming conflicts.
+
+Destructuring can also be used to provide default values for variables in case a value is undefined or null. This can help prevent errors and improve the robustness of our code.
+
+*Website Link: [Array and Object Destructuring Example](https://codepen.io/wpendl99/pen/oNPZoNb)*
 
 #### Daniel Yu Learned:
 
