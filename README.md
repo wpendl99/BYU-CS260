@@ -27,6 +27,7 @@
   - [JS Arrays](#js-arrays)
   - [JS Objects and Classes](#js-objects-classes)
   - [JS Regular Expressions](#js-regex)
+  - [JS Rest and Spread](#js-rest-spread)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
@@ -34,7 +35,6 @@
  
 - [Startup - HTML, CSS](#startup-html-css)
 
-- [JS Rest and Spread](#js-rest-spread)
 - [JS Destructuring](#js-destructuring)
 - [JS Exceptions](#js-exceptions)
 - [JS Document Object Model (DOM)](#js-dom)
@@ -372,6 +372,20 @@ One interesting aspect of this assignment that I implement into my example was t
 One thing I find interesting about regular expressions is their expressiveness and conciseness. With regular expressions, you can define complex patterns for matching and manipulating text with just a few characters. This allows you to perform powerful text processing tasks in a very efficient and compact way. Regular expressions also provide a standardized way to work with text patterns across different programming languages and tools, which makes them a useful tool for data exchange and interoperability. Additionally, regular expressions can be a powerful tool for data validation and input checking, allowing you to enforce specific formatting and input requirements on user input.
 
 *Website Link: [Email Validator](https://codepen.io/wpendl99/pen/MWqpEGX)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='js-rest-spread'></a>
+## JavaScript Regular Expressions
+#### William Pendleton Learned:
+One thing that I find interesting about rest and spread in JavaScript is how they can simplify code that deals with arrays and objects.
+
+With the spread syntax, we can easily concatenate arrays, clone arrays, and merge objects with one-line code. This can help make our code more concise and easier to read.
+
+On the other hand, rest parameters allow us to define functions that can accept an arbitrary number of arguments, which can be useful in situations where we don't know how many arguments will be passed to a function. This can help us write more flexible and reusable code.
+
+*Website Link: [Shopping Cart](https://codepen.io/wpendl99/pen/NWLpaOw)*
 
 #### Daniel Yu Learned:
 
