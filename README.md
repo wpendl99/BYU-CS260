@@ -26,6 +26,7 @@
   - [JS Arrow Functions](#js-arrow-functions)
   - [JS Arrays](#js-arrays)
   - [JS Objects and Classes](#js-objects-classes)
+  - [JS Regular Expressions](#js-regex)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
@@ -33,7 +34,6 @@
  
 - [Startup - HTML, CSS](#startup-html-css)
 
-- [JS Regular Expressions](#js-regex)
 - [JS Rest and Spread](#js-rest-spread)
 - [JS Destructuring](#js-destructuring)
 - [JS Exceptions](#js-exceptions)
@@ -362,6 +362,16 @@ One aspect that stood out to me while I was doing this assignment was how when y
 One interesting aspect of this assignment that I implement into my example was the use of object constructors, and I used it to create Book objects in a CodePen that creates a table of My Favorite Books. Using object constructors allows us to create multiple Book objects with similar properties and methods without having to write repetitive code. This is a useful concept to understand because it helps to simplify our code and make it more efficient. Additionally, it allows us to work with complex data structures that can be easily updated and maintained.
 
 *Website Link: [My Favorite Books](https://codepen.io/wpendl99/pen/dyqpzBG)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='js-regex'></a>
+## JavaScript Regular Expressions
+#### William Pendleton Learned:
+One thing I find interesting about regular expressions is their expressiveness and conciseness. With regular expressions, you can define complex patterns for matching and manipulating text with just a few characters. This allows you to perform powerful text processing tasks in a very efficient and compact way. Regular expressions also provide a standardized way to work with text patterns across different programming languages and tools, which makes them a useful tool for data exchange and interoperability. Additionally, regular expressions can be a powerful tool for data validation and input checking, allowing you to enforce specific formatting and input requirements on user input.
+
+*Website Link: [Email Validator](https://codepen.io/wpendl99/pen/MWqpEGX)*
 
 #### Daniel Yu Learned:
 
