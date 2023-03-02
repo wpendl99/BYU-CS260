@@ -149,7 +149,7 @@ footer p {
 	margin-bottom: 30px;
 }
 
-.index-content-row {
+.gallery-content-row {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
