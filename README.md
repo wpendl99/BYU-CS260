@@ -29,6 +29,7 @@
   - [JS Regular Expressions](#js-regex)
   - [JS Rest and Spread](#js-rest-spread)
   - [JS Destructuring](#js-destructuring)
+  - [JS Exceptions](#js-exceptions)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
@@ -36,7 +37,6 @@
  
 - [Startup - HTML, CSS](#startup-html-css)
   
-- [JS Exceptions](#js-exceptions)
 - [JS Document Object Model (DOM)](#js-dom)
 - [JS Promises](#js-promises)
 - [JS Async/Await](#js-async-await)
@@ -402,6 +402,16 @@ Object destructuring allows us to extract values from objects and assign them to
 Destructuring can also be used to provide default values for variables in case a value is undefined or null. This can help prevent errors and improve the robustness of our code.
 
 *Website Link: [Array and Object Destructuring Example](https://codepen.io/wpendl99/pen/oNPZoNb)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='js-exceptions'></a>
+## JavaScript Exceptions
+#### William Pendleton Learned:
+One thing that I found interesting about this assignment is the way that exception handling can be used to make web applications more robust and user-friendly. By using try-catch blocks to handle errors, we can catch exceptions that might otherwise crash the application or confuse the user, and display helpful error messages instead. This can improve the user experience and make the application more resilient to unexpected inputs or server errors.
+
+*Website Link: [Exception Handling Example](https://codepen.io/wpendl99/pen/OJopvRz)*
 
 #### Daniel Yu Learned:
 
