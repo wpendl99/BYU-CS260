@@ -30,6 +30,7 @@
   - [JS Rest and Spread](#js-rest-spread)
   - [JS Destructuring](#js-destructuring)
   - [JS Exceptions](#js-exceptions)
+  - [JS Document Object Model (DOM)](#js-dom)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
@@ -37,7 +38,6 @@
  
 - [Startup - HTML, CSS](#startup-html-css)
   
-- [JS Document Object Model (DOM)](#js-dom)
 - [JS Promises](#js-promises)
 - [JS Async/Await](#js-async-await)
 - [Simon JavaScript](#simon-js)
@@ -412,6 +412,16 @@ Destructuring can also be used to provide default values for variables in case a
 One thing that I found interesting about this assignment is the way that exception handling can be used to make web applications more robust and user-friendly. By using try-catch blocks to handle errors, we can catch exceptions that might otherwise crash the application or confuse the user, and display helpful error messages instead. This can improve the user experience and make the application more resilient to unexpected inputs or server errors.
 
 *Website Link: [Exception Handling Example](https://codepen.io/wpendl99/pen/OJopvRz)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='js-dom'></a>
+## JavaScript DOM
+#### William Pendleton Learned:
+One thing I found interesting about this assignment is how it combines multiple concepts in web development, including DOM manipulation, event handling, and color manipulation. By using JavaScript to manipulate the DOM, we can dynamically update the content and appearance of a web page in response to user interactions. And by using color manipulation algorithms to determine whether a color is light or dark, we can make further decisions about how to style the page elements. Overall, this assignment showcases the versatility and power of web development technologies, and how they can be combined in creative and engaging ways to create dynamic and interactive web pages.
+
+*Website Link: [Hello Color!](https://codepen.io/wpendl99/pen/wvEJmyx)*
 
 #### Daniel Yu Learned:
 
