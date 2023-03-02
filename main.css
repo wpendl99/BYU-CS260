@@ -148,3 +148,12 @@ footer p {
 	line-height: 1.25;
 	margin-bottom: 30px;
 }
+
+.index-content-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.card > img {
+	max-width: 100%;
+}
