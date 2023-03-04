@@ -32,14 +32,14 @@
   - [JS Exceptions](#js-exceptions)
   - [JS Document Object Model (DOM)](#js-dom)
   - [JS Promises](#js-promises)
+  - [JS Async/Await](#js-async-await)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
   <br>
  
 - [Startup - HTML, CSS](#startup-html-css)
-  
-- [JS Async/Await](#js-async-await)
+ 
 - [Simon JavaScript](#simon-js)
 - [Startup - JavaScript](#startup-js)
 </details>
@@ -432,6 +432,16 @@ One thing I found interesting about this assignment is how it combines multiple 
 One thing that I found interesting about this assignment is how Promises can be used to simplify asynchronous programming in JavaScript. Promises provide a cleaner and more elegant way to handle asynchronous tasks by allowing developers to chain together operations using the then and catch methods, which makes the code more readable and easier to reason about. Overall, Promises are a powerful tool that can greatly improve the quality and maintainability of asynchronous code in JavaScript.
 
 *Website Link: [Promise Example](https://codepen.io/wpendl99/pen/qBMmevx)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='js-async-await'></a>
+## JavaScript async/await
+#### William Pendleton Learned:
+One thing that I found interesting about this assignment is how async and await can simplify the process of writing asynchronous code in JavaScript. With async and await, developers can write code that looks synchronous, but still executes asynchronously under the hood. This makes it easier to reason about the code, and can help to prevent some of the common pitfalls of asynchronous programming.
+
+*Website Link: [Async/Await Example](https://codepen.io/wpendl99/pen/rNZwBxz)*
 
 #### Daniel Yu Learned:
 
