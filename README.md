@@ -31,6 +31,7 @@
   - [JS Destructuring](#js-destructuring)
   - [JS Exceptions](#js-exceptions)
   - [JS Document Object Model (DOM)](#js-dom)
+  - [JS Promises](#js-promises)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
@@ -38,7 +39,6 @@
  
 - [Startup - HTML, CSS](#startup-html-css)
   
-- [JS Promises](#js-promises)
 - [JS Async/Await](#js-async-await)
 - [Simon JavaScript](#simon-js)
 - [Startup - JavaScript](#startup-js)
@@ -422,6 +422,16 @@ One thing that I found interesting about this assignment is the way that excepti
 One thing I found interesting about this assignment is how it combines multiple concepts in web development, including DOM manipulation, event handling, and color manipulation. By using JavaScript to manipulate the DOM, we can dynamically update the content and appearance of a web page in response to user interactions. And by using color manipulation algorithms to determine whether a color is light or dark, we can make further decisions about how to style the page elements. Overall, this assignment showcases the versatility and power of web development technologies, and how they can be combined in creative and engaging ways to create dynamic and interactive web pages.
 
 *Website Link: [Hello Color!](https://codepen.io/wpendl99/pen/wvEJmyx)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='js-promises'></a>
+## JavaScript Promises
+#### William Pendleton Learned:
+One thing that I found interesting about this assignment is how Promises can be used to simplify asynchronous programming in JavaScript. Promises provide a cleaner and more elegant way to handle asynchronous tasks by allowing developers to chain together operations using the then and catch methods, which makes the code more readable and easier to reason about. Overall, Promises are a powerful tool that can greatly improve the quality and maintainability of asynchronous code in JavaScript.
+
+*Website Link: [Promise Example](https://codepen.io/wpendl99/pen/qBMmevx)*
 
 #### Daniel Yu Learned:
 
