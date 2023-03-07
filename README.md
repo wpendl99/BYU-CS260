@@ -33,6 +33,7 @@
   - [JS Document Object Model (DOM)](#js-dom)
   - [JS Promises](#js-promises)
   - [JS Async/Await](#js-async-await)
+  - [Simon JavaScript](#simon-js)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
@@ -40,7 +41,7 @@
  
 - [Startup - HTML, CSS](#startup-html-css)
  
-- [Simon JavaScript](#simon-js)
+
 - [Startup - JavaScript](#startup-js)
 </details>
 
@@ -295,7 +296,7 @@ Overall, the process of building a simple home page with Bootstrap was an engagi
 #### William Pendleton Learned:
 By incorporating CSS and Bootstrap into my Simon game, I was able to create a visually appealing and responsive design that improved the overall look and feel of the application, making it more user-friendly. I also gained experience with structuring CSS files, modifying code, and experimenting with changes to see their effects. Although bootstrap has been fun to learn, I'm excited to explore other frameworks like Tailwind CSS and think that my startup project would be a great way to work on implementing those frameworks. This assignment helped me to better understand how to use CSS and Bootstrap to enhance the design and user experience of a web application, and I'm looking forward to continuing to build on this knowledge in future projects.
 
-*Website Link: [Simon CSS (wkp23)](https://simon.worldexcursions.click)*
+*Website Link: [Simon CSS (wkp23)](https://simon.worldexcursions.click/archive/v2)*
 
 #### Daniel Yu Learned:
 
@@ -442,6 +443,18 @@ One thing that I found interesting about this assignment is how Promises can be 
 One thing that I found interesting about this assignment is how async and await can simplify the process of writing asynchronous code in JavaScript. With async and await, developers can write code that looks synchronous, but still executes asynchronously under the hood. This makes it easier to reason about the code, and can help to prevent some of the common pitfalls of asynchronous programming.
 
 *Website Link: [Async/Await Example](https://codepen.io/wpendl99/pen/rNZwBxz)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='simon-js'></a>
+## Simon JavaScript
+#### William Pendleton Learned:
+I just finished an assignment for my Simon can web app that added three new JavaScript files, and I have to say, it was a really cool experience. One of the files helped me implement a player login system that stores usernames in local storage, which was super helpful for keeping track of who's playing. The second file was the heart of the game itself, with button and game classes that controlled the gameplay and made everything work smoothly. Finally, the third file was responsible for reading local storage scores and displaying them on a table, which was a really neat way to keep track of progress and encourage players to keep trying to beat their high scores.
+
+Overall, I really enjoyed working on this assignment and seeing how all the different pieces of JavaScript fit together to create a functional game. I learned a lot about how to structure my code and how to make use of local storage to store and retrieve important data. I also appreciated how the professor broke down the different aspects of the game into separate files, which made it much easier to understand and work with. All in all, I feel like I came away from this assignment with a much better understanding of JavaScript and how to use it to build cool things like this Simon can game.
+
+*Website Link: [Simon JS (wkp23)](https://simon.worldexcursions.click)*
 
 #### Daniel Yu Learned:
 
