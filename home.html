@@ -10,7 +10,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap"
 		rel="stylesheet"
 	/>
 	<script
@@ -24,13 +24,198 @@
 			$("#footer").load("footer.html");
 		});
 	</script>
-	<link rel="stylesheet" href="main.css" />
+	<script
+		src="https://kit.fontawesome.com/ff836cfd3f.js"
+		crossorigin="anonymous"
+	></script>
+	<link rel="stylesheet" href="./main.css" />
 	<body>
 		<main>
 			<div id="header"></div>
 			<section class="content">
 				<!-- Put Content code in here -->
-				<div class="home-content"></div>
+				<div class="home-content">
+					<section class="your-excursions excursions-section">
+						<h1 class="excursions-sections-title">Your Excursions</h1>
+						<ul class="excursions-list">
+							<li class="excursions-card">
+								<img
+									src="./images/destinations/sydney.jpeg"
+									alt="Syndey Sights"
+								/>
+								<div class="excursions-card-gradient"></div>
+								<div class="card-icons">
+									<span class="heart-icon"><i class="fas fa-heart"></i></span>
+									<span class="vr-icon"
+										><i class="fa fa-vr-cardboard"></i
+									></span>
+								</div>
+								<div class="excursions-card-text">
+									<h3>Syndey Sightseeing</h3>
+									<p class="excursions-card-subtitle">8 stops</p>
+								</div>
+							</li>
+							<li class="excursions-card">
+								<img
+									src="./images/destinations/London.jpg"
+									alt="London Landmarks"
+								/>
+								<div class="excursions-card-gradient"></div>
+								<div class="card-icons">
+									<span class="heart-icon"><i class="fas fa-heart"></i></span>
+									<span class="vr-icon"
+										><i class="fa fa-vr-cardboard"></i
+									></span>
+								</div>
+								<div class="excursions-card-text">
+									<h3>London Landmarks</h3>
+									<p class="excursions-card-subtitle">6 stops</p>
+								</div>
+							</li>
+							<li class="excursions-card">
+								<img src="./images/destinations/rome.jpeg" alt="Rome Routes" />
+								<div class="excursions-card-gradient"></div>
+								<div class="card-icons">
+									<span class="heart-icon"><i class="fas fa-heart"></i></span>
+									<span class="vr-icon"
+										><i class="fa fa-vr-cardboard"></i
+									></span>
+								</div>
+								<div class="excursions-card-text">
+									<h3>Rome Routes</h3>
+									<p class="excursions-card-subtitle">13 stops</p>
+								</div>
+							</li>
+						</ul>
+					</section>
+					<section class="other-excursions excursions-section">
+						<h1 class="excursions-sections-title">Other Excursions</h1>
+						<ul class="excursions-list">
+							<li class="excursions-card">
+								<img
+									src="./images/destinations/delhi.jpeg"
+									alt="Destinations in Delhi"
+								/>
+								<div class="excursions-card-gradient"></div>
+								<div class="card-icons">
+									<span class="heart-icon"><i class="fas fa-heart"></i></span>
+									<span class="vr-icon hidden"
+										><i class="fa fa-vr-cardboard"></i
+									></span>
+								</div>
+								<div class="excursions-card-text">
+									<h3>Destinations in Delhi</h3>
+									<p class="excursions-card-subtitle">4 stops</p>
+								</div>
+							</li>
+							<li class="excursions-card">
+								<img src="./images/destinations/tokyo.jpeg" alt="Tokyo Tour" />
+								<div class="excursions-card-gradient"></div>
+								<div class="card-icons">
+									<span class="heart-icon hidden"
+										><i class="fas fa-heart"></i
+									></span>
+									<span class="vr-icon hidden"
+										><i class="fa fa-vr-cardboard"></i
+									></span>
+								</div>
+								<div class="excursions-card-text">
+									<h3>Tokyo Tour</h3>
+									<p class="excursions-card-subtitle">5 stops</p>
+								</div>
+							</li>
+							<li class="excursions-card">
+								<img
+									src="./images/destinations/barcelona.jpeg"
+									alt="Barcelona Bridges"
+								/>
+								<div class="excursions-card-gradient"></div>
+								<div class="card-icons">
+									<span class="heart-icon hidden"
+										><i class="fas fa-heart"></i
+									></span>
+									<span class="vr-icon"
+										><i class="fa fa-vr-cardboard"></i
+									></span>
+								</div>
+								<div class="excursions-card-text">
+									<h3>Bold Barcelona</h3>
+									<p class="excursions-card-subtitle">9 stops</p>
+								</div>
+							</li>
+							<li class="excursions-card">
+								<img
+									src="./images/destinations/portugal.jpg"
+									alt="Portugal's Pathways"
+								/>
+								<div class="excursions-card-gradient"></div>
+								<div class="card-icons">
+									<span class="heart-icon"><i class="fas fa-heart"></i></span>
+									<span class="vr-icon"
+										><i class="fa fa-vr-cardboard"></i
+									></span>
+								</div>
+								<div class="excursions-card-text">
+									<h3>Partugal's Pathways</h3>
+									<p class="excursions-card-subtitle">3 stops</p>
+								</div>
+							</li>
+							<li class="excursions-card">
+								<img
+									src="./images/destinations/rio_de_janeiro.jpeg"
+									alt="Rio Ride"
+								/>
+								<div class="excursions-card-gradient"></div>
+								<div class="card-icons">
+									<span class="heart-icon hidden"
+										><i class="fas fa-heart"></i
+									></span>
+									<span class="vr-icon hidden"
+										><i class="fa fa-vr-cardboard"></i
+									></span>
+								</div>
+								<div class="excursions-card-text">
+									<h3>Rio Ride</h3>
+									<p class="excursions-card-subtitle">7 stops</p>
+								</div>
+							</li>
+							<li class="excursions-card">
+								<img
+									src="./images/destinations/san_fran.jpeg"
+									alt="Sunny San Francisco"
+								/>
+								<div class="excursions-card-gradient"></div>
+								<div class="card-icons">
+									<span class="heart-icon"><i class="fas fa-heart"></i></span>
+									<span class="vr-icon"
+										><i class="fa fa-vr-cardboard"></i
+									></span>
+								</div>
+								<div class="excursions-card-text">
+									<h3>Sunny San Francisco</h3>
+									<p class="excursions-card-subtitle">5 stops</p>
+								</div>
+							</li>
+							<li class="excursions-card">
+								<img
+									src="./images/destinations/berlin.jpeg"
+									alt="Berlin's Boroughs"
+								/>
+								<div class="excursions-card-gradient"></div>
+								<div class="card-icons">
+									<span class="heart-icon"><i class="fas fa-heart"></i></span>
+									<span class="vr-icon"
+										><i class="fa fa-vr-cardboard"></i
+									></span>
+								</div>
+								<div class="excursions-card-text">
+									<h3>Berlin's Boroughso</h3>
+									<p class="excursions-card-subtitle">4 stops</p>
+								</div>
+							</li>
+						</ul>
+					</section>
+				</div>
 				<!-- Don't put code below here -->
 			</section>
 			<div id="footer"></div>

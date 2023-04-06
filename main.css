@@ -49,6 +49,11 @@ body {
 	height: auto;
 }
 
+.logo-xl img {
+	width: 400px;
+	height: auto;
+}
+
 .navbar-right {
 	flex: 1;
 	justify-self: flex-end;
@@ -107,12 +112,16 @@ main {
 .content {
 	flex: 1;
 	background-color: #f2f2f2;
+	display: flex;
+	flex-direction: column;
 }
 
 .inline-link {
+	color: black;
 	font-weight: 500;
 	transition: color 0.2s;
 	transition-timing-function: ease;
+	text-decoration: none;
 }
 
 .inline-link:hover {
@@ -137,11 +146,10 @@ footer p {
 }
 
 .index-content {
+	flex: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding-top: 60px;
-	height: 80vh;
 }
 
 .index-content-top p {
@@ -149,6 +157,7 @@ footer p {
 	margin-bottom: 30px;
 }
 
+<<<<<<< Updated upstream
 .gallery-content-row {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -156,4 +165,273 @@ footer p {
 
 .card > img {
 	max-width: 100%;
+=======
+.index-content-top {
+	margin-top: 30px;
+}
+
+.index-content-bottom {
+	margin-bottom: 30px;
+}
+
+.login-content {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.signup-content {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.user-card {
+	margin: auto auto;
+	background-color: #fff;
+	padding: 40px;
+	border-radius: 10px;
+}
+
+.user-card h1 {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.user-card p {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.user-card form {
+	display: flex;
+	flex-direction: column;
+	margin: 20px 0;
+}
+
+.user-card form div {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.input-fields label {
+	font-family: "Montserrat", sans-serif;
+	text-align: left;
+	font-weight: 300;
+	font-size: 18px;
+	margin-bottom: 5px;
+	color: gray;
+}
+
+.input-fields:focus-within label {
+	color: red;
+}
+
+.input-fields input {
+	font-family: "Montserrat", sans-serif;
+	text-align: left;
+	font-weight: 400;
+	font-size: 22px;
+	margin-bottom: 20px;
+	border: none;
+	border-bottom: 1px solid gray;
+	padding-bottom: 5px;
+}
+
+.input-fields input:focus {
+	outline: none;
+	border: none;
+	border-bottom: 1px solid red;
+}
+
+.submit-button {
+	font-family: "Montserrat", sans-serif;
+	padding: 7px 60px;
+	background-color: rgba(256, 0, 0, 1);
+	color: white;
+	border: none;
+	width: fit-content;
+	margin: auto;
+	margin-top: 20px;
+	border-radius: 10px;
+	text-decoration: none;
+	font-weight: 400;
+	font-size: 18px;
+	transition: background-color 0.2s;
+	transition-timing-function: ease;
+}
+
+.submit-button:hover {
+	background-color: rgba(256, 0, 0, 0.9);
+	cursor: pointer;
+}
+
+.submit-button:focus {
+	outline: none;
+	background-color: rgba(230, 0, 0, 1);
+}
+
+.submit-button:active {
+	background-color: rgba(200, 0, 0, 1);
+}
+
+.user-card p {
+	margin-bottom: 0;
+}
+
+.inline-red-link {
+	color: rgba(256, 0, 0, 1);
+	text-decoration: none;
+}
+
+.inline-red-link:focus {
+	color: rgba(230, 0, 0, 1);
+}
+
+.inline-red-link:active {
+	color: rgba(200, 0, 0, 1);
+}
+
+.excursions-section {
+	box-sizing: border-box;
+	width: 100vw;
+	max-width: 1420px;
+	margin: auto;
+	padding: 0px 20px;
+}
+
+.excursions-sections-title {
+	font-size: 28px;
+	margin: 20px 0px;
+}
+
+.excursions-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(260px, max-content));
+	gap: 20px;
+	list-style: none;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	padding: 0;
+}
+
+.excursions-card {
+	width: 100%;
+	height: 462px;
+	overflow: hidden;
+	position: relative;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+		rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.excursions-card img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	transition: transform 0.2s, filter 0.2s ease, -webkit-filter 0.2s ease;
+}
+
+.excursions-card-gradient {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0),
+		rgba(59, 59, 59, 0.73)
+	);
+	width: 100%;
+	height: 40%;
+	transition: height 0.2s ease, opacity 0.2s ease;
+	opacity: 1;
+}
+
+.excursions-card-gradient::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	/* background-image: linear-gradient(
+		to bottom,
+		rgba(255, 30, 30, 0.45),
+		rgba(252, 30, 30, 0.5)
+	); */
+	width: 100%;
+	height: 100%;
+	transition: opacity 0.2s ease;
+	opacity: 0;
+}
+
+.excursions-card:hover {
+	box-shadow: rgb(255, 83, 83) 0px 6px 24px 0px,
+		rgb(255, 83, 83) 0px 0px 0px 3px;
+	cursor: pointer;
+}
+
+.excursions-card:hover img {
+	transform: scale(1.2);
+	filter: blur(4px);
+	-webkit-filter: blur(4px);
+}
+
+.excursions-card:hover .excursions-card-gradient::after {
+	opacity: 1;
+}
+
+.excursions-card:hover .excursions-card-text {
+	width: 85%;
+}
+
+.excursions-card:hover .excursions-card-text h3 {
+	font-size: 20px;
+}
+
+.excursions-card-text {
+	position: absolute;
+	color: white;
+	bottom: 30px;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	width: 80%;
+	transition: width 0.2s ease;
+}
+
+.excursions-card-text h3 {
+	transition: font-size 0.2s ease, color 0.1s ease;
+}
+
+.heart-icon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(-50%, 25%);
+	font-size: 2.5em;
+	transition: font-size 0.2s ease;
+	-webkit-text-fill-color: red;
+	-webkit-text-stroke-width: 3px;
+	-webkit-text-stroke-color: black;
+}
+
+.vr-icon {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: translate(40%, -20%);
+	font-size: 2.5em;
+	transition: font-size 0.2s ease;
+	-webkit-text-fill-color: white;
+}
+
+.heart-icon:hover {
+	font-size: 2.75em;
+}
+
+.hidden {
+	opacity: 0;
+>>>>>>> Stashed changes
 }

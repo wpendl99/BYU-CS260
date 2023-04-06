@@ -1,0 +1,63 @@
+<!-- This page includes the HTML for login and sign-up, but only sign-up  will appear without JS -->
+<!-- This is the main landing screen when there is no user logged in -->
+<!DOCTYPE html>
+<html>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="no-store" />
+	<link rel="icon" href="favicon.ico" />
+	<title>Excursions</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
+		rel="stylesheet"
+	/>
+	<script
+		src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		crossorigin="anonymous"
+	></script>
+	<script>
+		$(function () {
+			$("#footer").load("footer.html");
+		});
+	</script>
+	<link rel="stylesheet" href="./main.css" />
+	<body>
+		<main>
+			<section class="content">
+				<!-- Put Content code in here -->
+				<div class="login-content">
+					<div class="user-card">
+						<a href="./index.html" class="logo-xl"
+							><img src="./images/Excursions.jpg" alt="Excursions"
+						/></a>
+						<h1>Welcome!</h1>
+						<p>Sign in to your account</p>
+						<form action="/login" method="post">
+							<div class="input-fields">
+								<label for="username">Username</label>
+								<input type="text" id="username" name="username" required />
+							</div>
+
+							<div class="input-fields">
+								<label for="password">Password</label>
+								<input type="password" id="password" name="password" required />
+							</div>
+
+							<input type="submit" value="Login" class="submit-button" />
+						</form>
+						<p>
+							Don't have an account?
+							<a href="./signup.html" class="inline-red-link">Sign up</a>
+						</p>
+					</div>
+					<div id="footer"></div>
+				</div>
+				<!-- Don't put code below here -->
+			</section>
+		</main>
+	</body>
+</html>
