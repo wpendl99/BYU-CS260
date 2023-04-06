@@ -19,6 +19,7 @@
   - [CSS Flex](#css-flex)
   - [CSS Frameworks](#css-frameworks)
   - [Simon CSS](#simon-css)
+  - [Startup HTML & CSS](#startup-html-css)
 - [UX Desgin](#ux-design)
 ### JavaScript
 - [JS Types, Operators, Conditionals, and Loops](#js-TOCL)
@@ -38,8 +39,6 @@
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
   <br>
- 
-- [Startup - HTML, CSS](#startup-html-css)
  
 
 - [Startup - JavaScript](#startup-js)
@@ -297,6 +296,16 @@ Overall, the process of building a simple home page with Bootstrap was an engagi
 By incorporating CSS and Bootstrap into my Simon game, I was able to create a visually appealing and responsive design that improved the overall look and feel of the application, making it more user-friendly. I also gained experience with structuring CSS files, modifying code, and experimenting with changes to see their effects. Although bootstrap has been fun to learn, I'm excited to explore other frameworks like Tailwind CSS and think that my startup project would be a great way to work on implementing those frameworks. This assignment helped me to better understand how to use CSS and Bootstrap to enhance the design and user experience of a web application, and I'm looking forward to continuing to build on this knowledge in future projects.
 
 *Website Link: [Simon CSS (wkp23)](https://simon.worldexcursions.click/archive/v2)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='startup-html-css'></a>
+## Startup HTML & CSS
+#### William Pendleton Learned:
+One interesting thing about HTML is its versatility and ability to create dynamic and interactive web pages. Through the use of different HTML elements and attributes, we can structure the content of a web page and create a variety of different styles and layouts. Additionally, HTML provides a foundation for other web development technologies such as CSS and JavaScript, allowing for even more creativity and functionality.
+
+*Website Link: [WorldExcursions.click](https://start.worldexcursions.click/)*
 
 #### Daniel Yu Learned:
 
