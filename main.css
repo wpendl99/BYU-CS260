@@ -19,6 +19,43 @@ body {
 	font-weight: 300;
 }
 
+.error {
+	color: red;
+}
+
+.hidden {
+	display: none;
+}
+
+.hidden > * {
+	display: none;
+}
+
+.shake {
+	animation: shake 0.2s ease-in-out 0s 1;
+}
+
+@keyframes shake {
+	0% {
+		transform: translateX(0);
+	}
+	20% {
+		transform: translateX(-10px);
+	}
+	40% {
+		transform: translateX(10px);
+	}
+	60% {
+		transform: translateX(-10px);
+	}
+	80% {
+		transform: translateX(10px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
 .navbar-left {
 	flex: 1;
 	display: flex;
@@ -49,6 +86,11 @@ body {
 	height: auto;
 }
 
+.logo-l img {
+	width: 300px;
+	height: auto;
+}
+
 .logo-xl img {
 	width: 400px;
 	height: auto;
@@ -74,6 +116,7 @@ body {
 	font-weight: 400;
 	transition: color 0.2s;
 	transition-timing-function: ease;
+	cursor: pointer;
 }
 
 .reverse-button:hover {
@@ -90,6 +133,7 @@ body {
 	font-weight: 400;
 	transition: background-color 0.2s;
 	transition-timing-function: ease;
+	cursor: pointer;
 }
 
 .button:hover {
@@ -98,6 +142,46 @@ body {
 
 .button:active {
 	background-color: rgba(200, 0, 0, 1);
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	text-align: right;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+}
+
+.caret {
+	margin-left: 5px;
+	margin-right: 10px;
+}
+
+.dropdown-content {
+	position: absolute;
+	right: 5px;
+	top: 25px;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+		rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+	padding: 12px 16px;
+	z-index: 1;
+}
+
+.dropdown-item:hover {
+	color: red;
+}
+
+.dropdown:hover {
+	cursor: pointer;
+}
+
+.unselectable {
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
 }
 
 main {
@@ -256,6 +340,11 @@ footer p {
 	transition-timing-function: ease;
 }
 
+.submit-button:disabled {
+	opacity: 0.5; /* decrease opacity to indicate the button is disabled */
+	cursor: not-allowed; /* change cursor to not-allowed to indicate the button is disabled */
+}
+
 .submit-button:hover {
 	background-color: rgba(256, 0, 0, 0.9);
 	cursor: pointer;
@@ -285,6 +374,22 @@ footer p {
 
 .inline-red-link:active {
 	color: rgba(200, 0, 0, 1);
+}
+
+.image-header {
+	box-sizing: border-box;
+	width: 100vw;
+	background-color: #fff;
+	padding: 10px 20px;
+	box-shadow: 0 -2px 4px rgb(0 0 0 / 10%);
+}
+
+.signout-content {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .excursions-section {
@@ -420,8 +525,4 @@ footer p {
 
 .heart-icon:hover {
 	font-size: 2.75em;
-}
-
-.hidden {
-	opacity: 0;
 }

@@ -36,18 +36,37 @@
 						/></a>
 						<h1>Welcome!</h1>
 						<p>Sign in to your account</p>
-						<form action="/login" method="post">
+						<form action="" method="POST" id="signin-form">
 							<div class="input-fields">
-								<label for="username">Username</label>
-								<input type="text" id="username" name="username" required />
+								<label for="username" id="username-label">Username</label>
+								<input
+									type="text"
+									id="username"
+									name="username"
+									required
+									autocomplete="email"
+								/>
 							</div>
 
 							<div class="input-fields">
-								<label for="password">Password</label>
-								<input type="password" id="password" name="password" required />
+								<label for="password" id="password-label">Password</label>
+								<input
+									type="password"
+									id="password"
+									name="password"
+									required
+									autocomplete="current-password"
+								/>
 							</div>
-
-							<input type="submit" value="Login" class="submit-button" />
+							<p class="error hidden" id="error-label">
+								Error, please try again.
+							</p>
+							<input
+								type="submit"
+								value="Login"
+								class="submit-button"
+								id="submit-button"
+							/>
 						</form>
 						<p>
 							Don't have an account?
@@ -60,4 +79,5 @@
 			</section>
 		</main>
 	</body>
+	<script src="./signin.js"></script>
 </html>
