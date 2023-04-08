@@ -1,0 +1,75 @@
+{
+	"excursions": [
+		{
+			"title": "Sydney Sightseeing",
+			"creator": "wkp23@byu.edu",
+			"coverPhoto": "./images/destinations/sydney.jpeg",
+			"stops": [],
+			"vrReady": true
+		},
+		{
+			"title": "London Landmarks",
+			"creator": "wkp23@byu.edu",
+			"coverPhoto": "./images/destinations/London.jpg",
+			"stops": [],
+			"vrReady": false
+		},
+		{
+			"title": "Rome Routes",
+			"creator": "wkp23@byu.edu",
+			"coverPhoto": "./images/destinations/rome.jpeg",
+			"stops": [],
+			"vrReady": true
+		},
+		{
+			"title": "Destinations in Delhi",
+			"creator": "Excursions",
+			"coverPhoto": "./images/destinations/delhi.jpeg",
+			"stops": [],
+			"vrReady": false
+		},
+		{
+			"title": "Tokyo Tour",
+			"creator": "Excursions",
+			"coverPhoto": "./images/destinations/tokyo.jpeg",
+			"stops": [],
+			"vrReady": true
+		},
+		{
+			"title": "Bold Barcelona",
+			"creator": "Excursions",
+			"coverPhoto": "./images/destinations/barcelona.jpeg",
+			"stops": [],
+			"vrReady": false
+		},
+		{
+			"title": "Portugal's Pathways",
+			"creator": "Excursions",
+			"coverPhoto": "./images/destinations/portugal.jpeg",
+			"stops": [],
+			"vrReady": true
+		},
+		{
+			"title": "Rio Ride",
+			"creator": "Excursions",
+			"coverPhoto": "./images/destinations/rio_de_janeiro.jpeg",
+			"stops": [],
+			"vrReady": false
+		},
+		{
+			"title": "Sunny San Francisco",
+			"creator": "Excursions",
+			"coverPhoto": "./images/destinations/san_fran.jpeg",
+			"stops": [],
+			"vrReady": true
+		},
+		{
+			"title": "Berlin's Boroughs",
+			"creator": "Excursions",
+			"coverPhoto": "./images/destinations/berlin.jpeg",
+			"stops": [],
+			"vrReady": false
+		}
+	],
+	"likedExcursions": {}
+}

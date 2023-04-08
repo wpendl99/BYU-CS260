@@ -405,6 +405,10 @@ footer p {
 	margin: 20px 0px;
 }
 
+.excursions-message {
+	color: gray;
+}
+
 .excursions-list {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(260px, max-content));

@@ -110,7 +110,7 @@ signupForm.addEventListener("submit", function (event) {
 		submitButton.classList.add("shake");
 		submitButton.setAttribute("disabled", true);
 		return;
-	} else if (userData && userData.find((user) => user.username === username)) {
+	} else if (userData && emailField.value in userData) {
 		// Show error
 		errorEmailTakenLabel.classList.remove("hidden");
 		// Shake Button
