@@ -5,9 +5,11 @@ import {
   TextureLoader,
   RepeatWrapping,
   DoubleSide,
+  Texture,
 } from "three";
+import { getPanoramaImageAsBase64 } from "../../streetview.js";
 
-let texture = new TextureLoader().load("images/tower_default.png");
+let texture;
 let _coordinate_list;
 let _location_list;
 let _desc_list;
@@ -64,9 +66,22 @@ class PanoramaLoader {
 
   async loadPanorama() {
     return new Promise((resolve, reject) => {
+      texture = new Texture();
+
+      let image = new Image();
+      image.onload = function () {
+        texture.image = image;
+        texture.needsUpdate = true;
+      };
+
+      image.src = getPanoramaImageAsBase64(
+        _coordinate_list[_pos].x,
+        _coordinate_list[_pos].y,
+        3
+      );
+
       //TODO: call to server and get new image
       //TODO: set texture to image
-      console.log(_coordinate_list[_pos]);
       console.log(_location_list[_pos]);
       resolve({
         panorama_new: this.setPanorama(),
