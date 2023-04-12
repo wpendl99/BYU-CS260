@@ -10,13 +10,15 @@ import {
 let texture = new TextureLoader().load("images/tower_default.png");
 let _coordinate_list;
 let _location_list;
+let _desc_list;
 let _pos;
 
 class PanoramaLoader {
-  constructor(coordinate_list, location_list) {
+  constructor(coordinate_list, location_list, desc_list) {
     _location_list = location_list;
     _pos = 0;
     _coordinate_list = coordinate_list;
+    _desc_list = desc_list;
     console.log(_pos);
   }
 
@@ -50,8 +52,8 @@ class PanoramaLoader {
       console.log(_pos);
 
       this.loadPanorama().then(
-        ({ panorama_new, locationName }) => {
-          resolve({ panorama_new, locationName });
+        ({ panorama_new, locationName, description }) => {
+          resolve({ panorama_new, locationName, description });
         },
         (error) => {
           reject(error);
@@ -69,6 +71,7 @@ class PanoramaLoader {
       resolve({
         panorama_new: this.setPanorama(),
         locationName: _location_list[_pos],
+        description: _desc_list[_pos],
       });
     });
   }
