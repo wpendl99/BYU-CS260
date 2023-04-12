@@ -13,6 +13,7 @@ import { controller1, controller2, controllerGrip1, controllerGrip2, hand1, hand
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import ThreeMeshUI from 'three-mesh-ui';
 import { onSelectStart1, onSelectStart2 } from './systems/vr_interact.js'
+import { createPanel } from './components/panel.js';
 
 // These variables are module-scoped: we cannot access them
 // from outside the module
@@ -24,6 +25,7 @@ let controls;
 let vrControl;
 let pl_instance;
 let panorama;
+let panel;
 
 
 class World {
@@ -38,14 +40,22 @@ class World {
       //TODO: Get list of locations into panoramaloader constructor
       pl_instance = new PanoramaLoader();
       panorama = pl_instance.setPanorama();
-      scene.add(camera, light, panorama);
+      //TODO: dynamic text setting
+      panel = createPanel("destination");
+      scene.add(camera, light, panorama, panel);
 
-      const controls = new OrbitControls(camera, renderer.domElement);
-      controls.maxPolarAngle = Math.PI * 1;
-      controls.target = new Vector3(0, 1, -5);
-      controls.minDistance = 450;
-      controls.maxDistance = 450;
-      camera.position.set(0, 1.6, 0);
+      // const controls = new OrbitControls(camera, renderer.domElement);
+      // controls.maxPolarAngle = Math.PI * 1;
+      // controls.target = new Vector3(0, 1, -5);
+      // controls.target = new Vector3(0, 0, -0.01);
+      // controls.minDistance = 450;
+      // controls.maxDistance = 450;
+      
+      // controls.update();
+
+      controls = new OrbitControls( camera, renderer.domElement );
+      controls.target.set( 0, 0, 0 );
+      camera.position.set(0, 0, 1);
       controls.update();
   
       const resizer = new Resizer(container, camera, renderer);
@@ -90,7 +100,7 @@ class World {
   }
 
   
-  export { World, renderer, scene, panorama, pl_instance};
+  export { World, renderer, scene, panorama, pl_instance, panel};
 
   
   
