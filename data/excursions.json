@@ -72,60 +72,52 @@
       "coverPhoto": "./images/destinations/London.jpg",
       "stops": [
         {
-          "name": "",
-          "description": "",
+          "name": "Tower Bridge",
+          "description": "The iconic bridge of London",
           "address": "",
           "vrReady": true,
-          "lat": "",
-          "lng": ""
+          "lat": "51.5040817",
+          "lng": "-0.0746651"
         },
         {
-          "name": "",
-          "description": "",
+          "name": "Buckingham Palace",
+          "description": "RIP Queen",
           "address": "",
           "vrReady": true,
-          "lat": "",
-          "lng": ""
+          "lat": "51.5018604",
+          "lng": "-0.1413844"
         },
         {
-          "name": "",
-          "description": "",
+          "name": "The London Eye",
+          "description": "Huge observation wheel giving passengers a privileged bird's-eye view of the city's landmarks",
           "address": "",
           "vrReady": true,
-          "lat": "",
-          "lng": ""
+          "lat": "51.5044252",
+          "lng": "-0.1232642"
         },
         {
-          "name": "",
-          "description": "",
+          "name": "Palace of Westminster",
+          "description": "Neo-Gothic masterpiece & seat of the UK government",
           "address": "",
           "vrReady": true,
-          "lat": "",
-          "lng": ""
+          "lat": "51.4994628",
+          "lng": "-0.1247201"
         },
         {
-          "name": "",
-          "description": "",
+          "name": "Big Ben",
+          "description": "16-story Gothic clocktower and national symbol at the Eastern end of the Houses of Parliament",
           "address": "",
           "vrReady": true,
-          "lat": "",
-          "lng": ""
+          "lat": "51.5002273",
+          "lng": "-0.1252538"
         },
         {
-          "name": "",
-          "description": "",
+          "name": "Natural History Museum",
+          "description": "Landmark museum of animals and natural phenomena",
           "address": "",
           "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
+          "lat": "51.4961151",
+          "lng": "-0.1763757"
         }
       ],
       "vrReady": false

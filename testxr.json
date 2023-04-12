@@ -1,1 +1,65 @@
-{"excursion":[{"title":"An Excursion with 4 Stops","description":"You might want to visit here to make sure stuff on the website works","creator":"wkp23@byu.edu","coverPhoto":"./images/default-background.jpg","stops":[{"name":"Stop 2","description":"Description for Stop 2","address":"Address for Stop 2","vrReady":true,"lat":"12","lng":"34"},{"name":"Stop 1","description":"Description for Stop 1","address":"Address for Stop 1","vrReady":false,"lat":"12","lng":"34"},{"name":"Stop 3","description":"Description for Stop 3","address":"Address for Stop 3","vrReady":true,"lat":"12","lng":"34"},{"name":"Stop 4","description":"Description for Stop 4","address":"Address for Stop 4","vrReady":true,"lat":"12","lng":"34"}],"vrReady":true}]}
+{
+  "title": "Sydney Sightseeing",
+  "description": "Experience the beauty of Sydney's most iconic landmarks and attractions on this sightseeing excursion.",
+  "creator": "wkp23@byu.edu",
+  "coverPhoto": "./images/destinations/sydney.jpeg",
+  "stops": [
+    {
+      "name": "Sydney Opera House",
+      "description": "You'll know it when you see it",
+      "address": "",
+      "vrReady": true,
+      "lat": "-33.859374",
+      "lng": "151.2216409"
+    },
+    {
+      "name": "Royal Botanic Garden",
+      "description": "Overlooking the Opera House",
+      "address": "",
+      "vrReady": true,
+      "lat": "-33.863965",
+      "lng": "151.2181324"
+    },
+    {
+      "name": "Art Gallery of New South Wales",
+      "description": "Contemporary, modern & indigenous art displayed in a classical-style building",
+      "address": "",
+      "vrReady": true,
+      "lat": "-33.8688276",
+      "lng": "151.2171987"
+    },
+    {
+      "name": "Chinatown Sydney",
+      "description": "Shopping and culinary district",
+      "address": "",
+      "vrReady": true,
+      "lat": "-33.8787886",
+      "lng": "151.2040888"
+    },
+    {
+      "name": "The Eye",
+      "description": "Iconic Sydney observation deck",
+      "address": "",
+      "vrReady": true,
+      "lat": "-33.8707181",
+      "lng": "151.2085797"
+    },
+    {
+      "name": "Little Bay Beach",
+      "description": "Just south of the city lies some beautiful sand and rocky shores",
+      "address": "",
+      "vrReady": true,
+      "lat": "-33.9799572",
+      "lng": "151.2513183"
+    },
+    {
+      "name": "McDonalds",
+      "description": "North of the beach, you can grab some food!",
+      "address": "",
+      "vrReady": true,
+      "lat": "-33.9328837",
+      "lng": "151.1889117"
+    }
+  ],
+  "vrReady": true
+}
