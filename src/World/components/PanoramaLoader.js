@@ -64,7 +64,7 @@ class PanoramaLoader {
 	}
 
 	async loadPanorama() {
-		return new Promise((resolve, reject) => {
+		return new Promise(async (resolve, reject) => {
 			texture = new Texture();
 
 			let image = new Image();
@@ -73,10 +73,12 @@ class PanoramaLoader {
 				texture.needsUpdate = true;
 			};
 
-			image.src = getPanoramaImageAsBase64(
-				_coordinate_list[_pos].lat,
-				_coordinate_list[_pos].long,
-				3
+			let lat = _coordinate_list[_pos].lat;
+			let lon = _coordinate_list[_pos].lng;
+			let zoom = 3;
+
+			image.src = await fetch(
+				`http://127.0.0.1:3000/panorama?lat=${lat}&lon=${lon}&zoom=${zoom}`
 			);
 
 			//TODO: call to server and get new image
