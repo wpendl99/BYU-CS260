@@ -12,7 +12,7 @@ import { Vector3 } from 'three';
 import { controller1, controller2, controllerGrip1, controllerGrip2, hand1, hand2 } from './components/controllers.js'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import ThreeMeshUI from 'three-mesh-ui';
-import { onSelectStart1, onSelectStart2 } from './systems/vr_interact.js'
+//import { onSelectStart1, onSelectStart2 } from './systems/vr_interact.js'
 import { createPanel } from './components/panel.js';
 
 // These variables are module-scoped: we cannot access them
@@ -29,7 +29,8 @@ let panel;
 
 
 class World {
-    constructor(container) {
+    constructor(container, xrEnabledStops) {
+      const _xrEnabledStops = xrEnabledStops;
       camera = createCamera();
       scene = createScene();
       renderer = Renderer.getRenderer();
@@ -37,12 +38,35 @@ class World {
       container.append(renderer.domElement);
   
       const light = createLights();
-      //TODO: Get list of locations into panoramaloader constructor
-      pl_instance = new PanoramaLoader();
-      panorama = pl_instance.setPanorama();
-      //TODO: dynamic text setting
-      panel = createPanel("destination");
-      scene.add(camera, light, panorama, panel);
+
+      const coordinateList = xrEnabledStops.map(stop => ({ lat: stop.lat, lng: stop.lng }));
+      const locationList = xrEnabledStops.map(stop => stop.name);
+
+      pl_instance = new PanoramaLoader(coordinateList, locationList);
+      scene.add(camera, light);
+      let promise = pl_instance.loadPanorama()
+        .then(
+            (resolve) => {
+                panorama = resolve.panorama_new;
+                scene.add(panorama);
+
+                panel = createPanel(resolve.locationName);
+                scene.add(panel);
+            }, 
+            (reject) => {
+                console.log(reject);
+                if (reject == "outofbounds") {
+                  scene.remove(panel);
+                  panel = createPanel("Server error, please refresh the page.");
+                  scene.add(panel);
+                }
+                else {
+                  scene.remove(panel);
+                  panel = createPanel("Server error, please refresh the page.");
+                  scene.add(panel);
+                }
+                
+            });
 
       // const controls = new OrbitControls(camera, renderer.domElement);
       // controls.maxPolarAngle = Math.PI * 1;
@@ -94,13 +118,113 @@ class World {
         loop.start();
       }
       
-      stop() {
-        loop.stop();
-      }
+    stop() {
+      loop.stop();
+    }
+
+    getPanorama() {
+      return panorama;
+    }
+
+    setPanorama(new_panorama) {
+      panorama = new_panorama;
+    }
+
+    getPanel() {
+      return panel;
+    }
+
+    setPanel(new_panel) {
+      panel = new_panel;
+    }
+
+    getPanoramaLoader() {
+      return pl_instance
+    }
+
+    
   }
 
+  function onSelectStart2(e) {
+
+    
+
+    scene.remove(panel);
+    let oldPanel = panel; 
+    panel = createPanel("Loading previous destination...");
+    scene.add(panel);
+
+
+    let promise = pl_instance.movePanorama("prev")
+    .then(
+        (resolve) => {
+            console.log("prev");
+            
+            scene.remove(panorama);
+            panorama = resolve.panorama_new;
+            scene.add(panorama);
+
+            scene.remove(panel);;
+            panel = createPanel(resolve.locationName);
+            scene.add(panel);
+        }, 
+        (reject) => {
+            console.log(reject);
+            if (reject == "outofbounds") {
+              scene.remove(panel);
+              panel = oldPanel;
+              scene.add(panel);
+            }
+            else {
+              scene.remove(panel);
+              panel = createPanel("Server error, please refresh the page.");
+              scene.add(panel);
+            }
+        });
+    console.log(promise)
+
+    
+}
+
+function onSelectStart1(e) {
+
+    scene.remove(panel);
+    let oldPanel = panel; 
+    panel = createPanel("Loading next destination...");
+    scene.add(panel);
+
+
+    let promise = pl_instance.movePanorama("next")
+    .then(
+        (resolve) => {
+            console.log("next");
+            
+            scene.remove(panorama);
+            panorama = resolve.panorama_new;
+            scene.add(panorama);
+
+            scene.remove(panel);;
+            panel = createPanel(resolve.locationName);
+            scene.add(panel);
+        }, 
+        (reject) => {
+            console.log(reject);
+            if (reject == "outofbounds") {
+              scene.remove(panel);
+              panel = oldPanel;
+              scene.add(panel);
+            }
+            else {
+              scene.remove(panel);
+              panel = createPanel("Server error, please refresh the page.");
+              scene.add(panel);
+            }
+            
+        });
+    console.log(promise)
+}
   
-  export { World, renderer, scene, panorama, pl_instance, panel};
+export { World, renderer, scene};
 
   
   
