@@ -87,8 +87,8 @@ class World {
     // controls.update();
 
     controls = new OrbitControls(camera, renderer.domElement);
-    controls.target.set(0, 0, 0);
-    camera.position.set(0, 0, 1);
+    controls.target.set(0, 0.5, 0);
+    camera.position.set(0, 0.5, 1);
     controls.update();
 
     const resizer = new Resizer(container, camera, renderer);

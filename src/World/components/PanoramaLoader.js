@@ -64,29 +64,44 @@ class PanoramaLoader {
   }
 
   async loadPanorama() {
-    return new Promise((resolve, reject) => {
+    return new Promise(async (resolve, reject) => {
       texture = new Texture();
 
-      // let image = new Image();
-      // image.onload = function () {
-      //   texture.image = image;
-      //   texture.needsUpdate = true;
-      // };
+      let image = new Image();
+      image.onload = function () {
+        texture.image = image;
+        texture.needsUpdate = true;
+      };
 
-      // image.src = getPanoramaImageAsBase64(
-      //   _coordinate_list[_pos].lat,
-      //   _coordinate_list[_pos].long,
-      //   3
-      // );
+      let lat = _coordinate_list[_pos].lat;
+      let lon = _coordinate_list[_pos].lng;
+      let zoom = 3;
 
-      //TODO: call to server and get new image
-      //TODO: set texture to image
-      console.log(_location_list[_pos]);
-      resolve({
-        panorama_new: this.setPanorama(),
-        locationName: _location_list[_pos],
-        description: _desc_list[_pos],
-      });
+      const response = await fetch(
+        `http://10.37.250.26:5000/panorama?lat=${lat}&lon=${lon}&zoom=${zoom}`
+      );
+      if (response.ok) {
+        const data = await response.json();
+        const base64Image = data.base64Image;
+        image.src = base64Image;
+        // Do something with the base64Image, e.g., display it on the page
+        // console.log(base64Image);
+
+        console.log(_location_list[_pos]);
+        resolve({
+          panorama_new: this.setPanorama(),
+          locationName: _location_list[_pos],
+          description: _desc_list[_pos],
+        });
+      } else {
+        // Handle HTTP errors
+        console.error(
+          "Error fetching panorama image:",
+          response.status,
+          response.statusText
+        );
+        reject(response);
+      }
     });
   }
 }

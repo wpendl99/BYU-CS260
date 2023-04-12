@@ -12,7 +12,7 @@ function createPanel(input_text, input_desc) {
     backgroundColor: new THREE.Color("white"),
   });
 
-  container.position.set(0, -0.5, -1.8);
+  container.position.set(0, -0.2, -1.8);
   container.rotation.x = -0.55;
 
   container.set({

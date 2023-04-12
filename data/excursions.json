@@ -76,16 +76,16 @@
           "description": "The iconic bridge of London",
           "address": "",
           "vrReady": true,
-          "lat": "51.5040817",
-          "lng": "-0.0746651"
+          "lat": "51.5050563",
+          "lng": "-0.0757071"
         },
         {
           "name": "Buckingham Palace",
           "description": "RIP Queen",
           "address": "",
           "vrReady": true,
-          "lat": "51.5018604",
-          "lng": "-0.1413844"
+          "lat": "51.50225",
+          "lng": "-0.1394171"
         },
         {
           "name": "The London Eye",
@@ -94,14 +94,6 @@
           "vrReady": true,
           "lat": "51.5044252",
           "lng": "-0.1232642"
-        },
-        {
-          "name": "Palace of Westminster",
-          "description": "Neo-Gothic masterpiece & seat of the UK government",
-          "address": "",
-          "vrReady": true,
-          "lat": "51.4994628",
-          "lng": "-0.1247201"
         },
         {
           "name": "Big Ben",
@@ -116,11 +108,11 @@
           "description": "Landmark museum of animals and natural phenomena",
           "address": "",
           "vrReady": true,
-          "lat": "51.4961151",
-          "lng": "-0.1763757"
+          "lat": "51.4954985",
+          "lng": "-0.1762037"
         }
       ],
-      "vrReady": false
+      "vrReady": true
     },
     {
       "title": "Rome Routes",

@@ -1,64 +1,48 @@
 {
-  "title": "Sydney Sightseeing",
-  "description": "Experience the beauty of Sydney's most iconic landmarks and attractions on this sightseeing excursion.",
+  "title": "London Landmarks",
+  "description": "Discover the rich history and culture of London through its most famous landmarks and monuments on this guided tour.",
   "creator": "wkp23@byu.edu",
-  "coverPhoto": "./images/destinations/sydney.jpeg",
+  "coverPhoto": "./images/destinations/London.jpg",
   "stops": [
     {
-      "name": "Sydney Opera House",
-      "description": "You'll know it when you see it",
+      "name": "Tower Bridge",
+      "description": "The iconic bridge of London",
       "address": "",
       "vrReady": true,
-      "lat": "-33.859374",
-      "lng": "151.2216409"
+      "lat": "51.5050563",
+      "lng": "-0.0757071"
     },
     {
-      "name": "Royal Botanic Garden",
-      "description": "Overlooking the Opera House",
+      "name": "Buckingham Palace",
+      "description": "RIP Queen",
       "address": "",
       "vrReady": true,
-      "lat": "-33.863965",
-      "lng": "151.2181324"
+      "lat": "51.50225",
+      "lng": "-0.1394171"
     },
     {
-      "name": "Art Gallery of New South Wales",
-      "description": "Contemporary, modern & indigenous art displayed in a classical-style building",
+      "name": "The London Eye",
+      "description": "Huge observation wheel giving passengers a privileged bird's-eye view of the city's landmarks",
       "address": "",
       "vrReady": true,
-      "lat": "-33.8688276",
-      "lng": "151.2171987"
+      "lat": "51.5044252",
+      "lng": "-0.1232642"
     },
     {
-      "name": "Chinatown Sydney",
-      "description": "Shopping and culinary district",
+      "name": "Big Ben",
+      "description": "16-story Gothic clocktower and national symbol at the Eastern end of the Houses of Parliament",
       "address": "",
       "vrReady": true,
-      "lat": "-33.8787886",
-      "lng": "151.2040888"
+      "lat": "51.5002273",
+      "lng": "-0.1252538"
     },
     {
-      "name": "The Eye",
-      "description": "Iconic Sydney observation deck",
+      "name": "Natural History Museum",
+      "description": "Landmark museum of animals and natural phenomena",
       "address": "",
       "vrReady": true,
-      "lat": "-33.8707181",
-      "lng": "151.2085797"
-    },
-    {
-      "name": "Little Bay Beach",
-      "description": "Just south of the city lies some beautiful sand and rocky shores",
-      "address": "",
-      "vrReady": true,
-      "lat": "-33.9799572",
-      "lng": "151.2513183"
-    },
-    {
-      "name": "McDonalds",
-      "description": "North of the beach, you can grab some food!",
-      "address": "",
-      "vrReady": true,
-      "lat": "-33.9328837",
-      "lng": "151.1889117"
+      "lat": "51.4954985",
+      "lng": "-0.1762037"
     }
   ],
   "vrReady": true
