@@ -31,6 +31,7 @@ function signup(name, email, password) {
 			name: name,
 			username: email,
 			password: password,
+			liked: [],
 		};
 
 		// Add the new user to the user data object
