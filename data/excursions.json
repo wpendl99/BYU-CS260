@@ -2,13 +2,15 @@
 	"excursions": [
 		{
 			"title": "Sydney Sightseeing",
+			"description": "Experience the beauty of Sydney's most iconic landmarks and attractions on this sightseeing excursion.",
 			"creator": "wkp23@byu.edu",
 			"coverPhoto": "./images/destinations/sydney.jpeg",
 			"stops": [],
-			"vrReady": true
+			"vrReady": false
 		},
 		{
 			"title": "London Landmarks",
+			"description": "Discover the rich history and culture of London through its most famous landmarks and monuments on this guided tour.",
 			"creator": "wkp23@byu.edu",
 			"coverPhoto": "./images/destinations/London.jpg",
 			"stops": [],
@@ -16,13 +18,15 @@
 		},
 		{
 			"title": "Rome Routes",
+			"description": "Immerse yourself in the ancient beauty of Rome and explore its most stunning routes and pathways on this guided excursion.",
 			"creator": "wkp23@byu.edu",
 			"coverPhoto": "./images/destinations/rome.jpeg",
 			"stops": [],
-			"vrReady": true
+			"vrReady": false
 		},
 		{
 			"title": "Destinations in Delhi",
+			"description": "Experience the vibrant culture and history of Delhi's top destinations on this guided tour.",
 			"creator": "Excursions",
 			"coverPhoto": "./images/destinations/delhi.jpeg",
 			"stops": [],
@@ -30,13 +34,15 @@
 		},
 		{
 			"title": "Tokyo Tour",
+			"description": "Get lost in the bustling streets and charming neighborhoods of Tokyo on this exciting guided tour.",
 			"creator": "Excursions",
 			"coverPhoto": "./images/destinations/tokyo.jpeg",
 			"stops": [],
-			"vrReady": true
+			"vrReady": false
 		},
 		{
 			"title": "Bold Barcelona",
+			"description": "Discover the bold and vibrant personality of Barcelona's streets and landmarks on this exciting excursion.",
 			"creator": "Excursions",
 			"coverPhoto": "./images/destinations/barcelona.jpeg",
 			"stops": [],
@@ -44,13 +50,15 @@
 		},
 		{
 			"title": "Portugal's Pathways",
+			"description": "Experience the beauty and charm of Portugal's stunning pathways and hidden gems on this guided excursion.",
 			"creator": "Excursions",
 			"coverPhoto": "./images/destinations/portugal.jpeg",
 			"stops": [],
-			"vrReady": true
+			"vrReady": false
 		},
 		{
 			"title": "Rio Ride",
+			"description": "Feel the rhythm and energy of Rio de Janeiro's bustling streets and exciting attractions on this exciting excursion.",
 			"creator": "Excursions",
 			"coverPhoto": "./images/destinations/rio_de_janeiro.jpeg",
 			"stops": [],
@@ -58,18 +66,19 @@
 		},
 		{
 			"title": "Sunny San Francisco",
+			"description": "Experience the sunny and laid-back vibe of San Francisco's most popular destinations on this guided tour.",
 			"creator": "Excursions",
 			"coverPhoto": "./images/destinations/san_fran.jpeg",
 			"stops": [],
-			"vrReady": true
+			"vrReady": false
 		},
 		{
 			"title": "Berlin's Boroughs",
+			"description": "Explore the diverse neighborhoods of Berlin, from trendy cafes and street art in Kreuzberg to historic landmarks in Mitte.",
 			"creator": "Excursions",
 			"coverPhoto": "./images/destinations/berlin.jpeg",
 			"stops": [],
 			"vrReady": false
 		}
-	],
-	"likedExcursions": {}
+	]
 }

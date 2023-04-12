@@ -3,6 +3,10 @@
 
 // excursions data
 let excursions = JSON.parse(localStorage.getItem("excursions"));
+let likedExcursions = [];
+try {
+	likedExcursions = JSON.parse(localStorage.getItem("user")).liked;
+} catch {}
 
 const fetchData = async () => {
 	const response = await fetch("./data/excursions.json");
@@ -52,17 +56,25 @@ window.addEventListener("load", function () {
 		const heartSpan = document.createElement("span");
 		heartSpan.classList.add("heart-icon");
 		const heartIcon = document.createElement("i");
-		heartIcon.classList.add("fas", "fa-heart");
+		// Check to see if the excursion is liked
+		if (likedExcursions.keys && likedExcursions.indexOf(excursion.title) >= 0) {
+			heartIcon.classList.add("fas", "fa-heart");
+			heartSpan.classList.add("heart-liked");
+		} else {
+			heartIcon.classList.add("fas", "fa-heart");
+			heartSpan.classList.add("heart-unliked");
+		}
 		heartSpan.appendChild(heartIcon);
-
-		const vrSpan = document.createElement("span");
-		vrSpan.classList.add("vr-icon");
-		const vrIcon = document.createElement("i");
-		vrIcon.classList.add("fas", "fa-vr-cardboard");
-		vrSpan.appendChild(vrIcon);
-
 		iconsDiv.appendChild(heartSpan);
-		iconsDiv.appendChild(vrSpan);
+
+		if (excursion.vrReady) {
+			const vrSpan = document.createElement("span");
+			vrSpan.classList.add("vr-icon");
+			const vrIcon = document.createElement("i");
+			vrIcon.classList.add("fas", "fa-vr-cardboard");
+			vrSpan.appendChild(vrIcon);
+			iconsDiv.appendChild(vrSpan);
+		}
 
 		const textDiv = document.createElement("div");
 		textDiv.classList.add("excursions-card-text");
@@ -97,14 +109,17 @@ const updateExcursions = () => {
 	const yourExcursions = document.getElementById("your-excursions");
 	// Check if user exists
 	if (!user) {
-		// If user doesn't exist, append sign in message
+		// If user doesn't exist, append sign in message & hide Create modal button
 		const message = document.createElement("p");
 		message.innerHTML = `<a href="./signin.html" class="inline-red-link">Sign in</a> to start creating your excursions!`;
 		message.classList.add("excursions-message");
 		yourExcursions.appendChild(message);
 		yourExcursions.style.display = "flex";
 		yourExcursions.style.flexDirection = "column";
+		// Hide Button
+		$("#create-modal-button").toggle(false);
 	} else if (yourExcursions.childElementCount === 0) {
+		// If they do exists, append create excursion message and show button
 		const message = document.createElement("p");
 		message.textContent =
 			"Click the '+' sign to start creating your excursions!";
@@ -112,7 +127,11 @@ const updateExcursions = () => {
 		yourExcursions.appendChild(message);
 		yourExcursions.style.display = "flex";
 		yourExcursions.style.flexDirection = "column";
+		// Show Button
+		$("#create-modal-button").toggle(true);
 	} else {
 		yourExcursions.style.display = "grid";
+		// Show Button
+		$("#create-modal-button").toggle(true);
 	}
 };
