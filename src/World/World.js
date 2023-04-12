@@ -17,6 +17,7 @@ import {
   hand1,
   hand2,
 } from "./components/controllers.js";
+import { createControllerPanel } from "./components/controllerPanel.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import ThreeMeshUI from "three-mesh-ui";
 //import { onSelectStart1, onSelectStart2 } from './systems/vr_interact.js'
@@ -103,7 +104,9 @@ class World {
     const _controllerGrip2 = controllerGrip2;
 
     _controller1.addEventListener("selectstart", onSelectStart1);
+    _controller1.add(createControllerPanel("Next Location"));
     _controller2.addEventListener("selectstart", onSelectStart2);
+    _controller2.add(createControllerPanel("Previous Location"));
 
     const button = new ThreeMeshUI.Text({ textContent: "click me" });
     scene.add(button);
