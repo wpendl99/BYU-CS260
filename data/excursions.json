@@ -1,84 +1,654 @@
 {
-	"excursions": [
-		{
-			"title": "Sydney Sightseeing",
-			"description": "Experience the beauty of Sydney's most iconic landmarks and attractions on this sightseeing excursion.",
-			"creator": "wkp23@byu.edu",
-			"coverPhoto": "./images/destinations/sydney.jpeg",
-			"stops": [],
-			"vrReady": false
-		},
-		{
-			"title": "London Landmarks",
-			"description": "Discover the rich history and culture of London through its most famous landmarks and monuments on this guided tour.",
-			"creator": "wkp23@byu.edu",
-			"coverPhoto": "./images/destinations/London.jpg",
-			"stops": [],
-			"vrReady": false
-		},
-		{
-			"title": "Rome Routes",
-			"description": "Immerse yourself in the ancient beauty of Rome and explore its most stunning routes and pathways on this guided excursion.",
-			"creator": "wkp23@byu.edu",
-			"coverPhoto": "./images/destinations/rome.jpeg",
-			"stops": [],
-			"vrReady": false
-		},
-		{
-			"title": "Destinations in Delhi",
-			"description": "Experience the vibrant culture and history of Delhi's top destinations on this guided tour.",
-			"creator": "Excursions",
-			"coverPhoto": "./images/destinations/delhi.jpeg",
-			"stops": [],
-			"vrReady": false
-		},
-		{
-			"title": "Tokyo Tour",
-			"description": "Get lost in the bustling streets and charming neighborhoods of Tokyo on this exciting guided tour.",
-			"creator": "Excursions",
-			"coverPhoto": "./images/destinations/tokyo.jpeg",
-			"stops": [],
-			"vrReady": false
-		},
-		{
-			"title": "Bold Barcelona",
-			"description": "Discover the bold and vibrant personality of Barcelona's streets and landmarks on this exciting excursion.",
-			"creator": "Excursions",
-			"coverPhoto": "./images/destinations/barcelona.jpeg",
-			"stops": [],
-			"vrReady": false
-		},
-		{
-			"title": "Portugal's Pathways",
-			"description": "Experience the beauty and charm of Portugal's stunning pathways and hidden gems on this guided excursion.",
-			"creator": "Excursions",
-			"coverPhoto": "./images/destinations/portugal.jpeg",
-			"stops": [],
-			"vrReady": false
-		},
-		{
-			"title": "Rio Ride",
-			"description": "Feel the rhythm and energy of Rio de Janeiro's bustling streets and exciting attractions on this exciting excursion.",
-			"creator": "Excursions",
-			"coverPhoto": "./images/destinations/rio_de_janeiro.jpeg",
-			"stops": [],
-			"vrReady": false
-		},
-		{
-			"title": "Sunny San Francisco",
-			"description": "Experience the sunny and laid-back vibe of San Francisco's most popular destinations on this guided tour.",
-			"creator": "Excursions",
-			"coverPhoto": "./images/destinations/san_fran.jpeg",
-			"stops": [],
-			"vrReady": false
-		},
-		{
-			"title": "Berlin's Boroughs",
-			"description": "Explore the diverse neighborhoods of Berlin, from trendy cafes and street art in Kreuzberg to historic landmarks in Mitte.",
-			"creator": "Excursions",
-			"coverPhoto": "./images/destinations/berlin.jpeg",
-			"stops": [],
-			"vrReady": false
-		}
-	]
+  "excursions": [
+    {
+      "title": "Sydney Sightseeing",
+      "description": "Experience the beauty of Sydney's most iconic landmarks and attractions on this sightseeing excursion.",
+      "creator": "wkp23@byu.edu",
+      "coverPhoto": "./images/destinations/sydney.jpeg",
+      "stops": [
+        {
+          "name": "Sydney Opera House",
+          "description": "You'll know it when you see it",
+          "address": "",
+          "vrReady": true,
+          "lat": "-33.859374",
+          "lng": "151.2216409"
+        },
+        {
+          "name": "Royal Botanic Garden",
+          "description": "Overlooking the Opera House",
+          "address": "",
+          "vrReady": true,
+          "lat": "-33.863965",
+          "lng": "151.2181324"
+        },
+        {
+          "name": "Art Gallery of New South Wales",
+          "description": "Contemporary, modern & indigenous art displayed in a classical-style building",
+          "address": "",
+          "vrReady": true,
+          "lat": "-33.8688276",
+          "lng": "151.2171987"
+        },
+        {
+          "name": "Chinatown Sydney",
+          "description": "Shopping and culinary district",
+          "address": "",
+          "vrReady": true,
+          "lat": "-33.8787886",
+          "lng": "151.2040888"
+        },
+        {
+          "name": "The Eye",
+          "description": "Iconic Sydney observation deck",
+          "address": "",
+          "vrReady": true,
+          "lat": "-33.8707181",
+          "lng": "151.2085797"
+        },
+        {
+          "name": "Little Bay Beach",
+          "description": "Just south of the city lies some beautiful sand and rocky shores",
+          "address": "",
+          "vrReady": true,
+          "lat": "-33.9799572",
+          "lng": "151.2513183"
+        },
+        {
+          "name": "McDonalds",
+          "description": "North of the beach, you can grab some food!",
+          "address": "",
+          "vrReady": true,
+          "lat": "-33.9328837",
+          "lng": "151.1889117"
+        }
+      ],
+      "vrReady": true
+    },
+    {
+      "title": "London Landmarks",
+      "description": "Discover the rich history and culture of London through its most famous landmarks and monuments on this guided tour.",
+      "creator": "wkp23@byu.edu",
+      "coverPhoto": "./images/destinations/London.jpg",
+      "stops": [
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        }
+      ],
+      "vrReady": false
+    },
+    {
+      "title": "Rome Routes",
+      "description": "Immerse yourself in the ancient beauty of Rome and explore its most stunning routes and pathways on this guided excursion.",
+      "creator": "wkp23@byu.edu",
+      "coverPhoto": "./images/destinations/rome.jpeg",
+      "stops": [
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        }
+      ],
+      "vrReady": false
+    },
+    {
+      "title": "Destinations in Delhi",
+      "description": "Experience the vibrant culture and history of Delhi's top destinations on this guided tour.",
+      "creator": "Excursions",
+      "coverPhoto": "./images/destinations/delhi.jpeg",
+      "stops": [
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        }
+      ],
+      "vrReady": false
+    },
+    {
+      "title": "Tokyo Tour",
+      "description": "Get lost in the bustling streets and charming neighborhoods of Tokyo on this exciting guided tour.",
+      "creator": "Excursions",
+      "coverPhoto": "./images/destinations/tokyo.jpeg",
+      "stops": [
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        }
+      ],
+      "vrReady": false
+    },
+    {
+      "title": "Bold Barcelona",
+      "description": "Discover the bold and vibrant personality of Barcelona's streets and landmarks on this exciting excursion.",
+      "creator": "Excursions",
+      "coverPhoto": "./images/destinations/barcelona.jpeg",
+      "stops": [
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        }
+      ],
+      "vrReady": false
+    },
+    {
+      "title": "Portugal's Pathways",
+      "description": "Experience the beauty and charm of Portugal's stunning pathways and hidden gems on this guided excursion.",
+      "creator": "Excursions",
+      "coverPhoto": "./images/destinations/portugal.jpeg",
+      "stops": [
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        }
+      ],
+      "vrReady": false
+    },
+    {
+      "title": "Rio Ride",
+      "description": "Feel the rhythm and energy of Rio de Janeiro's bustling streets and exciting attractions on this exciting excursion.",
+      "creator": "Excursions",
+      "coverPhoto": "./images/destinations/rio_de_janeiro.jpeg",
+      "stops": [
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        }
+      ],
+      "vrReady": false
+    },
+    {
+      "title": "Sunny San Francisco",
+      "description": "Experience the sunny and laid-back vibe of San Francisco's most popular destinations on this guided tour.",
+      "creator": "Excursions",
+      "coverPhoto": "./images/destinations/san_fran.jpeg",
+      "stops": [
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        }
+      ],
+      "vrReady": false
+    },
+    {
+      "title": "Berlin's Boroughs",
+      "description": "Explore the diverse neighborhoods of Berlin, from trendy cafes and street art in Kreuzberg to historic landmarks in Mitte.",
+      "creator": "Excursions",
+      "coverPhoto": "./images/destinations/berlin.jpeg",
+      "stops": [
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        },
+        {
+          "name": "",
+          "description": "",
+          "address": "",
+          "vrReady": true,
+          "lat": "",
+          "lng": ""
+        }
+      ],
+      "vrReady": false
+    }
+  ]
 }
