@@ -227,7 +227,7 @@ $(document).on("click", "#submit-modal", function () {
 					name: $(this).find("#stopName").val(),
 					description: $(this).find("#stopDescription").val(),
 					address: $(this).find("#stopAddress").val(),
-					vrReady: $(this).find("#showLatLong").val(),
+					vrReady: $(this).find("#showLatLong").is(":checked"),
 					lat: $(this).find("#stopLat").val(),
 					lng: $(this).find("#stopLng").val(),
 				};
