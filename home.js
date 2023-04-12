@@ -5,7 +5,7 @@
 let excursions = JSON.parse(localStorage.getItem("excursions"));
 let likedExcursions = [];
 try {
-	likedExcursions = JSON.parse(localStorage.getItem("user")).liked;
+	likedExcursions = user.liked;
 } catch {}
 
 const fetchData = async () => {
@@ -53,19 +53,24 @@ window.addEventListener("load", function () {
 		const iconsDiv = document.createElement("div");
 		iconsDiv.classList.add("card-icons");
 
-		const heartSpan = document.createElement("span");
-		heartSpan.classList.add("heart-icon");
-		const heartIcon = document.createElement("i");
-		// Check to see if the excursion is liked
-		if (likedExcursions.keys && likedExcursions.indexOf(excursion.title) >= 0) {
-			heartIcon.classList.add("fas", "fa-heart");
-			heartSpan.classList.add("heart-liked");
-		} else {
-			heartIcon.classList.add("fas", "fa-heart");
-			heartSpan.classList.add("heart-unliked");
+		if (user) {
+			const heartSpan = document.createElement("span");
+			heartSpan.classList.add("heart-icon");
+			const heartIcon = document.createElement("i");
+			// Check to see if the excursion is liked
+			if (
+				likedExcursions.keys &&
+				likedExcursions.indexOf(excursion.title) >= 0
+			) {
+				heartIcon.classList.add("fas", "fa-heart");
+				heartSpan.classList.add("heart-liked");
+			} else {
+				heartIcon.classList.add("fas", "fa-heart");
+				heartSpan.classList.add("heart-unliked");
+			}
+			heartSpan.appendChild(heartIcon);
+			iconsDiv.appendChild(heartSpan);
 		}
-		heartSpan.appendChild(heartIcon);
-		iconsDiv.appendChild(heartSpan);
 
 		if (excursion.vrReady) {
 			const vrSpan = document.createElement("span");
