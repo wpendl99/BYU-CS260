@@ -59,7 +59,7 @@ window.addEventListener("load", function () {
 			const heartIcon = document.createElement("i");
 			// Check to see if the excursion is liked
 			if (
-				likedExcursions.keys &&
+				likedExcursions.length > 0 &&
 				likedExcursions.indexOf(excursion.title) >= 0
 			) {
 				heartIcon.classList.add("fas", "fa-heart");
