@@ -78,7 +78,8 @@ class PanoramaLoader {
       let zoom = 3;
 
       const response = await fetch(
-        `http://10.37.250.26:5000/panorama?lat=${lat}&lon=${lon}&zoom=${zoom}`
+        //`http://10.37.250.26:5000/panorama?lat=${lat}&lon=${lon}&zoom=${zoom}`
+        `https://pano.worldexcursions.click/panorama?lat=${lat}&lon=${lon}&zoom=${zoom}`
       );
       if (response.ok) {
         const data = await response.json();
