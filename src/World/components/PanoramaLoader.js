@@ -7,6 +7,7 @@ import {
 	DoubleSide,
 	Texture,
 } from "three";
+import { getPanoramaImageAsBase64 } from "../../streetview.js";
 
 let texture;
 let _coordinate_list;

@@ -1,7 +1,5 @@
-const fetch = require("node-fetch");
-const { createCanvas, Image } = require("canvas");
-const sharp = require("sharp");
-const fs = require("fs");
+import fetch from "node-fetch";
+import fabric from "fabric";
 
 // Builds the URL of the script on Google's servers that returns the closest
 // panoramas (ids) to a give GPS coordinate.
@@ -91,51 +89,100 @@ function tilesInfo(panoid, zoom = 5) {
 	return tiles;
 }
 
-async function downloadPanoramaV3(panoid, zoom = 5, disp = false) {
+async function downloadPanoramaV3(panoid, zoom = 3) {
 	const tileWidth = 512;
 	const tileHeight = 512;
-	const imgW = 512 * 2 ** zoom;
-	const imgH = 512 * 2 ** (zoom - 1);
-	const tiles = tilesInfo(panoid, zoom);
+	const imgW = 416 * 2 ** zoom;
+	const imgH = 416 * 2 ** (zoom - 1);
+	const tiles = await tilesInfo(panoid, zoom);
 
-	const validTiles = [];
-	for (let i = 0; i < tiles.length; i++) {
-		const [x, y, fname, url] = tiles[i];
-		if (disp && i % 20 === 0) {
-			console.log(`Image ${i} / ${tiles.length}`);
-		}
-		if (x * tileWidth < imgW && y * tileHeight < imgH) {
-			const response = await fetch(url);
-			const arrayBuffer = await response.arrayBuffer();
-			validTiles.push(await sharp(Buffer.from(arrayBuffer)).toBuffer());
-		}
-	}
-
-	const panorama = sharp({
-		create: {
+	return new Promise((resolve) => {
+		const canvas = new fabric.StaticCanvas(null, {
 			width: imgW,
 			height: imgH,
-			channels: 3,
-			background: { r: 0, g: 0, b: 0 },
-		},
+		});
+
+		let tilesLoaded = 0;
+		tiles.forEach(async (tile) => {
+			const { x, y, url } = tile;
+
+			if (x * tileWidth < imgW && y * tileHeight < imgH) {
+				const response = await fetch(url);
+				const blob = await response.blob();
+				const img = await loadImage(URL.createObjectURL(blob));
+
+				const fabricImg = new fabric.Image(img, {
+					left: x * tileWidth,
+					top: y * tileHeight,
+					selectable: false,
+				});
+
+				canvas.add(fabricImg);
+				tilesLoaded++;
+
+				if (tilesLoaded === tiles.length) {
+					const base64Image = canvas.toDataURL("image/png");
+					resolve(base64Image);
+				}
+			}
+		});
 	});
-
-	let operations = [];
-	for (let i = 0, j = 0; i < tiles.length; i++) {
-		const [x, y] = tiles[i];
-		if (x * tileWidth < imgW && y * tileHeight < imgH) {
-			const tile = validTiles[j++];
-			operations.push({
-				input: tile,
-				left: x * tileWidth,
-				top: y * tileHeight,
-			});
-		}
-	}
-
-	const buffer = await panorama.composite(operations).png().toBuffer();
-	return buffer;
 }
+
+function loadImage(url) {
+	return new Promise((resolve, reject) => {
+		const img = new Image();
+		img.src = url;
+		img.onload = () => resolve(img);
+		img.onerror = (error) => reject(error);
+	});
+}
+
+// async function downloadPanoramaV3(panoid, zoom = 3, disp = false) {
+// 	const tileWidth = 512;
+// 	const tileHeight = 512;
+// 	const imgW = 512 * 2 ** zoom;
+// 	const imgH = 512 * 2 ** (zoom - 1);
+// 	const tiles = tilesInfo(panoid, zoom);
+
+// 	const validTiles = [];
+// 	for (let i = 0; i < tiles.length; i++) {
+// 		const [x, y, fname, url] = tiles[i];
+// 		if (disp && i % 20 === 0) {
+// 			console.log(`Image ${i} / ${tiles.length}`);
+// 		}
+// 		if (x * tileWidth < imgW && y * tileHeight < imgH) {
+// 			const response = await fetch(url);
+// 			const arrayBuffer = await response.arrayBuffer();
+// 			validTiles.push(await sharp(Buffer.from(arrayBuffer)).toBuffer());
+// 		}
+// 	}
+
+// 	const panorama = sharp({
+// 		create: {
+// 			width: imgW,
+// 			height: imgH,
+// 			channels: 3,
+// 			background: { r: 0, g: 0, b: 0 },
+// 		},
+// 	});
+
+// 	let operations = [];
+// 	for (let i = 0, j = 0; i < tiles.length; i++) {
+// 		const [x, y] = tiles[i];
+// 		if (x * tileWidth < imgW && y * tileHeight < imgH) {
+// 			const tile = validTiles[j++];
+// 			operations.push({
+// 				input: tile,
+// 				left: x * tileWidth,
+// 				top: y * tileHeight,
+// 			});
+// 		}
+// 	}
+
+// 	const buffer = await panorama.composite(operations).png().toBuffer();
+// 	return buffer;
+// }
 
 async function getPanoramaImageAsBase64(lat, lon, zoom = 5) {
 	try {
@@ -156,28 +203,28 @@ async function getPanoramaImageAsBase64(lat, lon, zoom = 5) {
 	}
 }
 
-async function savePanoramaImageToFile(
-	lat,
-	lon,
-	zoom = 5,
-	filename = "panorama.png"
-) {
-	try {
-		const base64Image = await getPanoramaImageAsBase64(lat, lon, zoom);
+// async function savePanoramaImageToFile(
+// 	lat,
+// 	lon,
+// 	zoom = 5,
+// 	filename = "panorama.png"
+// ) {
+// 	try {
+// 		const base64Image = await getPanoramaImageAsBase64(lat, lon, zoom);
 
-		// Remove the data:image/png;base64, prefix
-		const base64Data = base64Image.replace(/^data:image\/png;base64,/, "");
+// 		// Remove the data:image/png;base64, prefix
+// 		const base64Data = base64Image.replace(/^data:image\/png;base64,/, "");
 
-		// Convert the base64 string back to a binary buffer
-		const buffer = Buffer.from(base64Data, "base64");
+// 		// Convert the base64 string back to a binary buffer
+// 		const buffer = Buffer.from(base64Data, "base64");
 
-		// Write the buffer to a file
-		fs.writeFileSync(filename, buffer);
-	} catch (error) {
-		console.error("Error saving panorama image to file:", error);
-		throw error;
-	}
-}
+// 		// Write the buffer to a file
+// 		fs.writeFileSync(filename, buffer);
+// 	} catch (error) {
+// 		console.error("Error saving panorama image to file:", error);
+// 		throw error;
+// 	}
+// }
 
 // // Usage example
 // downloadPanoramaV3("PANOID_HERE", 3)
@@ -215,3 +262,5 @@ async function savePanoramaImageToFile(
 // 	.catch((error) => {
 // 		console.error("Error saving panorama image to file:", error);
 // 	});
+
+export { getPanoramaImageAsBase64 };
