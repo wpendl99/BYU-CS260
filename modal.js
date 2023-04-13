@@ -241,7 +241,7 @@ $(document).on("click", "#submit-modal", async function () {
 		if (editMode) {
 			// API Request the Update Excursion
 			await fetch(`/api/excursion`, {
-				method: "update",
+				method: "put",
 				headers: { "content-type": "application/json" },
 				body: JSON.stringify(excursion),
 			});

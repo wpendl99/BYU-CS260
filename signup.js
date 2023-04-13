@@ -56,40 +56,6 @@ async function signup(name, email, password) {
 	}
 }
 
-// Sign up Function
-function signup(name, email, password) {
-	// Check if the username already exists in local storage
-	if (userData && userData[email]) {
-		// User already exists, show error message
-		console.log("Username already exists!");
-		return false;
-	} else {
-		// Create a new user object
-		let newUser = {
-			name: name,
-			username: email,
-			password: password,
-		};
-
-		// Add the new user to the user data object
-		if (!userData) {
-			userData = {};
-		}
-		userData[email] = newUser;
-
-		// Save the user data to local storage
-		localStorage.setItem("userData", JSON.stringify(userData));
-		localStorage.setItem("user", JSON.stringify(newUser));
-
-		// Set logged in user
-		user = newUser;
-
-		// User is signed up, do something
-		console.log("User is signed up!");
-		return true;
-	}
-}
-
 // Validate Name Field
 function validateName() {
 	const regex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
@@ -144,13 +110,6 @@ signupForm.addEventListener("submit", function (event) {
 	} else if (!validateEmail()) {
 		// Show error
 		errorEmailInvalidLabel.classList.remove("hidden");
-		// Shake Button
-		submitButton.classList.add("shake");
-		submitButton.setAttribute("disabled", true);
-		return;
-	} else if (userData && emailField.value in userData) {
-		// Show error
-		errorEmailTakenLabel.classList.remove("hidden");
 		// Shake Button
 		submitButton.classList.add("shake");
 		submitButton.setAttribute("disabled", true);
