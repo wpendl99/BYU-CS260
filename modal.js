@@ -135,7 +135,7 @@ $(document).on("click", "#modal-icon-trash", function () {
 		"Are you sure you want to delete this excursion?\nYour data will be lost forever!"
 	);
 	if (confirmDelete) {
-		deleteExcursion($("#excursion-title").val());
+		deleteExcursion($("#excursion-id").val());
 	}
 });
 
@@ -152,6 +152,7 @@ function fieldsFilledIn() {
 }
 
 function resetInputFields() {
+	$("#excursion-id").val("");
 	$("#excursion-preview").attr("src", "./images/default-background.jpg");
 	$(".blur-preview").attr("src", "./images/default-background.jpg");
 	$(".modal-background").find(":input").val("");
@@ -202,7 +203,7 @@ $(document).keydown(function (event) {
 });
 
 // Handle Modal Submittion
-$(document).on("click", "#submit-modal", function () {
+$(document).on("click", "#submit-modal", async function () {
 	if (modalSubmitValidation()) {
 		// Create new Excursion
 		const excursion = {
@@ -237,22 +238,22 @@ $(document).on("click", "#submit-modal", function () {
 				excursion.stops.push(stop);
 			}
 		});
-		let excursions = JSON.parse(localStorage.getItem("excursions"));
 		if (editMode) {
-			// THIS LINE WILL NEED TO CHANGE WHEN YOU IMPLEMENT DB TO USE ID
-			const index = excursions.excursions
-				.map((o) => o.title)
-				.indexOf(prevExcursion);
-			excursions.excursions[index] = excursion;
-			localStorage.setItem("excursions", JSON.stringify(excursions));
+			// API Request the Update Excursion
+			await fetch(`/api/excursion`, {
+				method: "update",
+				headers: { "content-type": "application/json" },
+				body: JSON.stringify(excursion),
+			});
+
 			location.reload();
 		} else {
-			// add excursion onto excursions
-			if (!excursions) {
-				excursions = [];
-			}
-			excursions.excursions.push(excursion);
-			localStorage.setItem("excursions", JSON.stringify(excursions));
+			// API Request to Create Excursion
+			await fetch(`/api/excursion`, {
+				method: "post",
+				headers: { "content-type": "application/json" },
+				body: JSON.stringify(excursion),
+			});
 			location.reload();
 		}
 	} else {
@@ -281,12 +282,10 @@ function modalSubmitValidation() {
 // When you click on an excursion card
 $(document).on("click", ".excursions-card", function (event) {
 	if (event.target.tagName !== "I") {
-		const excursion = JSON.parse(
-			localStorage.getItem("excursions")
-		).excursions.find((o) => o.title == $(this).find("h3").html());
+		let excursionId = $(event.target).closest("#excursion-card-id").val();
 		// Reset Modal
 		resetInputFields();
-		viewExcursion(excursion);
+		viewExcursion(excursionId);
 	}
 });
 
@@ -400,10 +399,12 @@ function viewExcursion(excursion) {
 
 	// Set fields equal to the excursion value
 	var modal = $(".modal-background");
+	// Set Excursion ID
+	module.find("#excursion-id").val(excursion.id);
 	// Hide header bar
 	modal.find(".modal-header").toggle(false);
 	// Show Edit button IF IT IS YOURS
-	if (JSON.parse(localStorage.getItem("user")).username === excursion.creator) {
+	if (JSON.parse(localStorage.getItem("username")) === excursion.creator) {
 		modal.find("#modal-icon-edit").css("display", "block");
 	} else {
 		modal.find("#modal-icon-edit").css("display", "none");
@@ -472,42 +473,28 @@ function viewExcursion(excursion) {
 	modal.toggle();
 }
 
-function deleteExcursion(excursionTitle) {
-	let excursions = JSON.parse(localStorage.getItem("excursions"));
-	// THIS LINE WILL NEED TO CHANGE WHEN YOU IMPLEMENT DB TO USE ID
-	const index = excursions.excursions
-		.map((o) => o.title)
-		.indexOf(excursionTitle);
-	if (index > -1) {
-		excursions.excursions.splice(index, 1);
-	}
-	localStorage.setItem("excursions", JSON.stringify(excursions));
+async function deleteExcursion(excursionID) {
+	await fetch(`/api/excursions`, {
+		method: "delete",
+		headers: { "content-type": "application/json" },
+		body: JSON.stringify({ id: excursionID }),
+	});
 	location.reload();
 }
 
 // Liking/unliking Excursions
 // When you click on an excursion card's Heart
-$(document).on("click", ".heart-icon", function (event) {
+$(document).on("click", ".heart-icon", async function (event) {
 	console.log("HIT!");
 	// If the excursion is already liked
 	if ($(event.target.parentNode).hasClass("heart-liked")) {
-		console.log("Changing to Unliked");
-		// Change Local Storage
-		// Get initial Variables
-		let userData = JSON.parse(localStorage.getItem("userData"));
-		let user = JSON.parse(localStorage.getItem("user"));
-		let liked = user.liked;
-		const excursionName = $(event.target)
-			.closest(".excursions-card")
-			.find("h3")
-			.html();
-		// Remove from liked in user and user data
-		liked.splice(liked.indexOf(excursionName), 1);
-		user.likelikeddExcursions = liked;
-		userData[user.username] = user;
-		// Update user and user data
-		localStorage.setItem("user", JSON.stringify(user));
-		localStorage.setItem("userData", JSON.stringify(userData));
+		// Unlike clicked excursion
+		let id = $(event.target).closest("#excursion-card-id").val();
+		const response = await fetch(`/api/excursions/likes/`, {
+			method: "delete",
+			headers: { "content-type": "application/json" },
+			body: JSON.stringify({ id: id }),
+		});
 
 		// Change Heart class to unliked
 		$(event.target.parentNode).removeClass("heart-liked");
@@ -515,26 +502,13 @@ $(document).on("click", ".heart-icon", function (event) {
 	}
 	// If the excursion is not already liked
 	else {
-		console.log("Changing to liked");
-		// Change Local Storage
-		// Get initial Variables
-		let userData = JSON.parse(localStorage.getItem("userData"));
-		let user = JSON.parse(localStorage.getItem("user"));
-		let liked = user.liked;
-		const excursionName = $(event.target)
-			.closest(".excursions-card")
-			.find("h3")
-			.html();
-		// Remove from liked in user and user data
-		if (!liked) {
-			liked = [];
-		}
-		liked.push(excursionName);
-		user.liked = liked;
-		userData[user.username] = user;
-		// Update user and user data
-		localStorage.setItem("user", JSON.stringify(user));
-		localStorage.setItem("userData", JSON.stringify(userData));
+		// Like clicked excursion
+		let id = $(event.target).closest("#excursion-card-id").val();
+		const response = await fetch(`/api/excursions/likes/`, {
+			method: "post",
+			headers: { "content-type": "application/json" },
+			body: JSON.stringify({ id: id }),
+		});
 
 		// Change Heart class to liked
 		$(event.target.parentNode).removeClass("heart-unliked");

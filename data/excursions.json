@@ -1,638 +1,646 @@
-{
-  "excursions": [
-    {
-      "title": "Sydney Sightseeing",
-      "description": "Experience the beauty of Sydney's most iconic landmarks and attractions on this sightseeing excursion.",
-      "creator": "wkp23@byu.edu",
-      "coverPhoto": "./images/destinations/sydney.jpeg",
-      "stops": [
-        {
-          "name": "Sydney Opera House",
-          "description": "You'll know it when you see it",
-          "address": "",
-          "vrReady": true,
-          "lat": "-33.859374",
-          "lng": "151.2216409"
-        },
-        {
-          "name": "Royal Botanic Garden",
-          "description": "Overlooking the Opera House",
-          "address": "",
-          "vrReady": true,
-          "lat": "-33.863965",
-          "lng": "151.2181324"
-        },
-        {
-          "name": "Art Gallery of New South Wales",
-          "description": "Contemporary, modern & indigenous art displayed in a classical-style building",
-          "address": "",
-          "vrReady": true,
-          "lat": "-33.8688276",
-          "lng": "151.2171987"
-        },
-        {
-          "name": "Chinatown Sydney",
-          "description": "Shopping and culinary district",
-          "address": "",
-          "vrReady": true,
-          "lat": "-33.8787886",
-          "lng": "151.2040888"
-        },
-        {
-          "name": "The Eye",
-          "description": "Iconic Sydney observation deck",
-          "address": "",
-          "vrReady": true,
-          "lat": "-33.8707181",
-          "lng": "151.2085797"
-        },
-        {
-          "name": "Little Bay Beach",
-          "description": "Just south of the city lies some beautiful sand and rocky shores",
-          "address": "",
-          "vrReady": true,
-          "lat": "-33.9799572",
-          "lng": "151.2513183"
-        },
-        {
-          "name": "McDonalds",
-          "description": "North of the beach, you can grab some food!",
-          "address": "",
-          "vrReady": true,
-          "lat": "-33.9328837",
-          "lng": "151.1889117"
-        }
-      ],
-      "vrReady": true
-    },
-    {
-      "title": "London Landmarks",
-      "description": "Discover the rich history and culture of London through its most famous landmarks and monuments on this guided tour.",
-      "creator": "wkp23@byu.edu",
-      "coverPhoto": "./images/destinations/London.jpg",
-      "stops": [
-        {
-          "name": "Tower Bridge",
-          "description": "The iconic bridge of London",
-          "address": "",
-          "vrReady": true,
-          "lat": "51.5050563",
-          "lng": "-0.0757071"
-        },
-        {
-          "name": "Buckingham Palace",
-          "description": "RIP Queen",
-          "address": "",
-          "vrReady": true,
-          "lat": "51.50225",
-          "lng": "-0.1394171"
-        },
-        {
-          "name": "The London Eye",
-          "description": "Huge observation wheel giving passengers a privileged bird's-eye view of the city's landmarks",
-          "address": "",
-          "vrReady": true,
-          "lat": "51.5044252",
-          "lng": "-0.1232642"
-        },
-        {
-          "name": "Big Ben",
-          "description": "16-story Gothic clocktower and national symbol at the Eastern end of the Houses of Parliament",
-          "address": "",
-          "vrReady": true,
-          "lat": "51.5002273",
-          "lng": "-0.1252538"
-        },
-        {
-          "name": "Natural History Museum",
-          "description": "Landmark museum of animals and natural phenomena",
-          "address": "",
-          "vrReady": true,
-          "lat": "51.4954985",
-          "lng": "-0.1762037"
-        }
-      ],
-      "vrReady": true
-    },
-    {
-      "title": "Rome Routes",
-      "description": "Immerse yourself in the ancient beauty of Rome and explore its most stunning routes and pathways on this guided excursion.",
-      "creator": "wkp23@byu.edu",
-      "coverPhoto": "./images/destinations/rome.jpeg",
-      "stops": [
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        }
-      ],
-      "vrReady": false
-    },
-    {
-      "title": "Destinations in Delhi",
-      "description": "Experience the vibrant culture and history of Delhi's top destinations on this guided tour.",
-      "creator": "Excursions",
-      "coverPhoto": "./images/destinations/delhi.jpeg",
-      "stops": [
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        }
-      ],
-      "vrReady": false
-    },
-    {
-      "title": "Tokyo Tour",
-      "description": "Get lost in the bustling streets and charming neighborhoods of Tokyo on this exciting guided tour.",
-      "creator": "Excursions",
-      "coverPhoto": "./images/destinations/tokyo.jpeg",
-      "stops": [
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        }
-      ],
-      "vrReady": false
-    },
-    {
-      "title": "Bold Barcelona",
-      "description": "Discover the bold and vibrant personality of Barcelona's streets and landmarks on this exciting excursion.",
-      "creator": "Excursions",
-      "coverPhoto": "./images/destinations/barcelona.jpeg",
-      "stops": [
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        }
-      ],
-      "vrReady": false
-    },
-    {
-      "title": "Portugal's Pathways",
-      "description": "Experience the beauty and charm of Portugal's stunning pathways and hidden gems on this guided excursion.",
-      "creator": "Excursions",
-      "coverPhoto": "./images/destinations/portugal.jpeg",
-      "stops": [
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        }
-      ],
-      "vrReady": false
-    },
-    {
-      "title": "Rio Ride",
-      "description": "Feel the rhythm and energy of Rio de Janeiro's bustling streets and exciting attractions on this exciting excursion.",
-      "creator": "Excursions",
-      "coverPhoto": "./images/destinations/rio_de_janeiro.jpeg",
-      "stops": [
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        }
-      ],
-      "vrReady": false
-    },
-    {
-      "title": "Sunny San Francisco",
-      "description": "Experience the sunny and laid-back vibe of San Francisco's most popular destinations on this guided tour.",
-      "creator": "Excursions",
-      "coverPhoto": "./images/destinations/san_fran.jpeg",
-      "stops": [
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        }
-      ],
-      "vrReady": false
-    },
-    {
-      "title": "Berlin's Boroughs",
-      "description": "Explore the diverse neighborhoods of Berlin, from trendy cafes and street art in Kreuzberg to historic landmarks in Mitte.",
-      "creator": "Excursions",
-      "coverPhoto": "./images/destinations/berlin.jpeg",
-      "stops": [
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        },
-        {
-          "name": "",
-          "description": "",
-          "address": "",
-          "vrReady": true,
-          "lat": "",
-          "lng": ""
-        }
-      ],
-      "vrReady": false
-    }
-  ]
-}
+[
+	{
+		"title": "Sydney Sightseeing",
+		"description": "Explore the stunning landscapes and iconic landmarks of Sydney in this immersive excursion.",
+		"creator": "wkp23@byu.edu",
+		"coverPhoto": "./images/destinations/sydney.jpeg",
+		"stops": [
+			{
+				"name": "Sydney Opera House",
+				"description": "Marvel at the architectural masterpiece and world-renowned performing arts venue.",
+				"address": "",
+				"vrReady": true,
+				"lat": "-33.859374",
+				"lng": "151.2216409"
+			},
+			{
+				"name": "Royal Botanic Garden",
+				"description": "Stroll through lush gardens with breathtaking views of the Opera House and Harbour Bridge.",
+				"address": "",
+				"vrReady": true,
+				"lat": "-33.863965",
+				"lng": "151.2181324"
+			},
+			{
+				"name": "Art Gallery of New South Wales",
+				"description": "Discover a diverse collection of art spanning various styles and time periods in this elegant gallery.",
+				"address": "",
+				"vrReady": true,
+				"lat": "-33.8688276",
+				"lng": "151.2171987"
+			},
+			{
+				"name": "Chinatown Sydney",
+				"description": "Experience the vibrant atmosphere of this bustling shopping and dining district.",
+				"address": "",
+				"vrReady": true,
+				"lat": "-33.8787886",
+				"lng": "151.2040888"
+			},
+			{
+				"name": "The Eye",
+				"description": "Take in panoramic views of the city from this iconic Sydney observation deck.",
+				"address": "",
+				"vrReady": true,
+				"lat": "-33.8707181",
+				"lng": "151.2085797"
+			},
+			{
+				"name": "Little Bay Beach",
+				"description": "Relax on the sandy shores of this picturesque beach just outside of Sydney.",
+				"address": "",
+				"vrReady": true,
+				"lat": "-33.9799572",
+				"lng": "151.2513183"
+			},
+			{
+				"name": "McDonalds",
+				"description": "Enjoy a quick bite to eat at this popular fast-food restaurant near the beach.",
+				"address": "",
+				"vrReady": true,
+				"lat": "-33.9328837",
+				"lng": "151.1889117"
+			}
+		],
+		"vrReady": true,
+		"likes": []
+	},
+	{
+		"title": "London Landmarks",
+		"description": "Uncover the captivating history and culture of London through its most iconic landmarks on this guided excursion.",
+		"creator": "wkp23@byu.edu",
+		"coverPhoto": "./images/destinations/London.jpg",
+		"stops": [
+			{
+				"name": "Tower Bridge",
+				"description": "Admire the magnificent Victorian architecture of this iconic London landmark.",
+				"address": "",
+				"vrReady": true,
+				"lat": "51.5050563",
+				"lng": "-0.0757071"
+			},
+			{
+				"name": "Buckingham Palace",
+				"description": "Witness the grandeur of the official residence of the British monarch.",
+				"address": "",
+				"vrReady": true,
+				"lat": "51.50225",
+				"lng": "-0.1394171"
+			},
+			{
+				"name": "The London Eye",
+				"description": "Enjoy stunning views of the city from this famous observation wheel.",
+				"address": "",
+				"vrReady": true,
+				"lat": "51.5044252",
+				"lng": "-0.1232642"
+			},
+			{
+				"name": "Big Ben",
+				"description": "Marvel at the iconic Gothic clocktower, a symbol of London, at the Houses of Parliament.",
+				"address": "",
+				"vrReady": true,
+				"lat": "51.5002273",
+				"lng": "-0.1252538"
+			},
+			{
+				"name": "Natural History Museum",
+				"description": "Explore fascinating exhibits of animals and natural phenomena at this renowned museum.",
+				"address": "",
+				"vrReady": true,
+				"lat": "51.4954985",
+				"lng": "-0.1762037"
+			}
+		],
+		"vrReady": true,
+		"likes": []
+	},
+	{
+		"title": "Rome Routes",
+		"description": "Delve into the ancient wonders of Rome and journey through its most remarkable routes on this guided excursion.",
+		"creator": "wkp23@byu.edu",
+		"coverPhoto": "./images/destinations/rome.jpeg",
+		"stops": [
+			{
+				"name": "Colosseum",
+				"description": "Step back in time at the iconic ancient Roman amphitheater and marvel at its impressive architecture.",
+				"address": "",
+				"vrReady": true,
+				"lat": "41.8902102",
+				"lng": "12.4922309"
+			},
+			{
+				"name": "Roman Forum",
+				"description": "Discover the heart of ancient Rome and explore the ruins of its political and social center.",
+				"address": "",
+				"vrReady": true,
+				"lat": "41.8924209",
+				"lng": "12.4853341"
+			},
+			{
+				"name": "Trevi Fountain",
+				"description": "Admire the grandeur of this iconic Baroque fountain, a symbol of romance and beauty.",
+				"address": "",
+				"vrReady": true,
+				"lat": "41.9009321",
+				"lng": "12.4833133"
+			},
+			{
+				"name": "Pantheon",
+				"description": "Explore the ancient temple dedicated to the gods of Rome, now a historic church.",
+				"address": "",
+				"vrReady": true,
+				"lat": "41.8986155",
+				"lng": "12.4768332"
+			},
+			{
+				"name": "Vatican City",
+				"description": "Visit the world's smallest sovereign state and marvel at the breathtaking art and architecture.",
+				"address": "",
+				"vrReady": true,
+				"lat": "41.9021781",
+				"lng": "12.4539374"
+			},
+			{
+				"name": "Piazza Navona",
+				"description": "Wander through the charming square, famous for its Baroque architecture, fountains, and street performers.",
+				"address": "",
+				"vrReady": true,
+				"lat": "41.898995",
+				"lng": "12.4730427"
+			},
+			{
+				"name": "Spanish Steps",
+				"description": "Climb the iconic staircase and enjoy picturesque views of the surrounding neighborhood.",
+				"address": "",
+				"vrReady": true,
+				"lat": "41.9057389",
+				"lng": "12.4822072"
+			}
+		],
+		"vrReady": true,
+		"likes": []
+	},
+	{
+		"title": "Destinations in Delhi",
+		"description": "Embark on a journey through Delhi's vibrant history and culture, visiting its top attractions on this guided tour.",
+		"creator": "Excursions",
+		"coverPhoto": "./images/destinations/delhi.jpeg",
+		"stops": [
+			{
+				"name": "India Gate",
+				"description": "Admire the towering war memorial dedicated to the Indian soldiers who lost their lives in World War I.",
+				"address": "",
+				"vrReady": true,
+				"lat": "28.6128518",
+				"lng": "77.2294527"
+			},
+			{
+				"name": "Qutub Minar",
+				"description": "Discover the ancient minaret, a UNESCO World Heritage Site, surrounded by historical ruins.",
+				"address": "",
+				"vrReady": true,
+				"lat": "28.5244515",
+				"lng": "77.1851074"
+			},
+			{
+				"name": "Humayun's Tomb",
+				"description": "Explore the stunning Mughal architecture of this historic tomb, also a UNESCO World Heritage Site.",
+				"address": "",
+				"vrReady": true,
+				"lat": "28.5928466",
+				"lng": "77.2501086"
+			},
+			{
+				"name": "Lotus Temple",
+				"description": "Visit the captivating Bahá'í House of Worship, known for its unique lotus-shaped design.",
+				"address": "",
+				"vrReady": true,
+				"lat": "28.553492",
+				"lng": "77.2588264"
+			},
+			{
+				"name": "Red Fort",
+				"description": "Step into the historic Mughal fortress, a symbol of India's rich history and a UNESCO World Heritage Site.",
+				"address": "",
+				"vrReady": true,
+				"lat": "28.6561592",
+				"lng": "77.2410203"
+			},
+			{
+				"name": "Jama Masjid",
+				"description": "Experience the grandeur of India's largest mosque, an architectural masterpiece in the heart of Old Delhi.",
+				"address": "",
+				"vrReady": true,
+				"lat": "28.6505948",
+				"lng": "77.2336767"
+			},
+			{
+				"name": "Akshardham Temple",
+				"description": "Witness the breathtaking beauty of this Hindu temple complex, showcasing traditional Indian culture and architecture.",
+				"address": "",
+				"vrReady": true,
+				"lat": "28.6126733",
+				"lng": "77.2772619"
+			}
+		],
+		"vrReady": true,
+		"likes": []
+	},
+	{
+		"title": "Tokyo Tour",
+		"description": "Delight in the bustling streets and enchanting neighborhoods of Tokyo on this thrilling guided tour.",
+		"creator": "Excursions",
+		"coverPhoto": "./images/destinations/tokyo.jpeg",
+		"stops": [
+			{
+				"name": "Shibuya Crossing",
+				"description": "Experience the world's busiest pedestrian crossing, a symbol of Tokyo's energetic atmosphere.",
+				"address": "",
+				"vrReady": true,
+				"lat": "35.6594429",
+				"lng": "139.699556"
+			},
+			{
+				"name": "Meiji Shrine",
+				"description": "Discover the tranquility of this Shinto shrine, dedicated to Emperor Meiji and Empress Shoken.",
+				"address": "",
+				"vrReady": true,
+				"lat": "35.6761919",
+				"lng": "139.699284"
+			},
+			{
+				"name": "Asakusa and Senso-ji Temple",
+				"description": "Wander through the charming Asakusa district and visit the ancient Senso-ji Temple, a significant Buddhist site.",
+				"address": "",
+				"vrReady": true,
+				"lat": "35.712677",
+				"lng": "139.796278"
+			},
+			{
+				"name": "Akihabara",
+				"description": "Dive into the heart of Japanese pop culture in this vibrant district, famous for its electronics, anime, and manga stores.",
+				"address": "",
+				"vrReady": true,
+				"lat": "35.702069",
+				"lng": "139.775327"
+			},
+			{
+				"name": "Tsukiji Fish Market",
+				"description": "Explore the world's largest seafood market, where you can find a variety of fresh fish, sushi, and other Japanese delicacies.",
+				"address": "",
+				"vrReady": true,
+				"lat": "35.665495",
+				"lng": "139.770825"
+			},
+			{
+				"name": "Ueno Park",
+				"description": "Stroll through the lush greenery of this spacious park, home to multiple museums, a zoo, and beautiful cherry blossom trees.",
+				"address": "",
+				"vrReady": true,
+				"lat": "35.715470",
+				"lng": "139.772194"
+			},
+			{
+				"name": "Tokyo Skytree",
+				"description": "Admire the panoramic views of Tokyo from the tallest tower in the world, featuring an observation deck and a sky-high restaurant.",
+				"address": "",
+				"vrReady": true,
+				"lat": "35.710008",
+				"lng": "139.810704"
+			}
+		],
+		"vrReady": true,
+		"likes": []
+	},
+	{
+		"title": "Bold Barcelona",
+		"description": "Discover the bold and vibrant personality of Barcelona's streets and landmarks on this exciting excursion.",
+		"creator": "Excursions",
+		"coverPhoto": "./images/destinations/barcelona.jpeg",
+		"stops": [
+			{
+				"name": "Sagrada Família",
+				"description": "Marvel at the stunning architecture of this iconic basilica designed by Antoni Gaudí, a masterpiece still under construction.",
+				"address": "",
+				"vrReady": true,
+				"lat": "41.403630",
+				"lng": "2.174356"
+			},
+			{
+				"name": "Park Güell",
+				"description": "Wander through this enchanting park, showcasing Gaudí's unique architectural style and vibrant mosaic designs.",
+				"address": "",
+				"vrReady": true,
+				"lat": "41.413611",
+				"lng": "2.152778"
+			},
+			{
+				"name": "Casa Batlló",
+				"description": "Explore one of Gaudí's most famous creations, a whimsical modernist building with a colorful facade and extraordinary interior.",
+				"address": "",
+				"vrReady": true,
+				"lat": "41.391697",
+				"lng": "2.165006"
+			},
+			{
+				"name": "La Rambla",
+				"description": "Stroll along this bustling pedestrian boulevard, lined with shops, restaurants, and street performers.",
+				"address": "",
+				"vrReady": true,
+				"lat": "41.381392",
+				"lng": "2.170044"
+			},
+			{
+				"name": "Gothic Quarter",
+				"description": "Wander through the narrow medieval streets of this historic neighborhood, filled with charm and hidden gems.",
+				"address": "",
+				"vrReady": true,
+				"lat": "41.381764",
+				"lng": "2.173132"
+			},
+			{
+				"name": "Barceloneta Beach",
+				"description": "Relax and soak up the sun at this popular urban beach, offering a lively atmosphere and beautiful views.",
+				"address": "",
+				"vrReady": true,
+				"lat": "41.379517",
+				"lng": "2.189748"
+			},
+			{
+				"name": "Magic Fountain of Montjuïc",
+				"description": "Be mesmerized by the colorful light and water show at this impressive fountain, set to music on select evenings.",
+				"address": "",
+				"vrReady": true,
+				"lat": "41.371125",
+				"lng": "2.150555"
+			}
+		],
+		"vrReady": true,
+		"likes": []
+	},
+	{
+		"title": "Partugal's Pathways",
+		"description": "Experience the beauty and charm of Portugal's stunning pathways and hidden gems on this guided excursion.",
+		"creator": "Excursions",
+		"coverPhoto": "./images/destinations/portugal.jpeg",
+		"stops": [
+			{
+				"name": "Belém Tower",
+				"description": "Admire the architectural beauty of this historic fortress, an iconic symbol of Portugal's Age of Discovery.",
+				"address": "",
+				"vrReady": true,
+				"lat": "38.691879",
+				"lng": "-9.216104"
+			},
+			{
+				"name": "Jerónimos Monastery",
+				"description": "Explore the impressive Gothic architecture and beautiful cloisters of this UNESCO World Heritage Site.",
+				"address": "",
+				"vrReady": true,
+				"lat": "38.6969853",
+				"lng": "-9.2061055"
+			},
+			{
+				"name": "Alfama District",
+				"description": "Wander through the narrow, winding streets of Lisbon's oldest neighborhood, full of history and charm.",
+				"address": "",
+				"vrReady": true,
+				"lat": "38.710636",
+				"lng": "-9.129796"
+			},
+			{
+				"name": "Pena Palace",
+				"description": "Visit this colorful Romanticist palace perched on a hilltop in Sintra, offering stunning views and lush gardens.",
+				"address": "",
+				"vrReady": true,
+				"lat": "38.787415",
+				"lng": "-9.390497"
+			},
+			{
+				"name": "Douro Valley",
+				"description": "Take in the breathtaking scenery of this picturesque wine region, known for its terraced vineyards and serene river.",
+				"address": "",
+				"vrReady": true,
+				"lat": "41.163839",
+				"lng": "-7.788903"
+			},
+			{
+				"name": "Livraria Lello",
+				"description": "Step into this stunning, historic bookstore in Porto, featuring ornate wood carvings and a striking red staircase.",
+				"address": "",
+				"vrReady": true,
+				"lat": "41.146786",
+				"lng": "-8.614765"
+			},
+			{
+				"name": "Praça do Comércio",
+				"description": "Relax in this expansive riverside square in Lisbon, surrounded by vibrant yellow buildings and lively cafes.",
+				"address": "",
+				"vrReady": true,
+				"lat": "38.707851",
+				"lng": "-9.136592"
+			}
+		],
+		"vrReady": true,
+		"likes": []
+	},
+	{
+		"title": "Rio Ride",
+		"description": "Feel the rhythm and energy of Rio de Janeiro's bustling streets and exciting attractions on this exciting excursion.",
+		"creator": "Excursions",
+		"coverPhoto": "./images/destinations/rio_de_janeiro.jpeg",
+		"stops": [
+			{
+				"name": "Christ the Redeemer",
+				"description": "Take in the breathtaking views from the base of this iconic statue, standing tall atop Corcovado Mountain.",
+				"address": "",
+				"vrReady": true,
+				"lat": "-22.951917",
+				"lng": "-43.210487"
+			},
+			{
+				"name": "Sugarloaf Mountain",
+				"description": "Ride a cable car to the summit of this iconic peak, offering panoramic views of Rio de Janeiro and its coastline.",
+				"address": "",
+				"vrReady": true,
+				"lat": "-22.948657",
+				"lng": "-43.155247"
+			},
+			{
+				"name": "Copacabana Beach",
+				"description": "Stroll along the golden sands of this famous beach, lined with shops, restaurants, and buzzing with activity.",
+				"address": "",
+				"vrReady": true,
+				"lat": "-22.971958",
+				"lng": "-43.182696"
+			},
+			{
+				"name": "Ipanema Beach",
+				"description": "Soak up the sun and vibrant atmosphere at this popular beach, famous for its stunning views and lively scene.",
+				"address": "",
+				"vrReady": true,
+				"lat": "-22.983786",
+				"lng": "-43.206829"
+			},
+			{
+				"name": "Escadaria Selarón",
+				"description": "Climb the colorful steps of this unique staircase, adorned with vibrant tiles from around the world by artist Jorge Selarón.",
+				"address": "",
+				"vrReady": true,
+				"lat": "-22.915556",
+				"lng": "-43.177222"
+			},
+			{
+				"name": "Jardim Botânico",
+				"description": "Stroll through the lush, serene landscapes of this expansive botanical garden, home to a vast array of plant species.",
+				"address": "",
+				"vrReady": true,
+				"lat": "-22.966991",
+				"lng": "-43.224143"
+			},
+			{
+				"name": "Lapa Arches",
+				"description": "Marvel at the impressive architecture of these historic arches, which once served as an aqueduct and now host lively events and nightlife.",
+				"address": "",
+				"vrReady": true,
+				"lat": "-22.913611",
+				"lng": "-43.180833"
+			}
+		],
+		"vrReady": true,
+		"likes": []
+	},
+	{
+		"title": "Sunny San Francisco",
+		"description": "Experience the sunny and laid-back vibe of San Francisco's most popular destinations on this guided tour.",
+		"creator": "Excursions",
+		"coverPhoto": "./images/destinations/san_fran.jpeg",
+		"stops": [
+			{
+				"name": "Golden Gate Bridge",
+				"description": "Admire the iconic, red suspension bridge that spans the entrance to the San Francisco Bay, offering breathtaking views of the city and the bay.",
+				"address": "",
+				"vrReady": true,
+				"lat": "37.819722",
+				"lng": "-122.478611"
+			},
+			{
+				"name": "Fisherman's Wharf",
+				"description": "Wander through this bustling waterfront area, filled with delicious seafood restaurants, shops, and historic attractions.",
+				"address": "",
+				"vrReady": true,
+				"lat": "37.808333",
+				"lng": "-122.415833"
+			},
+			{
+				"name": "Alcatraz Island",
+				"description": "Explore the infamous former federal prison that housed notorious criminals like Al Capone, and enjoy stunning views of the bay.",
+				"address": "",
+				"vrReady": true,
+				"lat": "37.826667",
+				"lng": "-122.423056"
+			},
+			{
+				"name": "Union Square",
+				"description": "Visit the bustling shopping, dining, and entertainment district at the heart of San Francisco.",
+				"address": "",
+				"vrReady": true,
+				"lat": "37.787778",
+				"lng": "-122.407222"
+			},
+			{
+				"name": "Lombard Street",
+				"description": "Navigate the famous winding, steep street known for its eight hairpin turns and beautiful landscaping.",
+				"address": "",
+				"vrReady": true,
+				"lat": "37.802222",
+				"lng": "-122.418889"
+			},
+			{
+				"name": "Coit Tower",
+				"description": "Climb to the top of this iconic tower for panoramic views of San Francisco and the surrounding bay.",
+				"address": "",
+				"vrReady": true,
+				"lat": "37.8025",
+				"lng": "-122.405833"
+			},
+			{
+				"name": "Palace of Fine Arts",
+				"description": "Discover this beautiful, Greco-Roman-style landmark, which showcases a stunning lagoon, colonnades, and peaceful gardens.",
+				"address": "",
+				"vrReady": true,
+				"lat": "37.802778",
+				"lng": "-122.448333"
+			}
+		],
+		"vrReady": true,
+		"likes": []
+	},
+	{
+		"title": "Berlin's Boroughs",
+		"description": "Explore the diverse neighborhoods of Berlin, from trendy cafes and street art in Kreuzberg to historic landmarks in Mitte.",
+		"creator": "Excursions",
+		"coverPhoto": "./images/destinations/berlin.jpeg",
+		"stops": [
+			{
+				"name": "Brandenburg Gate",
+				"description": "Visit the iconic symbol of Berlin, which has served as a backdrop to many historic events and now represents unity and peace.",
+				"address": "",
+				"vrReady": true,
+				"lat": "52.516111",
+				"lng": "13.377778"
+			},
+			{
+				"name": "East Side Gallery",
+				"description": "Explore the longest remaining section of the Berlin Wall, now transformed into a vibrant canvas for street art.",
+				"address": "",
+				"vrReady": true,
+				"lat": "52.505278",
+				"lng": "13.439444"
+			},
+			{
+				"name": "Reichstag Building",
+				"description": "Discover the historic and architecturally impressive building that houses the German Parliament, offering a glass dome with panoramic views of the city.",
+				"address": "",
+				"vrReady": true,
+				"lat": "52.518611",
+				"lng": "13.376111"
+			},
+			{
+				"name": "Pergamon Museum",
+				"description": "Explore this world-renowned museum, which houses an impressive collection of ancient art and architecture, including the Pergamon Altar and the Ishtar Gate.",
+				"address": "",
+				"vrReady": true,
+				"lat": "52.521111",
+				"lng": "13.396389"
+			},
+			{
+				"name": "Checkpoint Charlie",
+				"description": "Visit the famous Cold War-era crossing point between East and West Berlin, now featuring a museum dedicated to its history.",
+				"address": "",
+				"vrReady": true,
+				"lat": "52.5075",
+				"lng": "13.390278"
+			},
+			{
+				"name": "Alexanderplatz",
+				"description": "Explore this bustling public square in the heart of Berlin, which features the iconic Fernsehturm TV tower, World Clock, and numerous shops and restaurants.",
+				"address": "",
+				"vrReady": true,
+				"lat": "52.521944",
+				"lng": "13.413333"
+			},
+			{
+				"name": "Mauerpark",
+				"description": "Stroll through this vibrant park, known for its lively atmosphere, Sunday flea market, and colorful graffiti-covered remnants of the Berlin Wall.",
+				"address": "",
+				"vrReady": true,
+				"lat": "52.541111",
+				"lng": "13.402778"
+			}
+		],
+		"vrReady": true,
+		"likes": []
+	}
+]

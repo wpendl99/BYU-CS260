@@ -1,9 +1,16 @@
+let user_name = "";
+(async () => {
+	let authenticated = false;
+	const username = localStorage.getItem("userName");
+	if (username) {
+		const user = await getUser(username);
+		authenticated = user?.authenticated;
+		if (authenticated) {
+			user_name = user.name;
+		}
+	}
+})();
 // Global Variables
-// Retrieve the user data from local storage
-let userData = JSON.parse(localStorage.getItem("userData"));
-
-// logged-in user
-let user = JSON.parse(localStorage.getItem("user"));
 
 window.addEventListener("load", function () {
 	waitForElm("#userHeaderBar").then(() => {
@@ -14,7 +21,7 @@ window.addEventListener("load", function () {
 		// User Javascript
 		// Code for If the user is logged in, change the header bar
 		if (userHeaderBar) {
-			if (user) {
+			if (user_name) {
 				console.log("User Found");
 				// user is logged in
 				// Change href for center button
@@ -29,7 +36,7 @@ window.addEventListener("load", function () {
 
 				// Welcome User and Caret
 				const welcomeUserLink = document.createElement("div");
-				welcomeUserLink.innerText = `Welcome, ${name}`;
+				welcomeUserLink.innerText = `Welcome, ${user_name}`;
 				welcomeUserLink.classList.add("dropdown-toggle");
 				welcomeUserLink.id = "dropdownMenuButton";
 				welcomeUserCaret = document.createElement("span");
@@ -45,7 +52,6 @@ window.addEventListener("load", function () {
 				signOutButton.classList.add("dropdown-item");
 				signOutButton.addEventListener("click", () => {
 					signout();
-					window.location.assign("./signout.html");
 				});
 				dropdownMenu.appendChild(signOutButton);
 
@@ -100,14 +106,10 @@ window.addEventListener("load", function () {
 
 function signout() {
 	// Sign user out;
-	localStorage.removeItem("user");
-}
-
-function getUser() {
-	if (!user) {
-		return null;
-	}
-	return user;
+	localStorage.removeItem("userName");
+	fetch(`/api/auth/logout`, {
+		method: "delete",
+	}).then(() => (window.location.href = "./signout.html"));
 }
 
 function waitForElm(selector) {

@@ -1,6 +1,17 @@
+(async () => {
+	let authenticated = false;
+	const userName = localStorage.getItem("userName");
+	if (userName) {
+		const user = await getUser(username);
+		authenticated = user?.authenticated;
+	}
+
+	if (authenticated) {
+		window.location.href = "/home.html";
+	}
+})();
+
 // Variables
-// Retrieve the user data from local storage
-let userData = JSON.parse(localStorage.getItem("userData"));
 // signin form
 const signinForm = document.getElementById("signin-form");
 const usernameLabel = document.getElementById("username-label");
@@ -10,21 +21,22 @@ const passwordField = document.getElementById("password");
 const errorLabel = document.getElementById("error-label");
 const submitButton = document.getElementById("submit-button");
 
-// Signin function
-function signin(username, password) {
-	// Check if the user exists in local storage
-	if (
-		userData &&
-		userData[username] &&
-		userData[username].password === password
-	) {
-		// User is logged in, do something
-		localStorage.setItem("user", JSON.stringify(userData[username]));
-		console.log("Successful User Login");
+async function signin(username, password) {
+	let endpoint = `/api/auth/login`;
+
+	const response = await fetch(endpoint, {
+		method: "post",
+		body: JSON.stringify({ email: username.toLowerCase(), password: password }),
+		headers: {
+			"Content-type": "application/json; charset=UTF-8",
+		},
+	});
+	const body = await response.json();
+
+	if (response?.status === 200) {
+		localStorage.setItem("userName", username);
 		return true;
 	} else {
-		// User doesn't exist or password is incorrect, show error message
-		console.log("Error logging user in, try a new password or signup for one");
 		return false;
 	}
 }
@@ -49,7 +61,7 @@ signinForm.addEventListener("submit", function (event) {
 	event.preventDefault();
 
 	// Get the values from the form
-	const email = document.getElementById("username").value.toLowerCase();
+	const email = document.getElementById("username").value;
 	const password = document.getElementById("password").value;
 
 	if (signin(email, password)) {
@@ -75,3 +87,14 @@ signinForm.addEventListener("submit", function (event) {
 submitButton.addEventListener("animationend", () => {
 	submitButton.classList.remove("shake");
 });
+
+async function getUser(email) {
+	let scores = [];
+	// See if we have a user with the given email.
+	const response = await fetch(`/api/user/${email}`);
+	if (response.status === 200) {
+		return response.json();
+	}
+
+	return null;
+}

@@ -428,6 +428,14 @@ footer p {
 	padding: 0;
 }
 
+#excursion-id {
+	display: none;
+}
+
+#excursion-card-id {
+	display: none;
+}
+
 .excursions-card {
 	width: 100%;
 	height: 462px;

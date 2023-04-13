@@ -1,7 +1,17 @@
+(async () => {
+	let authenticated = false;
+	const userName = localStorage.getItem("userName");
+	if (userName) {
+		const user = await getUser(username);
+		authenticated = user?.authenticated;
+	}
+
+	if (authenticated) {
+		window.location.href = "/home.html";
+	}
+})();
+
 // Variables
-// Retrieve the user data from local storage
-let userData = JSON.parse(localStorage.getItem("userData"));
-console.log(userData);
 // signin form
 const signupForm = document.getElementById("signup-form");
 const nameLabel = document.getElementById("name-label");
@@ -18,6 +28,34 @@ const errorEmailTakenLabel = document.getElementById("error-email-taken-label");
 const errorPasswordLabel = document.getElementById("error-password-label");
 const submitButton = document.getElementById("submit-button");
 
+async function signup(name, email, password) {
+	let endpoint = `/api/auth/create`;
+
+	if (await getUser(email)) {
+		return false;
+	}
+
+	const response = await fetch(endpoint, {
+		method: "post",
+		body: JSON.stringify({
+			name: name,
+			email: email.toLowerCase(),
+			password: password,
+		}),
+		headers: {
+			"Content-type": "application/json; charset=UTF-8",
+		},
+	});
+	const body = await response.json();
+
+	if (response?.status === 200) {
+		localStorage.setItem("userName", userName);
+		return true;
+	} else {
+		return false;
+	}
+}
+
 // Sign up Function
 function signup(name, email, password) {
 	// Check if the username already exists in local storage
@@ -31,7 +69,6 @@ function signup(name, email, password) {
 			name: name,
 			username: email,
 			password: password,
-			liked: [],
 		};
 
 		// Add the new user to the user data object
@@ -129,7 +166,7 @@ signupForm.addEventListener("submit", function (event) {
 
 	// Get the values from the form
 	const name = nameField.value;
-	const email = emailField.value.toLowerCase();
+	const email = emailField.value;
 	const password = passwordField.value;
 
 	if (signup(name, email, password)) {
@@ -138,7 +175,7 @@ signupForm.addEventListener("submit", function (event) {
 	} else {
 		// Error Handling
 		// Remove Password field, show error, turn labels red and shake buttons
-		// Remove PAssword Field
+		// Remove Password Field
 		passwordField.value = "";
 		// Show Error
 		errorLabel.classList.remove("hidden");
@@ -155,3 +192,14 @@ signupForm.addEventListener("submit", function (event) {
 submitButton.addEventListener("animationend", () => {
 	submitButton.classList.remove("shake");
 });
+
+async function getUser(email) {
+	let scores = [];
+	// See if we have a user with the given email.
+	const response = await fetch(`/api/user/${email}`);
+	if (response.status === 200) {
+		return response.json();
+	}
+
+	return null;
+}
