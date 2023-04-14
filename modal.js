@@ -29,14 +29,9 @@ $(document).ready(function () {
 		const stops = document.getElementById("stops");
 		// Check that all previous stops have been filled out
 		const allStopsFilledOut = Array.from(stops.children).every((stop) => {
-			console.log(stop);
 			const nameInput = stop.querySelector("#stopName");
 			const descriptionInput = stop.querySelector("#stopDescription");
 			const addressInput = stop.querySelector("#stopAddress");
-
-			console.log("name: " + nameInput);
-			console.log("desc: " + descriptionInput);
-			console.log("add: " + addressInput);
 
 			return (
 				nameInput.value !== "" &&
@@ -194,9 +189,7 @@ function confirmClose() {
 $(document).on("click", "#modal-background", function (e) {
 	if (
 		e.target !== $("#modal-background").get(0) &&
-		e.target !== $(".modal-close").get(0) &&
-		e.target !== $(".modal-close").get(1) &&
-		e.target !== $(".modal-close").get(2)
+		!$(e.target).hasClass("modal-close")
 	) {
 		return;
 	}
@@ -215,7 +208,7 @@ $(document).keydown(function (event) {
 $(document).on("click", "#submit-modal", async function () {
 	if (modalSubmitValidation()) {
 		// Create new Excursion
-		const excursion = {
+		let excursion = {
 			title: $("#excursion-title").val(),
 			description: $("#excursion-description").val(),
 			creator: JSON.parse(localStorage.getItem("user")).username,
@@ -248,9 +241,8 @@ $(document).on("click", "#submit-modal", async function () {
 			}
 		});
 
-		console.log("HEY ALL SCOTT HERE: " + JSON.stringify(excursion));
-
 		if (editMode) {
+			excursion.id = $("#excursion-id").val();
 			// API Request the Update Excursion
 			await fetch(`/api/excursion`, {
 				method: "put",
@@ -261,7 +253,6 @@ $(document).on("click", "#submit-modal", async function () {
 			location.reload();
 		} else {
 			// API Request to Create Excursion
-			console.log("HEY ALL SCOTT HERE");
 			await fetch(`/api/excursion`, {
 				method: "post",
 				headers: { "content-type": "application/json" },
@@ -307,6 +298,8 @@ $(document).on("click", ".excursions-card", function (event) {
 
 function createExcursion() {
 	createMode = true;
+	editMode = false;
+	viewMode = false;
 
 	// Set fields equal to the excursion value
 	var modal = $(".modal-background");
@@ -420,8 +413,6 @@ async function viewExcursion(excursionID) {
 	fetch(`/api/excursion/${excursionID}`)
 		.then((response) => response.json())
 		.then((excursion) => {
-			console.log(excursion);
-
 			// Set fields equal to the excursion value
 			var modal = $(".modal-background");
 			// Set Excursion ID
@@ -510,7 +501,7 @@ async function viewExcursion(excursionID) {
 }
 
 async function deleteExcursion(excursionID) {
-	await fetch(`/api/excursions`, {
+	await fetch(`/api/excursion`, {
 		method: "delete",
 		headers: { "content-type": "application/json" },
 		body: JSON.stringify({ id: excursionID }),
@@ -521,7 +512,6 @@ async function deleteExcursion(excursionID) {
 // Liking/unliking Excursions
 // When you click on an excursion card's Heart
 $(document).on("click", ".heart-icon", async function (event) {
-	console.log("HIT!");
 	// If the excursion is already liked
 	if ($(event.target.parentNode).hasClass("heart-liked")) {
 		// Unlike clicked excursion
@@ -546,7 +536,6 @@ $(document).on("click", ".heart-icon", async function (event) {
 			.closest(".excursions-card")
 			.find("#excursion-card-id")
 			.val();
-		console.log(id);
 		const response = await fetch(`/api/excursions/likes/`, {
 			method: "post",
 			headers: { "content-type": "application/json" },
