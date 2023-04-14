@@ -58,7 +58,7 @@ async function createExcursion(excursion) {
 
 async function updateExcursion(excursion) {
 	await excursionCollection.replaceOne(
-		{ _id: new mongodb.ObjectId(id) },
+		{ _id: new mongodb.ObjectId(excursion.id) },
 		excursion
 	);
 
@@ -66,7 +66,9 @@ async function updateExcursion(excursion) {
 }
 
 async function deleteExcursion(excursion) {
-	await excursionCollection.deleteOne({ _id: new mongodb.ObjectId(id) });
+	await excursionCollection.deleteOne({
+		_id: new mongodb.ObjectId(excursion._id),
+	});
 }
 
 function getExcursionLikesByEmail(email) {

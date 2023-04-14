@@ -69,7 +69,6 @@ apiRouter.delete("/auth/logout", (_req, res) => {
 apiRouter.get("/user/:email", async (req, res) => {
 	console.log("Get /user/:email Request");
 	const user = await DB.getUser(req.params.email);
-	console.log(user);
 	if (user) {
 		const token = req?.cookies.token;
 		res.send({
@@ -86,7 +85,6 @@ apiRouter.get("/user/:email", async (req, res) => {
 apiRouter.get("/excursion/:id", async (req, res) => {
 	console.log("Get /excursion/:id Request");
 	const excursion = await DB.getExcursionByID(req.params.id);
-	console.log(excursion);
 	if (excursion) {
 		res.send(excursion);
 		return;
@@ -143,7 +141,8 @@ secureApiRouter.delete("/excursions/likes/", async (req, res) => {
 // Create Excursion
 secureApiRouter.post("/excursion", async (req, res) => {
 	console.log("Post /excursion Request");
-	let resultExcursion = await DB.createExcursion(excursion);
+	console.log("Hey all scott here: " + JSON.stringify(req.body));
+	let resultExcursion = await DB.createExcursion(req.body);
 
 	res.send({
 		id: resultExcursion._id,
@@ -155,12 +154,13 @@ secureApiRouter.put("/excursion", async (req, res) => {
 	console.log("put /excursion Request");
 	authToken = req.cookies[authCookieName];
 	const user = await DB.getUserByToken(authToken);
+	console.log(req.body);
 	const excursion = await DB.getExcursionByID(req.body.id);
 	if (user.email == excursion.creator) {
-		let excursion = await DB.updateExcursion(req.body);
+		let result = await DB.updateExcursion(req.body);
 
 		res.send({
-			id: excursion._id,
+			id: result._id,
 		});
 	} else {
 		res.status(401).send({ msg: "Unauthorized" });
@@ -174,7 +174,7 @@ secureApiRouter.delete("/excursion", async (req, res) => {
 	const user = await DB.getUserByToken(authToken);
 	const excursion = await DB.getExcursionByID(req.body.id);
 	if (user.email == excursion.creator) {
-		await DB.deleteExcursion(req.body);
+		await DB.deleteExcursion(excursion);
 
 		res.status(204).end();
 	} else {

@@ -29,14 +29,9 @@ $(document).ready(function () {
 		const stops = document.getElementById("stops");
 		// Check that all previous stops have been filled out
 		const allStopsFilledOut = Array.from(stops.children).every((stop) => {
-			console.log(stop);
 			const nameInput = stop.querySelector("#stopName");
 			const descriptionInput = stop.querySelector("#stopDescription");
 			const addressInput = stop.querySelector("#stopAddress");
-
-			console.log("name: " + nameInput);
-			console.log("desc: " + descriptionInput);
-			console.log("add: " + addressInput);
 
 			return (
 				nameInput.value !== "" &&
@@ -129,6 +124,15 @@ $(document).on("click", "#modal-icon-edit", function () {
 	editExcursion();
 });
 
+// Switch to Edit Mode when user presses edit button
+$(document).on("click", "#modal-icon-vr", function (event) {
+	let excursionId = $(event.target)
+		.closest(".modal")
+		.find("#excursion-id")
+		.val();
+	window.location.href = `/xr.html?id=${excursionId}`;
+});
+
 // Delete Excursion
 $(document).on("click", "#modal-icon-trash", function () {
 	const confirmDelete = confirm(
@@ -185,9 +189,7 @@ function confirmClose() {
 $(document).on("click", "#modal-background", function (e) {
 	if (
 		e.target !== $("#modal-background").get(0) &&
-		e.target !== $(".modal-close").get(0) &&
-		e.target !== $(".modal-close").get(1) &&
-		e.target !== $(".modal-close").get(2)
+		!$(e.target).hasClass("modal-close")
 	) {
 		return;
 	}
@@ -206,7 +208,7 @@ $(document).keydown(function (event) {
 $(document).on("click", "#submit-modal", async function () {
 	if (modalSubmitValidation()) {
 		// Create new Excursion
-		const excursion = {
+		let excursion = {
 			title: $("#excursion-title").val(),
 			description: $("#excursion-description").val(),
 			creator: JSON.parse(localStorage.getItem("user")).username,
@@ -238,7 +240,9 @@ $(document).on("click", "#submit-modal", async function () {
 				excursion.stops.push(stop);
 			}
 		});
+
 		if (editMode) {
+			excursion.id = $("#excursion-id").val();
 			// API Request the Update Excursion
 			await fetch(`/api/excursion`, {
 				method: "put",
@@ -294,6 +298,8 @@ $(document).on("click", ".excursions-card", function (event) {
 
 function createExcursion() {
 	createMode = true;
+	editMode = false;
+	viewMode = false;
 
 	// Set fields equal to the excursion value
 	var modal = $(".modal-background");
@@ -305,6 +311,8 @@ function createExcursion() {
 	modal.find("#modal-icon-edit").css("display", "none");
 	// Hide Trash button
 	modal.find("#modal-icon-trash").css("display", "none");
+	// hide vr button
+	modal.find("#modal-icon-vr").css("display", "none");
 
 	// Hide image edit icons and update image preview
 	modal.find(".icon-container-gradient").toggle(true);
@@ -357,6 +365,8 @@ function editExcursion() {
 	modal.find("#modal-icon-edit").css("display", "none");
 	// Show Trash button
 	modal.find("#modal-icon-trash").css("display", "block");
+	// hide vr button
+	modal.find("#modal-icon-vr").css("display", "none");
 
 	// Show image edit icons and update image preview
 	modal.find(".icon-container-gradient").toggle(true);
@@ -403,8 +413,6 @@ async function viewExcursion(excursionID) {
 	fetch(`/api/excursion/${excursionID}`)
 		.then((response) => response.json())
 		.then((excursion) => {
-			console.log(excursion);
-
 			// Set fields equal to the excursion value
 			var modal = $(".modal-background");
 			// Set Excursion ID
@@ -421,6 +429,14 @@ async function viewExcursion(excursionID) {
 			}
 			// Hide Trash button
 			modal.find("#modal-icon-trash").css("display", "none");
+
+			// show vr icon if vr ready
+			console.log("HERE I AM" + excursion.vrReady);
+			if (excursion.vrReady) {
+				modal.find("#modal-icon-vr").css("display", "block");
+			} else {
+				modal.find("#modal-icon-vr").css("display", "none");
+			}
 
 			// Hide image edit icons and update image preview
 			modal.find(".icon-container-gradient").toggle(false);
@@ -490,7 +506,7 @@ async function viewExcursion(excursionID) {
 }
 
 async function deleteExcursion(excursionID) {
-	await fetch(`/api/excursions`, {
+	await fetch(`/api/excursion`, {
 		method: "delete",
 		headers: { "content-type": "application/json" },
 		body: JSON.stringify({ id: excursionID }),
@@ -501,7 +517,6 @@ async function deleteExcursion(excursionID) {
 // Liking/unliking Excursions
 // When you click on an excursion card's Heart
 $(document).on("click", ".heart-icon", async function (event) {
-	console.log("HIT!");
 	// If the excursion is already liked
 	if ($(event.target.parentNode).hasClass("heart-liked")) {
 		// Unlike clicked excursion
@@ -526,7 +541,6 @@ $(document).on("click", ".heart-icon", async function (event) {
 			.closest(".excursions-card")
 			.find("#excursion-card-id")
 			.val();
-		console.log(id);
 		const response = await fetch(`/api/excursions/likes/`, {
 			method: "post",
 			headers: { "content-type": "application/json" },
