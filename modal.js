@@ -282,7 +282,10 @@ function modalSubmitValidation() {
 // When you click on an excursion card
 $(document).on("click", ".excursions-card", function (event) {
 	if (event.target.tagName !== "I") {
-		let excursionId = $(event.target).closest("#excursion-card-id").val();
+		let excursionId = $(event.target)
+			.closest(".excursions-card")
+			.find("#excursion-card-id")
+			.val();
 		// Reset Modal
 		resetInputFields();
 		viewExcursion(excursionId);
@@ -393,84 +396,90 @@ function editExcursion() {
 	$("#submit-modal").removeClass("disabled-a");
 }
 
-function viewExcursion(excursion) {
+async function viewExcursion(excursionID) {
 	viewMode = true;
 	editMode = false;
 
-	// Set fields equal to the excursion value
-	var modal = $(".modal-background");
-	// Set Excursion ID
-	module.find("#excursion-id").val(excursion.id);
-	// Hide header bar
-	modal.find(".modal-header").toggle(false);
-	// Show Edit button IF IT IS YOURS
-	if (JSON.parse(localStorage.getItem("username")) === excursion.creator) {
-		modal.find("#modal-icon-edit").css("display", "block");
-	} else {
-		modal.find("#modal-icon-edit").css("display", "none");
-	}
-	// Hide Trash button
-	modal.find("#modal-icon-trash").css("display", "none");
+	fetch(`/api/excursion/${excursionID}`)
+		.then((response) => response.json())
+		.then((excursion) => {
+			console.log(excursion);
 
-	// Hide image edit icons and update image preview
-	modal.find(".icon-container-gradient").toggle(false);
-	modal.find("#excursion-preview").attr("src", excursion.coverPhoto);
-	modal.find(".blur-preview").attr("src", excursion.coverPhoto);
+			// Set fields equal to the excursion value
+			var modal = $(".modal-background");
+			// Set Excursion ID
+			modal.find("#excursion-id").val(excursion._id);
+			// Hide header bar
+			modal.find(".modal-header").toggle(false);
+			// Show Edit button IF IT IS YOURS
+			if (JSON.parse(localStorage.getItem("user")) === excursion.creator) {
+				modal.find("#modal-icon-edit").css("display", "block");
+			} else {
+				modal.find("#modal-icon-edit").css("display", "none");
+			}
+			// Hide Trash button
+			modal.find("#modal-icon-trash").css("display", "none");
 
-	// For the following text: 1. Change the value, 2. Add view-only class to remove border, 3. add readonly properly to diable input
-	// Excursion Title
-	modal.find("#excursion-title").val(excursion.title);
-	modal.find("#excursion-title").addClass("view-only-input");
-	modal.find("#excursion-title").prop("readonly", true);
+			// Hide image edit icons and update image preview
+			modal.find(".icon-container-gradient").toggle(false);
+			modal.find("#excursion-preview").attr("src", excursion.coverPhoto);
+			modal.find(".blur-preview").attr("src", excursion.coverPhoto);
 
-	// Excursion Description
-	modal.find("#excursion-description").val(excursion.description);
-	modal.find("#excursion-description").addClass("view-only-input");
-	modal.find("#excursion-description").prop("readonly", true);
+			// For the following text: 1. Change the value, 2. Add view-only class to remove border, 3. add readonly properly to diable input
+			// Excursion Title
+			modal.find("#excursion-title").val(excursion.title);
+			modal.find("#excursion-title").addClass("view-only-input");
+			modal.find("#excursion-title").prop("readonly", true);
 
-	// Stops
-	modal.find("#stopName").addClass("view-only-input");
-	modal.find("#stopName").prop("readonly", true);
-	modal.find("#stopAddress").addClass("view-only-input");
-	modal.find("#stopAddress").prop("readonly", true);
-	modal.find("#stopDescription").addClass("view-only-input");
-	modal.find("#stopDescription").prop("readonly", true);
-	modal.find("#showLatLong").prop("disabled", true);
-	modal.find(".delete-stop-btn").toggle(false);
-	modal.find(".drag-handle").toggle(false);
+			// Excursion Description
+			modal.find("#excursion-description").val(excursion.description);
+			modal.find("#excursion-description").addClass("view-only-input");
+			modal.find("#excursion-description").prop("readonly", true);
 
-	// Check to see if this excursion has any stops
-	if (excursion.stops.length > 0) {
-		modal.find("#no-stops-label").css("display", "none");
-		modal.find("#stops").toggle(true);
+			// Stops
+			modal.find("#stopName").addClass("view-only-input");
+			modal.find("#stopName").prop("readonly", true);
+			modal.find("#stopAddress").addClass("view-only-input");
+			modal.find("#stopAddress").prop("readonly", true);
+			modal.find("#stopDescription").addClass("view-only-input");
+			modal.find("#stopDescription").prop("readonly", true);
+			modal.find("#showLatLong").prop("disabled", true);
+			modal.find(".delete-stop-btn").toggle(false);
+			modal.find(".drag-handle").toggle(false);
 
-		excursion.stops.forEach(function (stop) {
-			modal.find("#stops").children().first().clone().appendTo("#stops");
-			modal.find(".stop-li").last().find("#stopName").val(stop.name);
-			modal.find(".stop-li").last().find("#stopAddress").val(stop.address);
-			modal
-				.find(".stop-li")
-				.last()
-				.find("#stopDescription")
-				.val(stop.description);
-			modal.find(".stop-li").last().find("#showLatLong").val(stop.vrReady);
-			modal.find(".stop-li").last().find("#stopLat").val(stop.lat);
-			modal.find(".stop-li").last().find("#stopLong").val(stop.long);
+			// Check to see if this excursion has any stops
+			if (excursion.stops.length > 0) {
+				modal.find("#no-stops-label").css("display", "none");
+				modal.find("#stops").toggle(true);
+
+				excursion.stops.forEach(function (stop) {
+					modal.find("#stops").children().first().clone().appendTo("#stops");
+					modal.find(".stop-li").last().find("#stopName").val(stop.name);
+					modal.find(".stop-li").last().find("#stopAddress").val(stop.address);
+					modal
+						.find(".stop-li")
+						.last()
+						.find("#stopDescription")
+						.val(stop.description);
+					modal.find(".stop-li").last().find("#showLatLong").val(stop.vrReady);
+					modal.find(".stop-li").last().find("#stopLat").val(stop.lat);
+					modal.find(".stop-li").last().find("#stopLong").val(stop.long);
+				});
+				modal.find("#stops").children().first().remove();
+			} else {
+				modal.find("#no-stops-label").css("display", "block");
+				modal.find("#stops").toggle(false);
+			}
+
+			// Hide "Add Stop" Button
+			modal.find(".add-stop-container").toggle(false);
+
+			// Hide Footer
+			modal.find(".modal-footer").toggle(false);
+
+			// Toggle modal
+			modal.toggle();
 		});
-		modal.find("#stops").children().first().remove();
-	} else {
-		modal.find("#no-stops-label").css("display", "block");
-		modal.find("#stops").toggle(false);
-	}
-
-	// Hide "Add Stop" Button
-	modal.find(".add-stop-container").toggle(false);
-
-	// Hide Footer
-	modal.find(".modal-footer").toggle(false);
-
-	// Toggle modal
-	modal.toggle();
 }
 
 async function deleteExcursion(excursionID) {
@@ -489,7 +498,10 @@ $(document).on("click", ".heart-icon", async function (event) {
 	// If the excursion is already liked
 	if ($(event.target.parentNode).hasClass("heart-liked")) {
 		// Unlike clicked excursion
-		let id = $(event.target).closest("#excursion-card-id").val();
+		let id = $(event.target)
+			.closest(".excursions-card")
+			.find("#excursion-card-id")
+			.val();
 		const response = await fetch(`/api/excursions/likes/`, {
 			method: "delete",
 			headers: { "content-type": "application/json" },
@@ -503,7 +515,11 @@ $(document).on("click", ".heart-icon", async function (event) {
 	// If the excursion is not already liked
 	else {
 		// Like clicked excursion
-		let id = $(event.target).closest("#excursion-card-id").val();
+		let id = $(event.target)
+			.closest(".excursions-card")
+			.find("#excursion-card-id")
+			.val();
+		console.log(id);
 		const response = await fetch(`/api/excursions/likes/`, {
 			method: "post",
 			headers: { "content-type": "application/json" },

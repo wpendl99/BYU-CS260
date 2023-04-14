@@ -1,15 +1,20 @@
-(async () => {
+// Verify if already signed in
+async function authorize() {
 	let authenticated = false;
-	const userName = localStorage.getItem("userName");
-	if (userName) {
-		const user = await getUser(username);
+	const localUser = await JSON.parse(localStorage.getItem("user"));
+	if (localUser) {
+		const user = await getUser(user.username);
 		authenticated = user?.authenticated;
 	}
 
 	if (authenticated) {
-		window.location.href = "/home.html";
+		const currentPath = location.pathname;
+		if (currentPath !== "/home.html") {
+			window.location.href = "/home.html";
+		}
 	}
-})();
+}
+authorize();
 
 // Variables
 // signin form
@@ -31,10 +36,15 @@ async function signin(username, password) {
 			"Content-type": "application/json; charset=UTF-8",
 		},
 	});
-	const body = await response.json();
 
 	if (response?.status === 200) {
-		localStorage.setItem("userName", username);
+		// Set User in Local Storage
+		const user = await getUser(username);
+		console.log(user);
+		localStorage.setItem(
+			"user",
+			JSON.stringify({ name: user.name, username: user.email })
+		);
 		return true;
 	} else {
 		return false;
@@ -57,14 +67,14 @@ usernameField.addEventListener("input", validateForm);
 passwordField.addEventListener("input", validateForm);
 
 // Add listener for signin event
-signinForm.addEventListener("submit", function (event) {
+signinForm.addEventListener("submit", async function (event) {
 	event.preventDefault();
 
 	// Get the values from the form
 	const email = document.getElementById("username").value;
 	const password = document.getElementById("password").value;
 
-	if (signin(email, password)) {
+	if (await signin(email, password)) {
 		// Successful login
 		window.location.assign("./home.html");
 	} else {
@@ -89,12 +99,17 @@ submitButton.addEventListener("animationend", () => {
 });
 
 async function getUser(email) {
-	let scores = [];
-	// See if we have a user with the given email.
-	const response = await fetch(`/api/user/${email}`);
-	if (response.status === 200) {
-		return response.json();
+	try {
+		const response = await fetch(`/api/user/${email}`);
+		if (response.status === 200) {
+			return response.json();
+		} else if (response.status === 404) {
+			return false;
+		} else {
+			throw new Error("Error fetching user data");
+		}
+	} catch (error) {
+		console.log(error);
+		throw new Error("Error fetching user data");
 	}
-
-	return null;
 }

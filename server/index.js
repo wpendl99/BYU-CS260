@@ -16,7 +16,8 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Serve up the applications static content
-app.use(express.static("public"));
+// CHANGE THIS AND LINE 177 on PROD load
+app.use(express.static("../"));
 
 // Router for service endpoints
 var apiRouter = express.Router();
@@ -24,6 +25,7 @@ app.use(`/api`, apiRouter);
 
 // CreateAuth token for a new user
 apiRouter.post("/auth/create", async (req, res) => {
+	console.log("Post /auth/create Request");
 	if (await DB.getUser(req.body.email)) {
 		res.status(409).send({ msg: "Existing user" });
 	} else {
@@ -44,6 +46,7 @@ apiRouter.post("/auth/create", async (req, res) => {
 
 // GetAuth token for the provided credentials
 apiRouter.post("/auth/login", async (req, res) => {
+	console.log("Post /auth/login Request");
 	const user = await DB.getUser(req.body.email);
 	if (user) {
 		if (await bcrypt.compare(req.body.password, user.password)) {
@@ -57,13 +60,16 @@ apiRouter.post("/auth/login", async (req, res) => {
 
 // DeleteAuth token if stored in cookie
 apiRouter.delete("/auth/logout", (_req, res) => {
+	console.log("Delete /auth/logout Request");
 	res.clearCookie(authCookieName);
 	res.status(204).end();
 });
 
 // GetUser returns information about a user
 apiRouter.get("/user/:email", async (req, res) => {
+	console.log("Get /user/:email Request");
 	const user = await DB.getUser(req.params.email);
+	console.log(user);
 	if (user) {
 		const token = req?.cookies.token;
 		res.send({
@@ -78,7 +84,9 @@ apiRouter.get("/user/:email", async (req, res) => {
 
 // Get Excursion By Id
 apiRouter.get("/excursion/:id", async (req, res) => {
+	console.log("Get /excursion/:id Request");
 	const excursion = await DB.getExcursionByID(req.params.id);
+	console.log(excursion);
 	if (excursion) {
 		res.send(excursion);
 		return;
@@ -88,6 +96,7 @@ apiRouter.get("/excursion/:id", async (req, res) => {
 
 // Get Excursions
 apiRouter.get("/excursions", async (req, res) => {
+	console.log("Get /excursions Request");
 	res.send(await DB.getExcursions());
 });
 
@@ -107,6 +116,7 @@ secureApiRouter.use(async (req, res, next) => {
 
 // Get Liked Excursions
 secureApiRouter.get("/excursions/likes", async (req, res) => {
+	console.log("Get /excursions/likes Request");
 	authToken = req.cookies[authCookieName];
 	const user = await DB.getUserByToken(authToken);
 	res.send(await DB.getExcursionLikesByEmail(user.email));
@@ -114,22 +124,25 @@ secureApiRouter.get("/excursions/likes", async (req, res) => {
 
 // Add Liked Excursions
 secureApiRouter.post("/excursions/likes/", async (req, res) => {
+	console.log("Post /excursions/likes Request");
 	authToken = req.cookies[authCookieName];
 	const user = await DB.getUserByToken(authToken);
 	const id = req.body.id;
-	res.send(await DB.getExcursionLikesByEmail(id, user.email));
+	res.send(await DB.addExcursionLikeByEmail(id, user.email));
 });
 
 // Remove Liked Excursions
 secureApiRouter.delete("/excursions/likes/", async (req, res) => {
+	console.log("Delete /excursions/likes Request");
 	authToken = req.cookies[authCookieName];
 	const user = await DB.getUserByToken(authToken);
 	const id = req.body.id;
-	res.send(await DB.getExcursionLikesByEmail(id, user.email));
+	res.send(await DB.removeExcursionLikeByEmail(id, user.email));
 });
 
 // Create Excursion
 secureApiRouter.post("/excursion", async (req, res) => {
+	console.log("Post /excursion Request");
 	let resultExcursion = await DB.createExcursion(excursion);
 
 	res.send({
@@ -138,7 +151,8 @@ secureApiRouter.post("/excursion", async (req, res) => {
 });
 
 // Update Excursion
-secureApiRouter.update("/excursion", async (req, res) => {
+secureApiRouter.put("/excursion", async (req, res) => {
+	console.log("put /excursion Request");
 	authToken = req.cookies[authCookieName];
 	const user = await DB.getUserByToken(authToken);
 	const excursion = await DB.getExcursionByID(req.body.id);
@@ -155,6 +169,7 @@ secureApiRouter.update("/excursion", async (req, res) => {
 
 // Delete Excursion
 secureApiRouter.delete("/excursion", async (req, res) => {
+	console.log("Delete /excursions Request");
 	authToken = req.cookies[authCookieName];
 	const user = await DB.getUserByToken(authToken);
 	const excursion = await DB.getExcursionByID(req.body.id);
@@ -174,7 +189,7 @@ app.use(function (err, req, res, next) {
 
 // Return the application's default page if the path is unknown
 app.use((_req, res) => {
-	res.sendFile("index.html", { root: "public" });
+	res.sendFile("../index.html", { root: "public" });
 });
 
 // setAuthCookie in the HTTP response
