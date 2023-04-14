@@ -421,6 +421,7 @@ async function viewExcursion(excursionID) {
 			modal.find(".modal-header").toggle(false);
 			// Show Edit button IF IT IS YOURS
 			if (
+				JSON.parse(localStorage.getItem("user")) &&
 				JSON.parse(localStorage.getItem("user")).username === excursion.creator
 			) {
 				modal.find("#modal-icon-edit").css("display", "block");
