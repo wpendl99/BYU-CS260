@@ -129,6 +129,15 @@ $(document).on("click", "#modal-icon-edit", function () {
   editExcursion();
 });
 
+// Switch to Edit Mode when user presses edit button
+$(document).on("click", "#modal-icon-vr", function (event) {
+  let excursionId = $(event.target)
+    .closest(".modal")
+    .find("#excursion-id")
+    .val();
+  window.location.href = `/xr.html?id=${excursionId}`;
+});
+
 // Delete Excursion
 $(document).on("click", "#modal-icon-trash", function () {
   const confirmDelete = confirm(
@@ -238,6 +247,9 @@ $(document).on("click", "#submit-modal", async function () {
         excursion.stops.push(stop);
       }
     });
+
+    console.log("HEY ALL SCOTT HERE: " + JSON.stringify(excursion));
+
     if (editMode) {
       // API Request the Update Excursion
       await fetch(`/api/excursion`, {
@@ -249,6 +261,7 @@ $(document).on("click", "#submit-modal", async function () {
       location.reload();
     } else {
       // API Request to Create Excursion
+      console.log("HEY ALL SCOTT HERE");
       await fetch(`/api/excursion`, {
         method: "post",
         headers: { "content-type": "application/json" },
@@ -305,6 +318,8 @@ function createExcursion() {
   modal.find("#modal-icon-edit").css("display", "none");
   // Hide Trash button
   modal.find("#modal-icon-trash").css("display", "none");
+  // hide vr button
+  modal.find("#modal-icon-vr").css("display", "none");
 
   // Hide image edit icons and update image preview
   modal.find(".icon-container-gradient").toggle(true);
@@ -357,6 +372,8 @@ function editExcursion() {
   modal.find("#modal-icon-edit").css("display", "none");
   // Show Trash button
   modal.find("#modal-icon-trash").css("display", "block");
+  // hide vr button
+  modal.find("#modal-icon-vr").css("display", "none");
 
   // Show image edit icons and update image preview
   modal.find(".icon-container-gradient").toggle(true);
@@ -421,6 +438,14 @@ async function viewExcursion(excursionID) {
       }
       // Hide Trash button
       modal.find("#modal-icon-trash").css("display", "none");
+
+      // show vr icon if vr ready
+      console.log("HERE I AM" + excursion.vrReady);
+      if (excursion.vrReady) {
+        modal.find("#modal-icon-vr").css("display", "block");
+      } else {
+        modal.find("#modal-icon-vr").css("display", "none");
+      }
 
       // Hide image edit icons and update image preview
       modal.find(".icon-container-gradient").toggle(false);
