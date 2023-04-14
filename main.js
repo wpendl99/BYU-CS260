@@ -1,18 +1,25 @@
-let user_name = "";
-(async () => {
+// Verify if already signed in
+async function authorize() {
 	let authenticated = false;
-	const username = localStorage.getItem("userName");
-	if (username) {
-		const user = await getUser(username);
+	const localUser = await JSON.parse(localStorage.getItem("user"));
+	if (localUser) {
+		const user = await getUser(localUser.username);
 		authenticated = user?.authenticated;
-		if (authenticated) {
-			user_name = user.name;
+	}
+
+	if (authenticated) {
+		const currentPath = location.pathname;
+		if (currentPath === "/index.html" || currentPath === "/") {
+			window.location.href = "/home.html";
 		}
 	}
-})();
-// Global Variables
+}
+authorize();
 
 window.addEventListener("load", function () {
+	// Get user
+	let user = JSON.parse(localStorage.getItem("user"));
+
 	waitForElm("#userHeaderBar").then(() => {
 		// User HeaderBar
 		const userHeaderBar = document.getElementById("userHeaderBar");
@@ -21,7 +28,7 @@ window.addEventListener("load", function () {
 		// User Javascript
 		// Code for If the user is logged in, change the header bar
 		if (userHeaderBar) {
-			if (user_name) {
+			if (user) {
 				console.log("User Found");
 				// user is logged in
 				// Change href for center button
@@ -36,7 +43,7 @@ window.addEventListener("load", function () {
 
 				// Welcome User and Caret
 				const welcomeUserLink = document.createElement("div");
-				welcomeUserLink.innerText = `Welcome, ${user_name}`;
+				welcomeUserLink.innerText = `Welcome, ${user.name}`;
 				welcomeUserLink.classList.add("dropdown-toggle");
 				welcomeUserLink.id = "dropdownMenuButton";
 				welcomeUserCaret = document.createElement("span");
@@ -106,10 +113,26 @@ window.addEventListener("load", function () {
 
 function signout() {
 	// Sign user out;
-	localStorage.removeItem("userName");
+	localStorage.removeItem("user");
 	fetch(`/api/auth/logout`, {
 		method: "delete",
 	}).then(() => (window.location.href = "./signout.html"));
+}
+
+async function getUser(email) {
+	try {
+		const response = await fetch(`/api/user/${email}`);
+		if (response.status === 200) {
+			return response.json();
+		} else if (response.status === 404) {
+			return false;
+		} else {
+			throw new Error("Error fetching user data");
+		}
+	} catch (error) {
+		console.log(error);
+		throw new Error("Error fetching user data");
+	}
 }
 
 function waitForElm(selector) {

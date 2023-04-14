@@ -1,79 +1,79 @@
 <!DOCTYPE html>
 <html>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Cache-Control" content="no-store" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff0000" />
-  <meta name="msapplication-TileColor" content="#da532c" />
-  <meta name="theme-color" content="#ffffff" />
-  <title>Excursions</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap"
-    rel="stylesheet"
-  />
-  <script
-    src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"
-  ></script>
-  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
-  <script
-    src="https://kit.fontawesome.com/ff836cfd3f.js"
-    crossorigin="anonymous"
-  ></script>
-  <head>
-    <title>XR Location Viewer</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="no-store" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+	<link rel="manifest" href="/site.webmanifest" />
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff0000" />
+	<meta name="msapplication-TileColor" content="#da532c" />
+	<meta name="theme-color" content="#ffffff" />
+	<title>Excursions</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap"
+		rel="stylesheet"
+	/>
+	<script
+		src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		crossorigin="anonymous"
+	></script>
+	<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+	<script
+		src="https://kit.fontawesome.com/ff836cfd3f.js"
+		crossorigin="anonymous"
+	></script>
+	<head>
+		<title>XR Location Viewer</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="UTF-8" />
 
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://unpkg.com/three@0.151.3/build/three.module.js",
-          "three/addons/": "https://unpkg.com/three@0.151.3/examples/jsm/",
-          "three-mesh-ui": "https://unpkg.com/three-mesh-ui@6.4.0/build/three-mesh-ui.module.js",
-          "three-mesh-ui/examples/": "https://unpkg.com/three-mesh-ui@6.4.0/examples/"
-        }
-      }
-    </script>
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "https://unpkg.com/three@0.151.3/build/three.module.js",
+					"three/addons/": "https://unpkg.com/three@0.151.3/examples/jsm/",
+					"three-mesh-ui": "https://unpkg.com/three-mesh-ui@6.4.0/build/three-mesh-ui.module.js",
+					"three-mesh-ui/examples/": "https://unpkg.com/three-mesh-ui@6.4.0/examples/"
+				}
+			}
+		</script>
 
-    <link rel="icon" href="\images\excursions_ico.png" type="image/x-icon" />
-    <link href="./main.css" rel="stylesheet" type="text/css" />
-    <link href="./xr.css" rel="stylesheet" type="text/css" />
+		<link rel="icon" href="\images\excursions_ico.png" type="image/x-icon" />
+		<link href="./main.css" rel="stylesheet" type="text/css" />
+		<link href="./xr.css" rel="stylesheet" type="text/css" />
 
-    <script type="module" src="./xr.js"></script>
-    <script
-      async
-      src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"
-    ></script>
-  </head>
+		<script type="module" src="./xr.js"></script>
+		<script
+			async
+			src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"
+		></script>
+	</head>
 
-  <body>
-    <main>
-      <div id="header"></div>
-      <section class="content">
-        <div id="scene-container">
-          <!-- Our <canvas> will be inserted here -->
-        </div>
-        <button id="prev-button" class="ui-button">Prev</button>
-        <button id="next-button" class="ui-button">Next</button>
-      </section>
-    </main>
-  </body>
-  <script>
-    $(function () {
-      $("#header").load("header.html");
-      $("#footer").load("footer.html");
-    });
-  </script>
-  <script src="./main.js"></script>
-  <script src="./home.js"></script>
+	<body>
+		<main>
+			<div id="header"></div>
+			<section class="content">
+				<div id="scene-container">
+					<!-- Our <canvas> will be inserted here -->
+				</div>
+				<button id="prev-button" class="ui-button">Prev</button>
+				<button id="next-button" class="ui-button">Next</button>
+			</section>
+		</main>
+	</body>
+	<script>
+		$(function () {
+			$("#header").load("header.html");
+			$("#footer").load("footer.html");
+		});
+	</script>
+	<script src="./main.js"></script>
+	<!-- <script src="./home.js"></script> -->
 </html>

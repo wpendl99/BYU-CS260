@@ -1,15 +1,17 @@
-(async () => {
+// Verify if already signed in
+async function authorize() {
 	let authenticated = false;
-	const userName = localStorage.getItem("userName");
-	if (userName) {
-		const user = await getUser(username);
+	const localUser = await JSON.parse(localStorage.getItem("user"));
+	if (localUser) {
+		const user = await getUser(user.username);
 		authenticated = user?.authenticated;
 	}
 
 	if (authenticated) {
 		window.location.href = "/home.html";
 	}
-})();
+}
+authorize();
 
 // Variables
 // signin form
@@ -26,12 +28,17 @@ const errorEmailInvalidLabel = document.getElementById(
 );
 const errorEmailTakenLabel = document.getElementById("error-email-taken-label");
 const errorPasswordLabel = document.getElementById("error-password-label");
+const errorLabel = document.getElementById("error-label");
 const submitButton = document.getElementById("submit-button");
 
 async function signup(name, email, password) {
 	let endpoint = `/api/auth/create`;
 
-	if (await getUser(email)) {
+	// Check to see if the user exists
+	let user = await getUser(email);
+	if (user) {
+		console.log("User Already Exists");
+		throw ReferenceError;
 		return false;
 	}
 
@@ -46,10 +53,13 @@ async function signup(name, email, password) {
 			"Content-type": "application/json; charset=UTF-8",
 		},
 	});
-	const body = await response.json();
 
 	if (response?.status === 200) {
-		localStorage.setItem("userName", userName);
+		// Store user in cache
+		localStorage.setItem(
+			"user",
+			JSON.stringify({ name: name, username: email })
+		);
 		return true;
 	} else {
 		return false;
@@ -96,7 +106,7 @@ emailField.addEventListener("input", validateForm);
 passwordField.addEventListener("input", validateForm);
 
 // Add listener for signin event
-signupForm.addEventListener("submit", function (event) {
+signupForm.addEventListener("submit", async function (event) {
 	event.preventDefault();
 
 	// Check to see if values are valid first
@@ -127,20 +137,30 @@ signupForm.addEventListener("submit", function (event) {
 	const name = nameField.value;
 	const email = emailField.value;
 	const password = passwordField.value;
-
-	if (signup(name, email, password)) {
-		// Successful login
-		window.location.assign("./home.html");
-	} else {
-		// Error Handling
-		// Remove Password field, show error, turn labels red and shake buttons
+	try {
+		if (await signup(name, email, password)) {
+			// Successful login
+			window.location.assign("/home.html");
+		} else {
+			// General Error
+			// Remove Password field, show error, turn labels red and shake buttons
+			// Remove Password Field
+			passwordField.value = "";
+			// Show Error
+			errorLabel.classList.remove("hidden");
+			// Turn Labels red
+			emailLabel.classList.add("error");
+			passwordLabel.classList.add("error");
+			// Shake Button
+			submitButton.classList.add("shake");
+			submitButton.setAttribute("disabled", true);
+		}
+	} catch (ReferenceError) {
+		// Show error
+		errorEmailTakenLabel.classList.remove("hidden");
+		emailField.focus();
 		// Remove Password Field
 		passwordField.value = "";
-		// Show Error
-		errorLabel.classList.remove("hidden");
-		// Turn Labels red
-		emailLabel.classList.add("error");
-		passwordLabel.classList.add("error");
 		// Shake Button
 		submitButton.classList.add("shake");
 		submitButton.setAttribute("disabled", true);
@@ -153,12 +173,17 @@ submitButton.addEventListener("animationend", () => {
 });
 
 async function getUser(email) {
-	let scores = [];
-	// See if we have a user with the given email.
-	const response = await fetch(`/api/user/${email}`);
-	if (response.status === 200) {
-		return response.json();
+	try {
+		const response = await fetch(`/api/user/${email}`);
+		if (response.status === 200) {
+			return response.json();
+		} else if (response.status === 404) {
+			return false;
+		} else {
+			throw new Error("Error fetching user data");
+		}
+	} catch (error) {
+		console.log(error);
+		throw new Error("Error fetching user data");
 	}
-
-	return null;
 }

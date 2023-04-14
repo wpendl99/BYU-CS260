@@ -1,4 +1,5 @@
 const { MongoClient } = require("mongodb");
+const mongodb = require("mongodb");
 const bcrypt = require("bcrypt");
 const uuid = require("uuid");
 
@@ -13,7 +14,7 @@ if (!userName) {
 const url = `mongodb+srv://${userName}:${password}@${hostname}`;
 
 const client = new MongoClient(url);
-const userCollection = client.db("excursions").collection("user");
+const userCollection = client.db("excursions").collection("users");
 const excursionCollection = client.db("excursions").collection("excursions");
 
 function getUser(email) {
@@ -39,12 +40,14 @@ async function createUser(name, email, password) {
 	return user;
 }
 
-function getExcursionByID(id) {
-	return excursionCollection.findOne({ _id: id });
+async function getExcursionByID(id) {
+	return await excursionCollection.findOne({
+		_id: new mongodb.ObjectId(id),
+	});
 }
 
-function getExcursions() {
-	return excursionCollection.find({});
+async function getExcursions() {
+	return await excursionCollection.find({}).toArray();
 }
 
 async function createExcursion(excursion) {
@@ -54,46 +57,35 @@ async function createExcursion(excursion) {
 }
 
 async function updateExcursion(excursion) {
-	await excursionCollection.replaceOne({ _id: excursion.id }, excursion);
+	await excursionCollection.replaceOne(
+		{ _id: new mongodb.ObjectId(id) },
+		excursion
+	);
 
 	return excursion;
 }
 
 async function deleteExcursion(excursion) {
-	await excursionCollection.deleteOne({ _id: excursion.id });
+	await excursionCollection.deleteOne({ _id: new mongodb.ObjectId(id) });
 }
 
 function getExcursionLikesByEmail(email) {
-	return excursionCollection.find({ likes: email });
+	return excursionCollection.find({ likes: email }).toArray();
 }
 
 function addExcursionLikeByEmail(id, email) {
 	return excursionCollection.updateOne(
-		{ _id: id },
+		{ _id: new mongodb.ObjectId(id) },
 		{ $push: { likes: email } }
 	);
 }
 
 function removeExcursionLikeByEmail(id, email) {
 	return excursionCollection.updateOne(
-		{ _id: id },
+		{ _id: new mongodb.ObjectId(id) },
 		{ $pull: { likes: email } }
 	);
 }
-
-// function addScore(score) {
-// 	scoreCollection.insertOne(score);
-// }
-
-// function getHighScores() {
-// 	const query = {};
-// 	const options = {
-// 		sort: { score: -1 },
-// 		limit: 10,
-// 	};
-// 	const cursor = scoreCollection.find(query, options);
-// 	return cursor.toArray();
-// }
 
 module.exports = {
 	getUser,

@@ -1,23 +1,11 @@
-let username = "";
-(async () => {
-	let authenticated = false;
-	const userNameLocal = localStorage.getItem("userName");
-	if (userNameLocal) {
-		const user = await getUser(username);
-		authenticated = user?.authenticated;
-	}
-
-	if (authenticated) {
-		username = userNameLocal;
-	}
-})();
+let user = JSON.parse(localStorage.getItem("user"));
 
 // Global Variable
 // Excursions data
 let excursions = [];
 let likedExcursions = [];
 
-async () => {
+window.addEventListener("load", async function () {
 	// Get Excursions
 	try {
 		// Get the latest excursions from the server
@@ -35,11 +23,12 @@ async () => {
 	}
 
 	// Get Liked Excursions
-	if (username) {
+	if (user) {
 		try {
 			// Get liked excursions for user
 			const responseLikedExcursions = await fetch("/api/excursions/likes");
 			likedExcursions = await responseLikedExcursions.json();
+			likedExcursions = likedExcursions.map((obj) => obj._id);
 
 			// Save the likes in case we go offline in the future
 			localStorage.setItem("likedExcursions", JSON.stringify(likedExcursions));
@@ -52,9 +41,7 @@ async () => {
 			}
 		}
 	}
-};
 
-window.addEventListener("load", function () {
 	// load initial data
 	for (let i = 0; i < excursions.length; i++) {
 		const excursion = excursions[i];
@@ -65,7 +52,8 @@ window.addEventListener("load", function () {
 		idInput.id = "excursion-card-id";
 		idInput.setAttribute("readonly", "");
 		idInput.setAttribute("unselectable", "on");
-		idInput.value(excursion._id);
+		idInput.setAttribute("value", excursion._id);
+		li.appendChild(idInput);
 
 		const img = document.createElement("img");
 		img.classList.add("img-fluid", "imp");
@@ -77,12 +65,12 @@ window.addEventListener("load", function () {
 		const iconsDiv = document.createElement("div");
 		iconsDiv.classList.add("card-icons");
 
-		if (username) {
+		if (user) {
 			const heartSpan = document.createElement("span");
 			heartSpan.classList.add("heart-icon");
 			const heartIcon = document.createElement("i");
 			// Check to see if the excursion is liked
-			if (likedExcursions.indexOf(username) >= 0) {
+			if (likedExcursions.indexOf(excursion._id) >= 0) {
 				heartIcon.classList.add("fas", "fa-heart");
 				heartSpan.classList.add("heart-liked");
 			} else {
@@ -123,7 +111,7 @@ window.addEventListener("load", function () {
 		li.appendChild(iconsDiv);
 		li.appendChild(textDiv);
 
-		if (username && excursion.creator === username) {
+		if (user && excursion.creator === user.username) {
 			document.getElementById("your-excursions").appendChild(li);
 		} else {
 			document.getElementById("other-excursions").appendChild(li);
@@ -136,7 +124,7 @@ window.addEventListener("load", function () {
 const updateExcursions = () => {
 	const yourExcursions = document.getElementById("your-excursions");
 	// Check if user exists
-	if (!username) {
+	if (!user) {
 		// If user doesn't exist, append sign in message & hide Create modal button
 		const message = document.createElement("p");
 		message.innerHTML = `<a href="./signin.html" class="inline-red-link">Sign in</a> to start creating your excursions!`;
@@ -163,3 +151,19 @@ const updateExcursions = () => {
 		$("#create-modal-button").toggle(true);
 	}
 };
+
+async function getUser(email) {
+	try {
+		const response = await fetch(`/api/user/${email}`);
+		if (response.status === 200) {
+			return response.json();
+		} else if (response.status === 404) {
+			return false;
+		} else {
+			throw new Error("Error fetching user data");
+		}
+	} catch (error) {
+		console.log(error);
+		throw new Error("Error fetching user data");
+	}
+}
