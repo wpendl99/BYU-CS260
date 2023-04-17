@@ -36,6 +36,17 @@
   - [JS Async/Await](#js-async-await)
   - [Simon JavaScript](#simon-js)
   - [Startup - JavaScript](#startup-js)
+### Web Services
+- [Fetch](#ws-fetch)
+- [Node.js](#ws-node)
+- [Express](#ws-express)
+- [Simon Service](#simon-service)
+- [Data Services](#ws-data)
+  - [Simon Db](#simon-db)
+  - [Simon Login](#simon-login)
+  - [Simon WebSocket](#simon-socket)
+- [Startup - Service](#startup-service)
+
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
@@ -480,6 +491,40 @@ Overall, I really enjoyed working on this assignment and seeing how all the diff
 6. Deployment: I deployed the final version of the application to my production environment using the deployService.sh script.
 
 *Website Link: [Simon JS (wkp23)](https://startup.worldexcursions.click)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='ws-fetch'></a>
+## Fetch
+#### William Pendleton Learned:
+One interesting thing about the fetch API is its simplicity and ease of use compared to its predecessor, the XMLHttpRequest API. The fetch API uses promises, which allow for cleaner and more concise code compared to the XMLHttpRequest API, which uses callback functions. Additionally, the fetch API natively supports JSON, making it easier to handle JSON data without additional libraries or code.
+
+*Website Link: [WebServices: Fetch](https://codepen.io/wpendl99/pen/GRXxrvG)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='ws-node'></a>
+## Node.js
+#### William Pendleton Learned:
+I am always amazed by the ease and power that node offers in delivering dynamic content and also the ease in doing so. I really enjoyed learning about how to start a simple web-service and I can't wait to see how we are going to implement this in future projects to come.
+
+*Website Link: [Intro to Node: 4o4](https://codepen.io/wpendl99/pen/MWqGLNz)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='ws-express'></a>
+## Express
+#### William Pendleton Learned:
+One interesting aspect of the lesson is the implementation and use of middleware functions in Express. Middleware functions are an essential part of an Express application, as they provide modular functionality and allow developers to manage the flow of request and response data more effectively. They can be used for various purposes, such as routing, authentication, CORS, sessions, serving static web files, cookies, and logging.
+
+Middleware functions have a similar structure to routing functions, with the primary difference being that routing functions are only called if the associated pattern matches, while middleware functions are called for every HTTP request unless a preceding middleware function does not call the 'next' function. This demonstrates how middleware functions can control the order of execution and the flow of data through an Express application.
+
+The lesson demonstrates the use of built-in, third-party, and custom middleware functions. The built-in middleware function, 'express.static', serves static files from a specified directory. The third-party middleware function, 'cookie-parser', simplifies cookie generation and access. The custom middleware function is created to log the URL of each request.
+
+This concept of middleware functions in Express shows how developers can easily add, remove, or modify features in their application by simply chaining or rearranging middleware functions. It highlights the flexibility and modularity of the Express framework, making it a powerful tool for building web applications.
 
 #### Daniel Yu Learned:
 
