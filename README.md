@@ -529,3 +529,11 @@ This concept of middleware functions in Express shows how developers can easily 
 #### Daniel Yu Learned:
 
 [Back to top](#top)
+<a id='simon-service'></a>
+## Simon Service
+#### William Pendleton Learned:
+In this assignment, I gained valuable experience in deploying a Node.js application which involved understanding its working mechanism and configuring the Node.js service to listen on the appropriate ports. Furthermore, I learned how to set up an Express server for serving static content and managing API endpoints, which allowed me to handle requests for getting and submitting scores in the Simon game. This experience not only expanded my understanding of deployment processes but also reinforced my knowledge of backend development using Node.js and Express.
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
