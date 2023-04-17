@@ -35,13 +35,14 @@
   - [JS Promises](#js-promises)
   - [JS Async/Await](#js-async-await)
   - [Simon JavaScript](#simon-js)
+  - [Startup - JavaScript](#startup-js)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
   <br>
  
 
-- [Startup - JavaScript](#startup-js)
+
 </details>
 
 <a id='github'></a>
@@ -464,6 +465,21 @@ I just finished an assignment for my Simon can web app that added three new Java
 Overall, I really enjoyed working on this assignment and seeing how all the different pieces of JavaScript fit together to create a functional game. I learned a lot about how to structure my code and how to make use of local storage to store and retrieve important data. I also appreciated how the professor broke down the different aspects of the game into separate files, which made it much easier to understand and work with. All in all, I feel like I came away from this assignment with a much better understanding of JavaScript and how to use it to build cool things like this Simon can game.
 
 *Website Link: [Simon JS (wkp23)](https://simon.worldexcursions.click)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='startup-js'></a>
+## Startup JavaScript
+#### William Pendleton Learned:
+1. Reading login information: I learned how to read user input from login fields using JavaScript, which enabled me to display the username after the user logs in.
+2. Representing database data: I created a mock database using JavaScript objects and arrays, which allowed me to simulate database calls and manipulate data within the application.
+3. Localstorage API: I used the localstorage API to store and retrieve data between pages and browser sessions, ensuring a seamless user experience.
+4. Real-time data and WebSockets: I learned how to mock real-time data using WebSockets and inject the data into the DOM, simulating server updates for the application.
+5. Debugging: I utilized the VS Code Live Server extension and the browser's debugger window to debug my CSS and JavaScript code, which saved me time and helped me identify issues more efficiently.
+6. Deployment: I deployed the final version of the application to my production environment using the deployService.sh script.
+
+*Website Link: [Simon JS (wkp23)](https://startup.worldexcursions.click)*
 
 #### Daniel Yu Learned:
 
