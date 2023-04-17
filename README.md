@@ -537,3 +537,13 @@ In this assignment, I gained valuable experience in deploying a Node.js applicat
 #### Daniel Yu Learned:
 
 [Back to top](#top)
+<a id='ws-data'></a>
+## Data Services
+#### William Pendleton Learned:
+I learned that MongoDB is a powerful NoSQL database that is highly flexible and scalable. Its use of JSON objects as the core data model makes it simple for developers to work with JSON from top to bottom in their technology stack. Unlike traditional relational databases, MongoDB does not require a rigid table structure, allowing for more organic growth and adaptation of the data model as the application evolves. Additionally, its query syntax is influenced by JavaScript, which streamlines the querying process for developers familiar with the language.
+
+*Connection String: mongodb+srv://${user}:${password}@cs260.gan2q52.mongodb.net/?retryWrites=true&w=majority
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
