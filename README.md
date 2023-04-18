@@ -354,6 +354,9 @@ I found it interesting how the for loop and conditional statement work together 
 *Website Link: [Random Password Generator](https://codepen.io/wpendl99/pen/bGxeNPj)*
 
 #### Daniel Yu Learned:
+While experimenting with conditionals and loops in JavaScript, I learned how to use if-else statements and the ternary operator to execute code conditionally. I also learned how to use loops, including for, while, do-while, for-in, and for-of loops, to iterate over arrays and objects. Additionally, I gained experience using break and continue statements to control loop execution. 
+
+*Website Link: [Even Numbers](https://codepen.io/dan-dean/pen/dygpWOK)*
 
 [Back to top](#top)
 <a id='js-functions'></a>
@@ -364,6 +367,10 @@ I found it interesting how this assignment combines various types of functions i
 *Website Link: [Counting with JS](https://codepen.io/wpendl99/pen/MWqjvrX)*
 
 #### Daniel Yu Learned:
+I learned about inner functions which are functions declared inside other functions that allow for modularizing code without exposing private details. This helped to simplify the code by breaking it down into smaller, more manageable parts.
+By passing parameters and returning values from functions, I was able to create a more dynamic and customizable program. This allowed for greater flexibility in the code and made it easier to reuse specific blocks of code.
+
+*Website Link: [Averaging](https://codepen.io/dan-dean/pen/NWORjgP)*
 
 [Back to top](#top)
 <a id='js-arrow-functions'></a>
