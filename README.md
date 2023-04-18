@@ -557,3 +557,15 @@ In this assignment, we explored the integration of MongoDB Atlas as a database s
 #### Daniel Yu Learned:
 
 [Back to top](#top)
+<a id='simon-login'></a>
+## Simon Login
+#### William Pendleton Learned:
+In this assignment, we focused on user authentication and storing credentials and authentication tokens in MongoDB for a Simon game. The provided files, including 'public/index.html', 'public/login.js', and 'public/login.css', made up the login user interface, while Bootstrap supplied the styling for the controls. We explored the use of a secure cookie to store the authorization token, and learned how to implement application service endpoints in 'index.js' to manage user authentication.
+
+By studying and modifying the code, we gained familiarity with the process of creating and managing secure application service endpoints, handling authorization cookies, and working with a database for storing user credentials. This knowledge is essential for developing web applications with user authentication and secure access to resources.
+
+*Website Link: [Simon Login (wkp23)](https://simon.worldexcursions.click/)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
