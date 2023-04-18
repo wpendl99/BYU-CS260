@@ -322,6 +322,9 @@ One interesting thing about HTML is its versatility and ability to create dynami
 *Website Link: [WorldExcursions.click](https://start.worldexcursions.click/)*
 
 #### Daniel Yu Learned:
+We added custom styles for the header section, including a gradient background color and a larger font size for the site title. We also modified the styles for the navigation bar to have a different background color and hover effect when the links are hovered over. Additionally, we added a custom font to the site using the @font-face rule.
+
+In terms of what I learned using CSS, I discovered how to use selectors to target specific HTML elements and apply styles to them. I also learned about box model properties such as padding and margin, as well as how to use CSS to create responsive layouts that adjust to different screen sizes.
 
 [Back to top](#top)
 <a id='ux-design'></a>
