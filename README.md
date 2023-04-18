@@ -311,6 +311,7 @@ By incorporating CSS and Bootstrap into my Simon game, I was able to create a vi
 *Website Link: [Simon CSS (wkp23)](https://simon.worldexcursions.click/archive/v2)*
 
 #### Daniel Yu Learned:
+CSS allows for significantly greater levels of flexibility and depth in terms of visual elements, styling, and more in webpages. Interactivity and dynamic elements are still lacking, but this takes buttons from buttons to shapes and resizeable composition. HTML and CSS go hand in hand in creating the content of a website, with CSS just as vital.
 
 [Back to top](#top)
 <a id='startup-html-css'></a>
