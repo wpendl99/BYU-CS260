@@ -569,3 +569,15 @@ By studying and modifying the code, we gained familiarity with the process of cr
 #### Daniel Yu Learned:
 
 [Back to top](#top)
+<a id='simon-socket'></a>
+## Simon WebSocket
+#### William Pendleton Learned:
+In this assignment, we focused on implementing peer-to-peer communication using WebSocket for a Simon game. The functionality was designed to demonstrate WebSocket's capabilities by displaying notifications between users without adding unnecessary complexity. We installed the 'ws' NPM package and attached a WebSocket listener to the HTTP server within the 'peerProxy.js' file, implementing the PeerProxy class to manage WebSocket connections and requests.
+
+By studying the code in the 'public/play.js' file, we learned how to connect, broadcast, receive, and display events using WebSocket. This understanding can be applied to develop additional peer-to-peer functionalities in web applications, such as requiring connected peers to complete Simon patterns in turn. Overall, this assignment provided valuable insights into WebSocket and its role in real-time communication between users in web applications.
+
+*Website Link: [Simon WebSocket (wkp23)](https://simon.worldexcursions.click/)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
