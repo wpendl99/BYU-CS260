@@ -547,3 +547,13 @@ I learned that MongoDB is a powerful NoSQL database that is highly flexible and 
 #### Daniel Yu Learned:
 
 [Back to top](#top)
+<a id='simon-db'></a>
+## Simon Database
+#### William Pendleton Learned:
+In this assignment, we explored the integration of MongoDB Atlas as a database service to persistently save high scores for a Simon game. The technology stack included a client application using HTML/CSS/JavaScript, a web service with Caddy, Node.js, and Express, and a database service using MongoDB. We learned how to connect to MongoDB Atlas, securely handle credentials, and work with the database through the 'database.js' and 'index.js' files. By reviewing and modifying the provided code, we gained valuable experience in implementing persistence in a web application and working with a database service like MongoDB, which can be applied to more complex projects in the future.
+
+*Website Link: [Simon DB (wkp23)](https://simon.worldexcursions.click/)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
