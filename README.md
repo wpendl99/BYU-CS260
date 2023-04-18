@@ -338,6 +338,9 @@ Overall, Airbnb's UX design is a great example of how to create a user-friendly 
 *Website Link: [airbnb](https://www.airbnb.com)*
 
 #### Daniel Yu Learned:
+I really like the white theming behind this website which sets other elements out such as gameplay clips and images as visually striking. The website is also far from basic, and the white theme is hand in hand with the clean design language of the Quest 2 headset itself. It is as if the website is meant to reflect the headset, and your experience within it which will be clean with gameplay and other experiences as the standouts.
+
+*Website Link: [meta quest](https://www.meta.com/quest/)*
 
 [Back to top](#top)
 <a id='js-TOCL'></a>
