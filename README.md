@@ -46,7 +46,8 @@
   - [Simon Login](#simon-login)
   - [Simon WebSocket](#simon-socket)
 - [Startup - Service](#startup-service)
-
+### Web Frameworks
+- [React Components](#react-components)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
@@ -589,6 +590,18 @@ In this Startup Deliverable - Service assignment, several services are integrate
 Additionally, the application features multiple endpoints for managing excursions, such as creating, editing, and viewing. These excursions are stored persistently in a MongoDB database, enabling users to conveniently access and modify their data. By incorporating various services, endpoints, and database solutions, the application offers a comprehensive and interactive platform for managing and exploring excursions while showcasing the power of modern web development technologies.
 
 *Website Link: [WorldExcursions.click](https://simon.worldexcursions.click/)*
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='react-components'></a>
+## React Components
+#### William Pendleton Learned:
+In this assignment, I learned about the core concepts of React components, which help modularize application functionality, promote code reuse, and facilitate user interaction. Key features of React components include render functions for generating the user interface, properties for receiving and displaying information, and internal state management using the React.useState hook function.
+
+I modified the CodePen demo so that now it accepts an initial background color property and maintains its internal state for foreground and background colors, as well as an "outlook" message. The component uses event handlers to change the background and foreground color on mouse hover and toggle the outlook message, showcasing React's capabilities in creating dynamic, interactive user interfaces with properties, state management, and reactivity.
+
+*Website Link: [react: Components](https://codepen.io/wpendl99/pen/ZEqpeaE)*
 
 #### Daniel Yu Learned:
 
