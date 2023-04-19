@@ -27,8 +27,19 @@ function initMap() {
 		const lng = mapsMouseEvent.latLng.lng();
 		const parentWindow = window.opener;
 
-		parentWindow.postMessage({ lat, lng }, "*");
+		parentWindow.postMessage({ lat, lng, id }, "*");
 	});
 }
 
 window.initMap = initMap;
+
+const id = getUrlParameter("id");
+
+function getUrlParameter(name) {
+	name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+	const regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+	const results = regex.exec(location.search);
+	return results === null
+		? ""
+		: decodeURIComponent(results[1].replace(/\+/g, " "));
+}

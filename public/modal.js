@@ -505,7 +505,7 @@ async function viewExcursion(excursionID) {
 				modal.find("#no-stops-label").css("display", "none");
 				modal.find("#stops").toggle(true);
 
-				excursion.stops.forEach(function (stop) {
+				excursion.stops.forEach(function (stop, index) {
 					modal.find("#stops").children().first().clone().appendTo("#stops");
 					modal.find(".stop-li").last().find("#stopName").val(stop.name);
 					modal.find(".stop-li").last().find("#stopAddress").val(stop.address);
@@ -519,9 +519,10 @@ async function viewExcursion(excursionID) {
 						.last()
 						.find("#showLatLong")
 						.prop("checked", stop.vrReady);
+					modal.find(".stop-li").last().attr("data-stop-id", index);
 					// if()
 					modal.find(".stop-li").last().find("#stopLat").val(stop.lat);
-					modal.find(".stop-li").last().find("#stopLng").val(stop.long);
+					modal.find(".stop-li").last().find("#stopLng").val(stop.lng);
 				});
 				modal.find("#stops").children().first().remove();
 			} else {
@@ -592,22 +593,30 @@ $(document).on("click", ".heart-icon", async function (event) {
 let stopID;
 
 $(document).on("click", ".address-toggle-btn", async function (event) {
+	//TODO: Get stop id and pass it in as a url parameter to the map window
+	let stopID = $(this).closest(".stop-li").attr("data-stop-id");
+
 	const width = 600;
 	const height = 400;
 	const left = (window.innerWidth - width) / 2;
 	const top = (window.innerHeight - height) / 2;
-	const url = "./map.html";
+	let url = `./map.html?id=${stopID}`;
 	const features = `width=${width},height=${height},left=${left},top=${top}`;
 
 	window.open(url, "mapWindow", features);
-	//TODO: Refer to specific stop's latlng info so that field can be populated
-	// in the below function each time a message is sent
-	// will please help
 });
 
 //get latlng
 window.addEventListener("message", (event) => {
-	const { lat, lng } = event.data;
-
-	console.log("lat: " + lat + ", long: " + lng);
+	const { lat, lng, id } = event.data;
+	console.log(
+		"lat: " + lat + ", long: " + lng,
+		", id: " + id + ", editMode: " + editMode
+	);
+	if (editMode) {
+		//TODO: Using the id, set the associated stop's stopLat and stopLng input fields to lat and lng
+		const stopElement = $(`.stop-li[data-stop-id="${id}"]`);
+		stopElement.find("#stopLat").val(lat);
+		stopElement.find("#stopLng").val(lng);
+	}
 });
