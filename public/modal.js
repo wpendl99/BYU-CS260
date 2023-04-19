@@ -521,7 +521,7 @@ async function viewExcursion(excursionID) {
 						.prop("checked", stop.vrReady);
 					// if()
 					modal.find(".stop-li").last().find("#stopLat").val(stop.lat);
-					modal.find(".stop-li").last().find("#stopLng").val(stop.long);
+					modal.find(".stop-li").last().find("#stopLng").val(stop.lng);
 				});
 				modal.find("#stops").children().first().remove();
 			} else {
