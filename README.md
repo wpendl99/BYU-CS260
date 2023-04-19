@@ -67,7 +67,6 @@
   <summary>🚧 Assignments that are not yet completed</summary>
   <br>
 
-
 </details>
 
 <a id='github'></a>
@@ -731,6 +730,10 @@ In this assignment, I gained valuable experience in deploying a Node.js applicat
 
 #### Daniel Yu Learned:
 
+Adding the service portion of Simon allowed us to get experience with Javascript beyond the confines of a webpage in a browser. We were able to let the javascript through Node manage API endpoints and act as a server on its own. It allows us to interface with other systems, serve even more dynamic content, and interact with other third parties. Here, we are able to pull pictures and quotes from other sources and load those asynchronously.
+
+_Website Link: [simon service (dandean)](https://simon.excursionsxr.world)_
+
 [Back to top](#top)
 <a id='ws-data'></a>
 
@@ -757,6 +760,10 @@ _Website Link: [Simon DB (wkp23)](https://simon.worldexcursions.click/)_
 
 #### Daniel Yu Learned:
 
+Interaction with MongoDB allows us to store persistent knowledge between client visits such as lifetime highscores and player information. Adding it to our environment was done so in a secure way that never presents our underlying framework to end users and also keeps our systems modular, which is generally just good programming practice. The keys and hosts are stored in environment variables and interactions with the actual database occur through our server's database.js and index.js files through Node. All of this will be incredibly pertinent to our own startup application.
+
+_Website Link: [simon db (dandean)](https://simon.excursionsxr.world)_
+
 [Back to top](#top)
 <a id='simon-login'></a>
 
@@ -771,6 +778,10 @@ By studying and modifying the code, we gained familiarity with the process of cr
 _Website Link: [Simon Login (wkp23)](https://simon.worldexcursions.click/)_
 
 #### Daniel Yu Learned:
+
+It's important for our users and ourselves to make sure that validation is secure and consistent, and this goes beyond them having a password we can verify. Under the hood of this addition, Simon hashes passwords so that they are never stored in plaintext on our database and so leaks are a non-issue. This also means that additions to our highscores only come from verified users that have authenticated themselves as who they are.
+
+_Website Link: [simon login (dandean)](https://simon.excursionsxr.world)_
 
 [Back to top](#top)
 <a id='simon-socket'></a>
@@ -787,6 +798,9 @@ _Website Link: [Simon WebSocket (wkp23)](https://simon.worldexcursions.click/)_
 
 #### Daniel Yu Learned:
 
+Using the websoccket NPM package, we can show notifications between clients without a ton of structural overhead. These notification events were dynamic and flexible and we learned how to initiate and utilize these connections with the PeerProxy class.
+
+_Website Link: [simon websocket (dandean)](https://simon.excursionsxr.world)_
 [Back to top](#top)
 <a id='startup-service'></a>
 
@@ -798,10 +812,13 @@ In this Startup Deliverable - Service assignment, several services are integrate
 
 Additionally, the application features multiple endpoints for managing excursions, such as creating, editing, and viewing. These excursions are stored persistently in a MongoDB database, enabling users to conveniently access and modify their data. By incorporating various services, endpoints, and database solutions, the application offers a comprehensive and interactive platform for managing and exploring excursions while showcasing the power of modern web development technologies.
 
-_Website Link: [WorldExcursions.click](https://simon.worldexcursions.click/)_
+_Website Link: [WorldExcursions.click](https://startup.worldexcursions.click/)_
 
 #### Daniel Yu Learned:
 
+Throughout this section's deliverable, we developed the Services that make up our web app. This includes the interactions with the database through MongoDB Atlas and also our script running serverside as a service called pano. This service takes requests from client's browsers and servers up panoramic images from Google's Streetview. These services listen for calls to their API, and their addition also changed the structure of our local instance's directory, as publicly served static content was moved into the /public directory. Now, we have persistent data that is actually changeable, instead of static, always served up panoramas and excursion data.
+
+_Website Link: [ExcursionsXR.world]_(https://startup.excursionsxr.world)\*
 [Back to top](#top)
 <a id='react-components'></a>
 
