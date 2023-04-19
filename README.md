@@ -65,6 +65,7 @@
 - [React Reactivity](#react-reactivity)
 - [React Tic-Tac-Toe](#react-ttt)
 - [React CLI](#react-cli)
+- [React Router](#react-router)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
@@ -862,6 +863,21 @@ I had fun messing around with React CLI and being able to make a working react a
 The React CLI assignment provided a comprehensive introduction to using the create-react-app Command Line Interface (CLI) to set up a React-based project. I learned how to use NPX to run create-react-app, which generates a fully configured template for a React application. This template includes necessary files, components, and NPM packages that make it easy to get started with building a React application. The assignment also illustrated how the generated project structure can be modified to suit specific needs, such as removing testing and performance monitoring packages, or adjusting file extensions to better differentiate between JSX and JS files.
 
 One interesting aspect of the assignment was the exploration of how the development and production builds are created using the npm start and npm run build commands. These commands transpile, minify, and inject the proper JavaScript into the application, resulting in an optimized production build. Additionally, I found the discussion on the difference between using .js and .jsx file extensions for React components informative, as it highlighted how certain tools might behave differently based on the chosen extension.
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='react-router'></a>
+
+## React Router
+
+#### William Pendleton Learned:
+
+In this code, I implemented React Router to manage the navigation and routing for a simple web application. React Router is a popular library for managing client-side navigation in React applications, allowing developers to create dynamic, single-page applications with ease. It provides a set of components and hooks that help handle navigation and rendering components based on the current URL path.
+
+We used the BrowserRouter component to wrap our entire application, enabling routing functionality. We then utilized NavLink components to create navigation links for different routes, and Routes and Route components to define the mapping between URL paths and the respective components to be rendered. We also used the Navigate component to handle invalid paths by redirecting the user back to the home page. This implementation showcases the core functionality of React Router and how it can be easily integrated into a React application to manage routing and navigation.
+
+_Website Link: [react: React-Router](https://codepen.io/wpendl99/pen/gOBwGBY)_
 
 #### Daniel Yu Learned:
 
