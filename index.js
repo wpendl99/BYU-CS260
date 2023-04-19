@@ -17,7 +17,7 @@ app.use(cookieParser());
 
 // Serve up the applications static content
 // CHANGE THIS AND LINE 177 on PROD load
-app.use(express.static("../"));
+app.use(express.static("./public/"));
 
 // Router for service endpoints
 var apiRouter = express.Router();

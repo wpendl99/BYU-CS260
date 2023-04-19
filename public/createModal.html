@@ -1,199 +1,200 @@
 <div class="modal-background" id="modal-background">
-  <div class="modal">
-    <input id="excursion-id" unselectable readonly />
-    <div class="modal-header">
-      <h1 class="unselectable">Create Excursion</h1>
-    </div>
-    <button
-      id="modal-icon-vr"
-      class="modal-close modal-icon-button unselectable"
-    >
-      <i class="fa fa-vr-cardboard"></i>
-    </button>
-    <button
-      id="modal-icon-trash"
-      class="modal-close modal-icon-button unselectable"
-    >
-      <i class="fa fa-trash"></i>
-    </button>
-    <button
-      id="modal-icon-edit"
-      class="modal-close modal-icon-button unselectable"
-    >
-      <i class="fa fa-pencil"></i>
-    </button>
-    <button
-      id="modal-icon-x"
-      class="modal-close modal-icon-button unselectable"
-    >
-      &times;
-    </button>
-    <div class="modal-body">
-      <form>
-        <div class="image-container">
-          <img class="blur-preview" />
-          <img
-            id="excursion-preview"
-            class="unselectable"
-            src="./images/default-background.jpg"
-          />
-          <div class="icon-container-gradient">
-            <div class="icon-container">
-              <label for="excursion-upload" id="icon-label">
-                <i class="fa fa-upload"></i>
-              </label>
-              <i class="fa fa-trash" id="modal-trash-icon"></i>
-            </div>
-          </div>
-          <input
-            type="file"
-            id="excursion-upload"
-            name="excursion-upload"
-            accept="image/*"
-          />
-        </div>
-        <br />
-        <div class="excursion-text-container">
-          <input
-            type="text"
-            id="excursion-title"
-            name="excursion-title"
-            placeholder="Excursion Title *"
-            maxlength="75"
-            autocomplete="off"
-          /><br />
-          <textarea
-            id="excursion-description"
-            class="autoresizing"
-            name="excursion-description"
-            placeholder="This is the best place ever because ... *"
-          ></textarea
-          ><br />
-          <div class="form-group">
-            <label for="stops" id="stops-label">Stops:</label>
-            <label id="no-stops-label"
-              >It looks like there aren't any stops for this excursion yet
-              ...</label
-            >
-            <ol id="stops">
-              <li class="stop-li">
-                <div class="stop">
-                  <div class="drag-handle">
-                    <i class="fas fa-bars"></i>
-                  </div>
-                  <div class="stop-content">
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        id="stopName"
-                        class="stopName"
-                        name="stopName"
-                        placeholder="Stop Name"
-                        maxlength="75"
-                        autocomplete="off"
-                        required
-                      />
-                    </div>
-                    <div class="address-container">
-                      <button
-                        class="btn btn-primary address-toggle-btn"
-                        type="button"
-                      >
-                        Use Google Maps
-                      </button>
-                      <div class="manual-address">
-                        <input
-                          type="text"
-                          id="stopAddress"
-                          class="stopAddress"
-                          name="stopAddress"
-                          placeholder="Stop Address"
-                          maxlength="150"
-                          autocomplete="off"
-                          required
-                        />
-                      </div>
-                      <div class="google-maps-address">
-                        <iframe
-                          width="100%"
-                          height="200"
-                          frameborder="0"
-                          style="border: 1px solid #ccc"
-                          src="https://www.google.com/maps/embed/v1/search?q=New+York&key=API_KEY"
-                          allowfullscreen
-                        ></iframe>
-                      </div>
-                    </div>
-                    <div class="vr-mode-container">
-                      <div class="vr-check-container">
-                        <div class="form-group">
-                          <label for="showLatLong">VR Mode?</label>
-                          <input
-                            type="checkbox"
-                            id="showLatLong"
-                            class="showLatLong"
-                            name="showLatLong"
-                          />
-                        </div>
-                      </div>
-                      <div class="lat-long-container">
-                        <div class="form-group">
-                          <label for="stopLat">Lat: </label>
-                          <input
-                            type="text"
-                            id="stopLat"
-                            class="locked-input"
-                            name="stopLat"
-                            placeholder="Use Google Maps"
-                            unselectable
-                            readonly
-                          />
-                        </div>
-                        <div class="form-group">
-                          <label for="stopLng">Long: </label>
-                          <input
-                            type="text"
-                            id="stopLng"
-                            class="locked-input"
-                            name="stopLng"
-                            placeholder="Use Google Maps"
-                            unselectable
-                            readonly
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <textarea
-                        id="stopDescription"
-                        class="autoresizing stopDescription"
-                        name="stopDescription"
-                        placeholder="You need to stop here because..."
-                        required
-                      ></textarea>
-                    </div>
-                  </div>
-                  <button class="btn btn-danger delete-stop-btn" type="button">
-                    <i class="fa fa-trash"></i>
-                  </button>
-                </div>
-              </li>
-            </ol>
-          </div>
-          <div class="add-stop-container">
-            <button
-              class="btn btn-primary add-stop-btn unselectable"
-              type="button"
-            >
-              + Add Stop
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
-    <div class="modal-footer">
-      <a class="reverse-button unselectable modal-close">Cancel</a>
-      <a class="button unselectable disabled-a" id="submit-modal">Submit</a>
-    </div>
-  </div>
+	<div class="modal">
+		<input id="excursion-id" unselectable readonly />
+		<div class="modal-header">
+			<h1 class="unselectable">Create Excursion</h1>
+		</div>
+		<button
+			id="modal-icon-vr"
+			class="modal-close modal-icon-button unselectable"
+		>
+			<i class="fa fa-vr-cardboard"></i>
+		</button>
+		<button
+			id="modal-icon-trash"
+			class="modal-close modal-icon-button unselectable"
+		>
+			<i class="fa fa-trash"></i>
+		</button>
+		<button
+			id="modal-icon-edit"
+			class="modal-close modal-icon-button unselectable"
+		>
+			<i class="fa fa-pencil"></i>
+		</button>
+		<button
+			id="modal-icon-x"
+			class="modal-close modal-icon-button unselectable"
+		>
+			&times;
+		</button>
+		<div class="modal-body">
+			<form>
+				<div class="image-container">
+					<img class="blur-preview" />
+					<img
+						id="excursion-preview"
+						class="unselectable"
+						src="./images/default-background.jpg"
+					/>
+					<div class="icon-container-gradient">
+						<div class="icon-container">
+							<label for="excursion-upload" id="icon-label">
+								<i class="fa fa-upload"></i>
+							</label>
+							<i class="fa fa-trash" id="modal-trash-icon"></i>
+						</div>
+					</div>
+					<input
+						type="file"
+						id="excursion-upload"
+						name="excursion-upload"
+						accept="image/*"
+					/>
+				</div>
+				<br />
+				<div class="excursion-text-container">
+					<input
+						type="text"
+						id="excursion-title"
+						name="excursion-title"
+						placeholder="Excursion Title *"
+						maxlength="75"
+						autocomplete="off"
+					/><br />
+					<textarea
+						id="excursion-description"
+						class="autoresizing"
+						name="excursion-description"
+						placeholder="This is the best place ever because ... *"
+					></textarea
+					><br />
+					<div class="form-group">
+						<label for="stops" id="stops-label">Stops:</label>
+						<label id="no-stops-label"
+							>It looks like there aren't any stops for this excursion yet
+							...</label
+						>
+						<ol id="stops">
+							<li class="stop-li">
+								<div class="stop">
+									<div class="drag-handle">
+										<i class="fas fa-bars"></i>
+									</div>
+									<div class="stop-content">
+										<div class="form-group">
+											<input
+												type="text"
+												id="stopName"
+												class="stopName"
+												name="stopName"
+												placeholder="Stop Name"
+												maxlength="75"
+												autocomplete="off"
+												required
+											/>
+										</div>
+										<div class="address-container">
+											<button
+												class="btn btn-primary address-toggle-btn"
+												type="button"
+											>
+												Use Google Maps
+											</button>
+											<div class="manual-address">
+												<input
+													type="text"
+													id="stopAddress"
+													class="stopAddress"
+													name="stopAddress"
+													placeholder="Stop Address"
+													maxlength="150"
+													autocomplete="off"
+													required
+												/>
+											</div>
+											<div class="google-maps-address">
+												<iframe
+													width="100%"
+													height="200"
+													frameborder="0"
+													style="border: 1px solid #ccc"
+													src="https://www.google.com/maps/embed/v1/search?q=New+York&key=AIzaSyAdOMmPhtfYuGGDuFRF6k-C7PLM5h__Qw8"
+													allowfullscreen
+												></iframe>
+											</div>
+										</div>
+										<div class="vr-mode-container">
+											<div class="vr-check-container">
+												<div class="form-group">
+													<label for="showLatLong">VR Mode?</label>
+													<input
+														type="checkbox"
+														id="showLatLong"
+														class="showLatLong"
+														name="showLatLong"
+													/>
+												</div>
+											</div>
+											<div class="lat-long-container">
+												<div class="form-group">
+													<label for="stopLat">Lat: </label>
+													<input
+														type="text"
+														id="stopLat"
+														class="locked-input"
+														name="stopLat"
+														placeholder="Use Google Maps"
+														unselectable
+														readonly
+													/>
+												</div>
+												<div class="form-group">
+													<label for="stopLng">Long: </label>
+													<input
+														type="text"
+														id="stopLng"
+														class="locked-input"
+														name="stopLng"
+														placeholder="Use Google Maps"
+														unselectable
+														readonly
+													/>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<textarea
+												id="stopDescription"
+												class="autoresizing stopDescription"
+												name="stopDescription"
+												placeholder="You need to stop here because..."
+												required
+											></textarea>
+										</div>
+									</div>
+									<button class="btn btn-danger delete-stop-btn" type="button">
+										<i class="fa fa-trash"></i>
+									</button>
+								</div>
+							</li>
+						</ol>
+					</div>
+					<div class="add-stop-container">
+						<button
+							class="btn btn-primary add-stop-btn unselectable"
+							type="button"
+						>
+							+ Add Stop
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer">
+			<a class="reverse-button unselectable modal-close">Cancel</a>
+			<a class="button unselectable disabled-a" id="submit-modal">Submit</a>
+		</div>
+	</div>
 </div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdOMmPhtfYuGGDuFRF6k-C7PLM5h__Qw8"></script>

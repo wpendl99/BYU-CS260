@@ -553,3 +553,27 @@ $(document).on("click", ".heart-icon", async function (event) {
 		$(event.target.parentNode).addClass("heart-liked");
 	}
 });
+
+//Open Maps Window
+let stopID;
+
+$(document).on("click", ".address-toggle-btn", async function (event) {
+	const width = 600;
+	const height = 400;
+	const left = (window.innerWidth - width) / 2;
+	const top = (window.innerHeight - height) / 2;
+	const url = "./map.html";
+	const features = `width=${width},height=${height},left=${left},top=${top}`;
+
+	window.open(url, "mapWindow", features);
+	//TODO: Refer to specific stop's latlng info so that field can be populated
+	// in the below function each time a message is sent
+	// will please help
+});
+
+//get latlng
+window.addEventListener("message", (event) => {
+	const { lat, lng } = event.data;
+
+	console.log("lat: " + lat + ", long: " + lng);
+});
