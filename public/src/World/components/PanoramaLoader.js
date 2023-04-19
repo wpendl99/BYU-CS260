@@ -73,8 +73,6 @@ class PanoramaLoader {
 			//   texture.needsUpdate = true;
 			// };
 
-			texture = new TextureLoader();
-
 			let lat = _coordinate_list[_pos].lat;
 			let lon = _coordinate_list[_pos].lng;
 			let zoom = 3;
@@ -83,9 +81,14 @@ class PanoramaLoader {
 				//`http://10.37.250.26:5000/panorama?lat=${lat}&lon=${lon}&zoom=${zoom}`
 				`https://pano.worldexcursions.click/panorama/cdn?lat=${lat}&lon=${lon}&zoom=${zoom}`
 			);
+			console.log(response);
 			if (response.ok) {
-				const data = await response.body;
-				texture.load(data);
+				const data = await response.json();
+
+				texture = new TextureLoader().load(
+					data.imageUrl + "?not-from-cache-please",
+					function (texture) {}
+				);
 				// const base64Image = data.base64Image;
 				// image.src = base64Image;
 				// Do something with the base64Image, e.g., display it on the page

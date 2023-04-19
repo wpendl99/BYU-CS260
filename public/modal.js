@@ -207,12 +207,46 @@ $(document).keydown(function (event) {
 // Handle Modal Submittion
 $(document).on("click", "#submit-modal", async function () {
 	if (modalSubmitValidation()) {
+		// Wait for image upload
+
+		let coverPhotoURL =
+			"https://d1hfasmbhdmtvf.cloudfront.net/default-background.jpg";
+		const imageInput = document.getElementById("excursion-upload");
+		console.log(imageInput.files[0]);
+		if (imageInput.files[0]) {
+			try {
+				// Build Request
+				var data = new FormData();
+				data.append("image", imageInput.files[0]);
+				console.log(data);
+				// Send Request
+				const response = await fetch(
+					"https://pano.worldexcursions.click/image",
+					{
+						method: "POST",
+						body: data,
+					}
+				);
+				// Get Results Back
+				if (response.ok) {
+					const data = await response.json();
+					coverPhotoURL = data.imageUrl;
+				} else {
+					alert("Error uploading image");
+				}
+			} catch (error) {
+				console.log(error);
+			}
+		} else {
+			coverPhotoURL = document.getElementById("excursion-preview").src;
+		}
+
 		// Create new Excursion
 		let excursion = {
 			title: $("#excursion-title").val(),
 			description: $("#excursion-description").val(),
 			creator: JSON.parse(localStorage.getItem("user")).username,
-			coverPhoto: "./images/default-background.jpg",
+			coverPhoto: coverPhotoURL,
 			stops: [],
 			vrReady: false,
 		};
@@ -487,7 +521,7 @@ async function viewExcursion(excursionID) {
 						.prop("checked", stop.vrReady);
 					// if()
 					modal.find(".stop-li").last().find("#stopLat").val(stop.lat);
-					modal.find(".stop-li").last().find("#stopLong").val(stop.long);
+					modal.find(".stop-li").last().find("#stopLng").val(stop.long);
 				});
 				modal.find("#stops").children().first().remove();
 			} else {
