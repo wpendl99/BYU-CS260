@@ -213,7 +213,7 @@ $(document).on("click", "#submit-modal", async function () {
 			"https://d1hfasmbhdmtvf.cloudfront.net/default-background.jpg";
 		const imageInput = document.getElementById("excursion-upload");
 		console.log(imageInput.files[0]);
-		if (imageInput.files) {
+		if (imageInput.files[0]) {
 			try {
 				// Build Request
 				var data = new FormData();
@@ -237,6 +237,8 @@ $(document).on("click", "#submit-modal", async function () {
 			} catch (error) {
 				console.log(error);
 			}
+		} else {
+			coverPhotoURL = document.getElementById("excursion-preview").src;
 		}
 
 		// Create new Excursion
