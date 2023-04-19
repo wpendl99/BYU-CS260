@@ -64,6 +64,7 @@
 - [React Components](#react-components)
 - [React Reactivity](#react-reactivity)
 - [React Tic-Tac-Toe](#react-ttt)
+- [React CLI](#react-cli)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
@@ -846,6 +847,21 @@ In the "Tutorial: Tic-Tac-Toe" from React, I learned the basics of building a fu
 Another interesting aspect of the tutorial was the use of immutability for updating the state of the game. By creating a new copy of the squares array instead of modifying it directly, it helped maintain a clear history of the game's state, making it easier to implement features like undo and redo. This also demonstrated the benefits of immutability in React applications, which can lead to better performance and easier debugging. Overall, the tutorial provided a solid foundation for understanding the core concepts of React and offered valuable insights into best practices for building interactive applications.
 
 _Website Link: [Tutoral: Tic-Tac-Toe](https://codesandbox.io/s/tic-tac-toe-tutorail-f4lzdg)_
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='react-cli'></a>
+
+## React CLI
+
+#### William Pendleton Learned:
+
+I had fun messing around with React CLI and being able to make a working react app from scratch with create-react-app. I will definitely be making furture wesites this way and can't wait to learn more!
+
+The React CLI assignment provided a comprehensive introduction to using the create-react-app Command Line Interface (CLI) to set up a React-based project. I learned how to use NPX to run create-react-app, which generates a fully configured template for a React application. This template includes necessary files, components, and NPM packages that make it easy to get started with building a React application. The assignment also illustrated how the generated project structure can be modified to suit specific needs, such as removing testing and performance monitoring packages, or adjusting file extensions to better differentiate between JSX and JS files.
+
+One interesting aspect of the assignment was the exploration of how the development and production builds are created using the npm start and npm run build commands. These commands transpile, minify, and inject the proper JavaScript into the application, resulting in an optimized production build. Additionally, I found the discussion on the difference between using .js and .jsx file extensions for React components informative, as it highlighted how certain tools might behave differently based on the chosen extension.
 
 #### Daniel Yu Learned:
 
