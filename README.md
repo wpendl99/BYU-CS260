@@ -66,6 +66,7 @@
 - [React Tic-Tac-Toe](#react-ttt)
 - [React CLI](#react-cli)
 - [React Router](#react-router)
+- [Simon React](#simon-react)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
@@ -878,6 +879,25 @@ In this code, I implemented React Router to manage the navigation and routing fo
 We used the BrowserRouter component to wrap our entire application, enabling routing functionality. We then utilized NavLink components to create navigation links for different routes, and Routes and Route components to define the mapping between URL paths and the respective components to be rendered. We also used the Navigate component to handle invalid paths by redirecting the user back to the home page. This implementation showcases the core functionality of React Router and how it can be easily integrated into a React application to manage routing and navigation.
 
 _Website Link: [react: React-Router](https://codepen.io/wpendl99/pen/gOBwGBY)_
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='simon-react'></a>
+
+## Simon React
+
+#### William Pendleton Learned:
+
+In this deliverable, we converted the Simon application into a React-based single-page application (SPA) using the create-react-app package. The conversion involved reorganizing the application structure, refactoring the existing HTML, CSS, and JavaScript code into React components, and leveraging React functionality for improved modularization and interactivity.
+
+We started by creating a React template application using create-react-app, then removed unnecessary files and packages, and updated the remaining files to represent the Simon application. Next, we moved the template files into the Simon repository and converted the application to use React Bootstrap for a more streamlined user interface.
+
+We populated the App.jsx file and created view components, which were then incorporated into the router. The existing HTML, CSS, and JavaScript code was converted into React components, and debugging capabilities were set up. Finally, we refactored the application to take advantage of React-specific functionality, broke down components into smaller sub-components, and moved WebSocket code to a separate file for better organization.
+
+This conversion process demonstrates how a traditional multi-page application can be transformed into a more dynamic and interactive SPA using the React framework. The resulting React-based Simon application benefits from improved modularity, reusability, and maintainability, thanks to React's component-driven architecture and powerful features.
+
+_Website Link: [Simon React (wkp23)](https://simon.worldexcursions.click)_
 
 #### Daniel Yu Learned:
 
