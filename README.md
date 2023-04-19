@@ -63,6 +63,7 @@
 
 - [React Components](#react-components)
 - [React Reactivity](#react-reactivity)
+- [React Tic-Tac-Toe](#react-ttt)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
@@ -830,6 +831,21 @@ This assignment focuses on React's architectural foundations that enable reactiv
 The Question component has its own answer state, which is displayed within the component's content and can be interacted with by the user through HTML radio input elements. When the input is changed, the Question component's onChange function is called, and the answer state is updated accordingly. This automatically updates the displayed answer, illustrating React's reactivity in response to user input or data changes. Note that state updates are asynchronous, so you should not assume the state will be updated immediately after calling the updateState function.
 
 _Website Link: [react: Reactivity](https://codepen.io/wpendl99/pen/dygpWRq)_
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='react-ttt'></a>
+
+## React Tic-Tac-Toe
+
+#### William Pendleton Learned:
+
+In the "Tutorial: Tic-Tac-Toe" from React, I learned the basics of building a functional tic-tac-toe game using React components, state management, and event handling. The tutorial provided a step-by-step guide to creating the necessary components for the game, such as the Board and Square components. I found it particularly interesting how state management was handled, with state being lifted up from the Square component to the Board component. This allowed for easier management of the game's state and facilitated the implementation of the game's logic. 
+
+Another interesting aspect of the tutorial was the use of immutability for updating the state of the game. By creating a new copy of the squares array instead of modifying it directly, it helped maintain a clear history of the game's state, making it easier to implement features like undo and redo. This also demonstrated the benefits of immutability in React applications, which can lead to better performance and easier debugging. Overall, the tutorial provided a solid foundation for understanding the core concepts of React and offered valuable insights into best practices for building interactive applications.
+
+_Website Link: [Tutoral: Tic-Tac-Toe](https://codesandbox.io/s/tic-tac-toe-tutorail-f4lzdg)_
 
 #### Daniel Yu Learned:
 
