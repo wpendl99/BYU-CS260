@@ -62,6 +62,7 @@
 ### Web Frameworks
 
 - [React Components](#react-components)
+- [React Reactivity](#react-reactivity)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
@@ -814,6 +815,21 @@ In this assignment, I learned about the core concepts of React components, which
 I modified the CodePen demo so that now it accepts an initial background color property and maintains its internal state for foreground and background colors, as well as an "outlook" message. The component uses event handlers to change the background and foreground color on mouse hover and toggle the outlook message, showcasing React's capabilities in creating dynamic, interactive user interfaces with properties, state management, and reactivity.
 
 _Website Link: [react: Components](https://codepen.io/wpendl99/pen/ZEqpeaE)_
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='react-reactivity'></a>
+
+## React Reactivity
+
+#### William Pendleton Learned:
+
+This assignment focuses on React's architectural foundations that enable reactivity through component properties (props), state, and render functions. The example given contains two components, a parent Survey component and a child Question component. The Survey component has a color state, which is passed to the Question component as a property. This ensures that any changes in Survey's color state will be reflected in the Question component, demonstrating how parent components can control a child component's functionality.
+
+The Question component has its own answer state, which is displayed within the component's content and can be interacted with by the user through HTML radio input elements. When the input is changed, the Question component's onChange function is called, and the answer state is updated accordingly. This automatically updates the displayed answer, illustrating React's reactivity in response to user input or data changes. Note that state updates are asynchronous, so you should not assume the state will be updated immediately after calling the updateState function.
+
+_Website Link: [react: Reactivity](https://codepen.io/wpendl99/pen/dygpWRq)_
 
 #### Daniel Yu Learned:
 
