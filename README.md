@@ -861,7 +861,7 @@ _Website Link: [react: Reactivity](https://codepen.io/wpendl99/pen/dygpWRq)_
 
 #### William Pendleton Learned:
 
-In the "Tutorial: Tic-Tac-Toe" from React, I learned the basics of building a functional tic-tac-toe game using React components, state management, and event handling. The tutorial provided a step-by-step guide to creating the necessary components for the game, such as the Board and Square components. I found it particularly interesting how state management was handled, with state being lifted up from the Square component to the Board component. This allowed for easier management of the game's state and facilitated the implementation of the game's logic. 
+In the "Tutorial: Tic-Tac-Toe" from React, I learned the basics of building a functional tic-tac-toe game using React components, state management, and event handling. The tutorial provided a step-by-step guide to creating the necessary components for the game, such as the Board and Square components. I found it particularly interesting how state management was handled, with state being lifted up from the Square component to the Board component. This allowed for easier management of the game's state and facilitated the implementation of the game's logic.
 
 Another interesting aspect of the tutorial was the use of immutability for updating the state of the game. By creating a new copy of the squares array instead of modifying it directly, it helped maintain a clear history of the game's state, making it easier to implement features like undo and redo. This also demonstrated the benefits of immutability in React applications, which can lead to better performance and easier debugging. Overall, the tutorial provided a solid foundation for understanding the core concepts of React and offered valuable insights into best practices for building interactive applications.
 
@@ -917,5 +917,9 @@ This conversion process demonstrates how a traditional multi-page application ca
 _Website Link: [Simon React (wkp23)](https://simon.worldexcursions.click)_
 
 #### Daniel Yu Learned:
+
+Simon was converted into a React application which means drastic changes to the underlying architecture. The benefits of which means that we have increased the quality of it from a software architecture perspective, increasing modularity and maintainability. React apps allow us to abstact away a lot of other systems that can be baked as deliverabes for browsers, which offers us as developers a lot more flexibility.
+
+_Website Link: [simon react (dandean)](simon.excursionsxr.world)_
 
 [Back to top](#top)
