@@ -62,6 +62,11 @@
 ### Web Frameworks
 
 - [React Components](#react-components)
+- [React Reactivity](#react-reactivity)
+- [React Tic-Tac-Toe](#react-ttt)
+- [React CLI](#react-cli)
+- [React Router](#react-router)
+- [Simon React](#simon-react)
 
 <details>
   <summary>🚧 Assignments that are not yet completed</summary>
@@ -831,6 +836,85 @@ In this assignment, I learned about the core concepts of React components, which
 I modified the CodePen demo so that now it accepts an initial background color property and maintains its internal state for foreground and background colors, as well as an "outlook" message. The component uses event handlers to change the background and foreground color on mouse hover and toggle the outlook message, showcasing React's capabilities in creating dynamic, interactive user interfaces with properties, state management, and reactivity.
 
 _Website Link: [react: Components](https://codepen.io/wpendl99/pen/ZEqpeaE)_
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='react-reactivity'></a>
+
+## React Reactivity
+
+#### William Pendleton Learned:
+
+This assignment focuses on React's architectural foundations that enable reactivity through component properties (props), state, and render functions. The example given contains two components, a parent Survey component and a child Question component. The Survey component has a color state, which is passed to the Question component as a property. This ensures that any changes in Survey's color state will be reflected in the Question component, demonstrating how parent components can control a child component's functionality.
+
+The Question component has its own answer state, which is displayed within the component's content and can be interacted with by the user through HTML radio input elements. When the input is changed, the Question component's onChange function is called, and the answer state is updated accordingly. This automatically updates the displayed answer, illustrating React's reactivity in response to user input or data changes. Note that state updates are asynchronous, so you should not assume the state will be updated immediately after calling the updateState function.
+
+_Website Link: [react: Reactivity](https://codepen.io/wpendl99/pen/dygpWRq)_
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='react-ttt'></a>
+
+## React Tic-Tac-Toe
+
+#### William Pendleton Learned:
+
+In the "Tutorial: Tic-Tac-Toe" from React, I learned the basics of building a functional tic-tac-toe game using React components, state management, and event handling. The tutorial provided a step-by-step guide to creating the necessary components for the game, such as the Board and Square components. I found it particularly interesting how state management was handled, with state being lifted up from the Square component to the Board component. This allowed for easier management of the game's state and facilitated the implementation of the game's logic. 
+
+Another interesting aspect of the tutorial was the use of immutability for updating the state of the game. By creating a new copy of the squares array instead of modifying it directly, it helped maintain a clear history of the game's state, making it easier to implement features like undo and redo. This also demonstrated the benefits of immutability in React applications, which can lead to better performance and easier debugging. Overall, the tutorial provided a solid foundation for understanding the core concepts of React and offered valuable insights into best practices for building interactive applications.
+
+_Website Link: [Tutoral: Tic-Tac-Toe](https://codesandbox.io/s/tic-tac-toe-tutorail-f4lzdg)_
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='react-cli'></a>
+
+## React CLI
+
+#### William Pendleton Learned:
+
+I had fun messing around with React CLI and being able to make a working react app from scratch with create-react-app. I will definitely be making furture wesites this way and can't wait to learn more!
+
+The React CLI assignment provided a comprehensive introduction to using the create-react-app Command Line Interface (CLI) to set up a React-based project. I learned how to use NPX to run create-react-app, which generates a fully configured template for a React application. This template includes necessary files, components, and NPM packages that make it easy to get started with building a React application. The assignment also illustrated how the generated project structure can be modified to suit specific needs, such as removing testing and performance monitoring packages, or adjusting file extensions to better differentiate between JSX and JS files.
+
+One interesting aspect of the assignment was the exploration of how the development and production builds are created using the npm start and npm run build commands. These commands transpile, minify, and inject the proper JavaScript into the application, resulting in an optimized production build. Additionally, I found the discussion on the difference between using .js and .jsx file extensions for React components informative, as it highlighted how certain tools might behave differently based on the chosen extension.
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='react-router'></a>
+
+## React Router
+
+#### William Pendleton Learned:
+
+In this code, I implemented React Router to manage the navigation and routing for a simple web application. React Router is a popular library for managing client-side navigation in React applications, allowing developers to create dynamic, single-page applications with ease. It provides a set of components and hooks that help handle navigation and rendering components based on the current URL path.
+
+We used the BrowserRouter component to wrap our entire application, enabling routing functionality. We then utilized NavLink components to create navigation links for different routes, and Routes and Route components to define the mapping between URL paths and the respective components to be rendered. We also used the Navigate component to handle invalid paths by redirecting the user back to the home page. This implementation showcases the core functionality of React Router and how it can be easily integrated into a React application to manage routing and navigation.
+
+_Website Link: [react: React-Router](https://codepen.io/wpendl99/pen/gOBwGBY)_
+
+#### Daniel Yu Learned:
+
+[Back to top](#top)
+<a id='simon-react'></a>
+
+## Simon React
+
+#### William Pendleton Learned:
+
+In this deliverable, we converted the Simon application into a React-based single-page application (SPA) using the create-react-app package. The conversion involved reorganizing the application structure, refactoring the existing HTML, CSS, and JavaScript code into React components, and leveraging React functionality for improved modularization and interactivity.
+
+We started by creating a React template application using create-react-app, then removed unnecessary files and packages, and updated the remaining files to represent the Simon application. Next, we moved the template files into the Simon repository and converted the application to use React Bootstrap for a more streamlined user interface.
+
+We populated the App.jsx file and created view components, which were then incorporated into the router. The existing HTML, CSS, and JavaScript code was converted into React components, and debugging capabilities were set up. Finally, we refactored the application to take advantage of React-specific functionality, broke down components into smaller sub-components, and moved WebSocket code to a separate file for better organization.
+
+This conversion process demonstrates how a traditional multi-page application can be transformed into a more dynamic and interactive SPA using the React framework. The resulting React-based Simon application benefits from improved modularity, reusability, and maintainability, thanks to React's component-driven architecture and powerful features.
+
+_Website Link: [Simon React (wkp23)](https://simon.worldexcursions.click)_
 
 #### Daniel Yu Learned:
 
